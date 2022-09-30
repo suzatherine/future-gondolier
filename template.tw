@@ -1,5 +1,5 @@
 :: StoryTitle
-The Maze of Adventures Template 2
+Future Gondolier
 
 
 :: StoryData
@@ -7,7 +7,7 @@ The Maze of Adventures Template 2
 	"ifid": "313236DF-3F92-41FD-80D5-D6E2D6FFB6BD",
 	"format": "SugarCube",
 	"format-version": "2.36.1",
-	"start": "FG-27",
+	"start": "landing",
 	"zoom": 0.6
 }
 
