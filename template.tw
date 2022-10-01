@@ -457,7 +457,7 @@ setup.checkForRepeats = (array,element) => {
  The Future Gondolier</header>
 
 
-:: footer {"position":"100,375","size":"100,100"}
+:: footer {"position":"100,350","size":"100,100"}
 <footer><div class="nav-wrapper "><div class="nav-item"><<button "Replay">><<goto $passage>><</button>> </div><div class="nav-item"><<button "Back">><<goto $prevpass>><</button>></div></div><div class="nav-wrapper"><div class="nav-item"><<button "I'm lost">><<goto "lost">><</button>></div></div></footer>
 
 
@@ -475,7 +475,7 @@ You have two options:
 
 
 :: landing {"position":"450,50","size":"100,100"}
-<<set $passage to "landing">>
+<<set $passage to "landing">><<set $nextpassage to "FG-05">>
 <<include "header">>
 <main>
   menu
@@ -490,7 +490,7 @@ You have two options:
 
 
 :: FG-05 {"position":"450,200","size":"100,100"}
-<<set $passage to "FG-05">>
+<<set $passage to "FG-05">><<set $nextpassage to "FG-06">>
 <<include "header">>
 <main>
 
@@ -521,11 +521,11 @@ Here we are. Now if I just...hop out... I’m new to the whole gondolier thing..
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: FG-06 {"position":"450,325","size":"100,100"}
-<<set $passage to "FG-06">>
+<<set $passage to "FG-06">><<set $nextpassage to "FG-08">>
 <<include "header">>
 <main>
 
@@ -539,7 +539,7 @@ Ahh. Sorry. My boss said this might happen. You’re on dragon time, aren’t yo
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: FG-08 {"position":"450,450","size":"100,100"}
@@ -587,7 +587,7 @@ Ooh good guess! Not quite. Try again.
 
 
 :: FG-09B {"position":"525,575","size":"100,100"}
-<<set $passage to "FG-09B">>
+<<set $passage to "FG-09B">><<set $nextpassage to "FG-11">>
 <<include "header">>
 <main>
 
@@ -598,7 +598,7 @@ Exactly! Aren’t you clever.
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: FG-11 {"position":"450,700","size":"100,100"}
@@ -623,7 +623,7 @@ So, St Paul’s was built by Sir Christopher Wren in the 17th Century, in the En
 
 
 :: FG-12A {"position":"325,825","size":"100,100"}
-<<set $passage to "FG-12A">>
+<<set $passage to "FG-12A">><<set $nextpassage to "FG-13">>
 <<include "header">>
 <main>
 
@@ -632,11 +632,11 @@ Well, I’ll tell you! Flash floods.
 <<timed 3s>><<set $prevpass to $passage>><<goto "FG-13">><</timed>>
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: FG-12B {"position":"450,825","size":"100,100"}
-<<set $passage to "FG-12B">>
+<<set $passage to "FG-12B">><<set $nextpassage to "FG-13">>
 <<include "header">>
 <main>
 
@@ -645,11 +645,11 @@ Exactly.
 <<timed 3s>><<set $prevpass to $passage>><<goto "FG-13">><</timed>>
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: FG-12C {"position":"575,825","size":"100,100"}
-<<set $passage to "FG-12C">>
+<<set $passage to "FG-12C">><<set $nextpassage to "FG-13">>
 <<include "header">>
 <main>
 
@@ -658,11 +658,11 @@ Yes! Heavy rain which leads to flooding.
 <<timed 3s>><<set $prevpass to $passage>><<goto "FG-13">><</timed>>
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: FG-13 {"position":"450,950","size":"100,100"}
-<<set $passage to "FG-12B">>
+<<set $passage to "FG-12B">><<set $nextpassage to "FG-14">>
 <<include "header">>
 <main>
 
@@ -677,11 +677,11 @@ You see, when we have days and days of scaldingly hot weather, which have become
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: FG-14 {"position":"450,1075","size":"100,100"}
-<<set $passage to "FG-14">>
+<<set $passage to "FG-14">><<set $nextpassage to "FG-15">>
 <<include "header">>
 <main>
 
@@ -695,11 +695,11 @@ When you reach the Thames, do me a favour and take a deep, deep breath. Take in 
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: FG-15 {"position":"450,1200","size":"100,100"}
-<<set $passage to "FG-15">>
+<<set $passage to "FG-15">><<set $nextpassage to "FG-16">>
 <<include "header">>
 <main>
 
@@ -708,11 +708,11 @@ Dad started this business when he came over from Singapore in 2034. There was a 
 <<timed 3s>><<set $prevpass to $passage>><<goto "FG-16">><</timed>>
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: FG-16 {"position":"450,1325","size":"100,100"}
-<<set $passage to "FG-16">>
+<<set $passage to "FG-16">><<set $nextpassage to "FG-17">>
 <<include "header">>
 <main>
 
@@ -739,11 +739,11 @@ We’re getting close to Blackfriars Bridge, right?
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: FG-17 {"position":"450,1450","size":"100,100"}
-<<set $passage to "FG-16">>
+<<set $passage to "FG-17">><<set $nextpassage to "FG-18">>
 <<include "header">>
 <main>
 
@@ -764,15 +764,15 @@ Actually, if you turn around and look at the City, do you reckon you could count
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: FG-18 {"position":"450,1575","size":"100,100"}
-<<set $passage to "FG-18">>
+<<set $passage to "FG-18">><<set $nextpassage to "FG-19">>
 <<include "header">>
 <main>
 
-How many can you see?
+How many skyscrapers can you see?
 
 <<textbox "$skyscrapercount" "">>
 
@@ -782,11 +782,11 @@ How many can you see?
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: FG-19 {"position":"450,1700","size":"100,100"}
-<<set $passage to "FG-19">>
+<<set $passage to "FG-19">><<set $nextpassage to "FG-20">>
 <<include "header">>
 <main>
 
@@ -799,11 +799,11 @@ What do you reckon unused buildings could be used for? Libraries? Social housing
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: FG-20 {"position":"450,1825","size":"100,100"}
-<<set $passage to "FG-20">>
+<<set $passage to "FG-20">><<set $nextpassage to "FG-21">>
 <<include "header">>
 <main>
 
@@ -823,11 +823,11 @@ Ah, I think you should be coming out from the water now. Come on, let’s dock t
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: FG-21 {"position":"450,1950","size":"100,100"}
-<<set $passage to "FG-21">>
+<<set $passage to "FG-21">><<set $nextpassage to "FG-22">>
 <<include "header">>
 <main>
 
@@ -845,11 +845,11 @@ Now, when we get to Ludgate Circus, I want you to find St Bride Street.
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: FG-22 {"position":"450,2075","size":"100,100"}
-<<set $passage to "FG-22">>
+<<set $passage to "FG-22">><<set $nextpassage to "FG-23">>
 <<include "header">>
 <main>
 
@@ -865,11 +865,11 @@ Are any of you guys vegan?
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: FG-23 {"position":"450,2200","size":"100,100"}
-<<set $passage to "FG-23">>
+<<set $passage to "FG-23">><<set $nextpassage to "FG-24">>
 <<include "header">>
 <main>
 
@@ -889,11 +889,11 @@ How are the resolutions going? Make sure to discuss it alongside the people you�
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: FG-24 {"position":"450,2325","size":"100,100"}
-<<set $passage to "FG-23">>
+<<set $passage to "FG-24">>
 <<include "header">>
 <main>
 
@@ -917,7 +917,7 @@ Now, let me ask you: what was the City famous for when you were in 2022?
 
 
 :: FG-25A {"position":"375,2450","size":"100,100"}
-<<set $passage to "FG-25A">>
+<<set $passage to "FG-25A">><<set $nextpassage to "FG-26">>
 <<include "header">>
 <main>
 
@@ -929,11 +929,11 @@ Oh right, sure. That makes sense. I mean, those places, those companies that exi
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: FG-25B {"position":"525,2450","size":"100,100"}
-<<set $passage to "FG-25B">>
+<<set $passage to "FG-25B">><<set $nextpassage to "FG-26">>
 <<include "header">>
 <main>
 
@@ -949,7 +949,7 @@ Totally. There’s so much here, in every nook and cranny. It’s bursting with 
 
 
 :: FG-26 {"position":"450,2575","size":"100,100"}
-<<set $passage to "FG-26">>
+<<set $passage to "FG-26">><<set $nextpassage to "FG-27">>
 <<include "header">>
 <main>
 
@@ -966,7 +966,7 @@ Okay. I think we’re nearly at our finish.
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: FG-27 {"position":"450,2700","size":"100,100"}
@@ -1001,7 +1001,7 @@ How many trees did you see?
 
 
 :: FG-28A {"position":"375,2825","size":"100,100"}
-<<set $passage to "FG-28A">>
+<<set $passage to "FG-28A">><<set $nextpassage to "FG-29">>
 <<include "header">>
 <main>
 
@@ -1014,11 +1014,11 @@ I told Dad! I’m going to rub that in his face later. Hm, that’s pretty rubbi
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: FG-28B {"position":"525,2825","size":"100,100"}
-<<set $passage to "FG-28B">>
+<<set $passage to "FG-28B">><<set $nextpassage to "FG-29">>
 <<include "header">>
 <main>
 
@@ -1036,14 +1036,35 @@ Wow, seriously? Looks like Dad was right. I reckon the City can do better than t
 
 
 :: FG-29 {"position":"450,2950","size":"100,100"}
-<<set $passage to "FG-29">>
+<<set $passage to "FG-29">><<set $nextpassage to "end">>
 <<include "header">>
 <main>
 
 I’ve got to get back to the gondola now — don’t want anyone nicking it. Thank you very much for your time. Please rate me on Yelp — yes, Yelp still exists — I’m Kelly from Waterworks Tours. Make sure you comment and say I was the best tour guide ever — 
- Dad will be super happy with me. Goodbye!
+  Dad will be super happy with me. Goodbye!
+
+<<timed 3s>><<set $prevpass to $passage>><<goto "end">><</timed>>
+
+</main>
+<<include "footer">>
 
 
+:: footer2 {"position":"100,475","size":"100,100"}
+<footer>
+<div class="nav-item back"><<button "<">><<goto $prevpass>><</button>></div>
+<div class="nav-item"><<button "Replay">><<goto $passage>><</button>> </div>
+<div class="nav-item"><<button "Take me to the end">><<goto "lost">><</button>></div>
+<div class="nav-item forward"><<button ">">><<goto $nextpassage>><</button>></div>
+</footer>
+
+
+:: end {"position":"100,600","size":"100,100"}
+<main>
+
+End location
+
+
+  
 </main>
 <<include "footer">>
 
