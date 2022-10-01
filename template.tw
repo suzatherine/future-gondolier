@@ -543,7 +543,7 @@ Ahh. Sorry. My boss said this might happen. You’re on dragon time, aren’t yo
 
 
 :: FG-08 {"position":"450,450","size":"100,100"}
-<<set $passage to "FG-08">>
+<<set $passage to "FG-08">><<set $nextpassage to "FG-11">>
 <<include "header">>
 <main>
 
@@ -561,11 +561,11 @@ First off — if you look around, you might be able to spot one of the most famo
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: FG-09A {"position":"375,575","size":"100,100"}
-<<set $passage to "FG-09A">>
+<<set $passage to "FG-09A">><<set $nextpassage to "FG-11">>
 <<include "header">>
 <main>
 
@@ -583,7 +583,7 @@ Ooh good guess! Not quite. Try again.
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: FG-09B {"position":"525,575","size":"100,100"}
@@ -602,7 +602,7 @@ Exactly! Aren’t you clever.
 
 
 :: FG-11 {"position":"450,700","size":"100,100"}
-<<set $passage to "FG-09A">>
+<<set $passage to "FG-09A">><<set $nextpassage to "FG-13">>
 <<include "header">>
 <main>
 
@@ -619,7 +619,7 @@ So, St Paul’s was built by Sir Christopher Wren in the 17th Century, in the En
 
 
 </main>
-<<include "footer">>
+<<include "footer2">>
 
 
 :: FG-12A {"position":"325,825","size":"100,100"}
@@ -1054,7 +1054,7 @@ I’ve got to get back to the gondola now — don’t want anyone nicking it. Th
 <div class="nav-item back"><<button "<">><<goto $prevpass>><</button>></div>
 <div class="nav-item"><<button "Replay">><<goto $passage>><</button>> </div>
 <div class="nav-item"><<button "Take me to the end">><<goto "lost">><</button>></div>
-<div class="nav-item forward"><<button ">">><<goto $nextpassage>><</button>></div>
+<div class="nav-item forward"><<button ">">><<set $prevpass to $passage>><<goto $nextpassage>><</button>></div>
 </footer>
 
 

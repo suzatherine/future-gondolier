@@ -595,7 +595,7 @@ Ahh. Sorry. My boss said this might happen. You’re on dragon time, aren’t yo
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="FG-08" tags="" position="450,450" size="100,100">&lt;&lt;set $passage to &quot;FG-08&quot;&gt;&gt;
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="FG-08" tags="" position="450,450" size="100,100">&lt;&lt;set $passage to &quot;FG-08&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-11&quot;&gt;&gt;
 &lt;&lt;include &quot;header&quot;&gt;&gt;
 &lt;main&gt;
 
@@ -613,7 +613,7 @@ First off — if you look around, you might be able to spot one of the most famo
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="FG-09A" tags="" position="375,575" size="100,100">&lt;&lt;set $passage to &quot;FG-09A&quot;&gt;&gt;
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="FG-09A" tags="" position="375,575" size="100,100">&lt;&lt;set $passage to &quot;FG-09A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-11&quot;&gt;&gt;
 &lt;&lt;include &quot;header&quot;&gt;&gt;
 &lt;main&gt;
 
@@ -631,7 +631,7 @@ Ooh good guess! Not quite. Try again.
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="FG-09B" tags="" position="525,575" size="100,100">&lt;&lt;set $passage to &quot;FG-09B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-11&quot;&gt;&gt;
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="FG-09B" tags="" position="525,575" size="100,100">&lt;&lt;set $passage to &quot;FG-09B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-11&quot;&gt;&gt;
 &lt;&lt;include &quot;header&quot;&gt;&gt;
 &lt;main&gt;
 
@@ -642,7 +642,7 @@ Exactly! Aren’t you clever.
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="FG-11" tags="" position="450,700" size="100,100">&lt;&lt;set $passage to &quot;FG-09A&quot;&gt;&gt;
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="FG-11" tags="" position="450,700" size="100,100">&lt;&lt;set $passage to &quot;FG-09A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-13&quot;&gt;&gt;
 &lt;&lt;include &quot;header&quot;&gt;&gt;
 &lt;main&gt;
 
@@ -659,7 +659,7 @@ So, St Paul’s was built by Sir Christopher Wren in the 17th Century, in the En
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="FG-12A" tags="" position="325,825" size="100,100">&lt;&lt;set $passage to &quot;FG-12A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-13&quot;&gt;&gt;
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="FG-12A" tags="" position="325,825" size="100,100">&lt;&lt;set $passage to &quot;FG-12A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-13&quot;&gt;&gt;
 &lt;&lt;include &quot;header&quot;&gt;&gt;
 &lt;main&gt;
 
@@ -1002,7 +1002,7 @@ I’ve got to get back to the gondola now — don’t want anyone nicking it. Th
 &lt;div class=&quot;nav-item back&quot;&gt;&lt;&lt;button &quot;&lt;&quot;&gt;&gt;&lt;&lt;goto $prevpass&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
 &lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Replay&quot;&gt;&gt;&lt;&lt;goto $passage&gt;&gt;&lt;&lt;/button&gt;&gt; &lt;/div&gt;
 &lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Take me to the end&quot;&gt;&gt;&lt;&lt;goto &quot;lost&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
-&lt;div class=&quot;nav-item forward&quot;&gt;&lt;&lt;button &quot;&gt;&quot;&gt;&gt;&lt;&lt;goto $nextpassage&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
+&lt;div class=&quot;nav-item forward&quot;&gt;&lt;&lt;button &quot;&gt;&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto $nextpassage&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
 &lt;/footer&gt;
 </tw-passagedata><tw-passagedata pid="35" name="end" tags="" position="100,600" size="100,100">&lt;main&gt;
 
