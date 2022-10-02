@@ -4,7 +4,7 @@ Future Gondolier
 
 :: StoryData
 {
-	"ifid": "313236DF-3F92-41FD-80D5-D6E2D6FFB6BD",
+	"ifid": "313236DF-3F92-41FD-83D5-D6E2D6FFB6BD",
 	"format": "SugarCube",
 	"format-version": "2.36.1",
 	"start": "landing",
@@ -160,17 +160,17 @@ button{
 }
 
 button:hover{
-	background-color:#cf1b98;
+	background-color:#ea9e25;
 	border: #fff 1px solid;
 	color: #fff;
 }
 
 a {
-  color: #f2647d;
+  color:#ea9e25;;
 }
 
 a:active {
-  background-color: #f2647d;
+  background-color: #ea9e25;;
 }
 
 a:hover {
@@ -187,10 +187,13 @@ a:hover {
 
 /* GENERAL STYLES */
 body{
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+  font-weight: 600;
   font-family: "Space Grotesk";
+  color:#fff;
+  /* color:#000; */
   overflow:scroll;
-  background:#000;
+  background: #1c8f93;
   /* padding: 1.5rem */
   display:flex;
   flex-direction: column
@@ -205,18 +208,24 @@ header{
 
 main{
    padding: 2rem;
-   margin-block-end: 4rem
+   margin-block-end: 10rem
 }
+
+input[type=text]{
+  border: 1px solid #fff
+}
+
+/* FOOTER  */
 
 footer{
    display:flex;
   justify-content: space-between;
-  align-items: flex-end; 
+align-items: end;
   position:fixed;
   bottom: 0;
   padding: 2rem;
   width: 100%;
-  background-color: #000
+background: #1c8f93;
 }
 
 nav{
@@ -235,17 +244,32 @@ align-items: flex-end
 }
 
 .nav-item{
-  margin-block-end: 1.5rem
+  margin-block-end: 0.5rem;
+  width:100%;
+  display:flex
 }
 
-.nav-item:last-child{
-  margin-block-end: 0
+.nav-item.replay, .nav-item.end{
+justify-content: center
+}
+.nav-item.replay, .nav-item.forward{
+justify-content: end
 }
 
+.nav-item.replay, .nav-item.back{
+justify-content: start
+}
 
-.nav-wrapper:last-child{
-display:flex;
-align-items: flex-end
+.nav-item.forward > button, 
+.nav-item.back > button{
+  font-size:2rem
+}
+footer > button:first-child,  {
+  font-size:2rem
+}
+
+.nav-item > button{
+ font-size: 1.3rem
 }
 
 .menu-wrapper{
@@ -453,37 +477,38 @@ setup.checkForRepeats = (array,element) => {
 
 
 :: header {"position":"100,225","size":"100,100"}
-<header>Adventure Functionality /
- The Future Gondolier</header>
+<header>The Future Gondolier</header>
 
 
 :: footer {"position":"100,350","size":"100,100"}
-<footer><div class="nav-wrapper "><div class="nav-item"><<button "Replay">><<goto $passage>><</button>> </div><div class="nav-item"><<button "Back">><<goto $prevpass>><</button>></div></div><div class="nav-wrapper"><div class="nav-item"><<button "I'm lost">><<goto "lost">><</button>></div></div></footer>
+<footer>
+<div class="nav-item back"><<button "<">><<goto $prevpass>><</button>></div>
+<div class="nav-item replay"><<button "Replay">><<goto $passage>><</button>> </div>
+<div class="nav-item end"><<button "Take me to the end">><<set $prevpass to $passage>><<goto "lost">><</button>></div>
+<div class="nav-item forward"><<button ">">><<set $prevpass to $passage>><<goto $nextpassage>><</button>></div>
+</footer>
 
 
 :: lost {"position":"450,50","size":"100,100"}
-<<set $passage to "lost">><<include "header">>
+<<set $passage to "lost">>
 <main>
 Sorry to hear that you're lost! 
 You have two options:
 
-<<button "Begin the adventure again">><<goto "landing">><</button>>
-
-<<button "Take me straight to the end location!">><<goto "end">><</button>>
+<div class="menu-wrapper">
+  <<button "Begin the adventure again">><<goto "landing">><</button>>
+  <<button "Take me straight to the end location!">><<goto "end">><</button>>
+</div>
 </main>
 <<include "footer">>
 
 
 :: landing {"position":"450,50","size":"100,100"}
 <<set $passage to "landing">><<set $nextpassage to "FG-05">>
-<<include "header">>
 <main>
-  menu
-
+landing page
 
  <<button "start">><<set $prevpass to $passage>><<goto "FG-05">><</button>>
-
-
 
 </main>
 <<include "footer">>
@@ -491,142 +516,107 @@ You have two options:
 
 :: FG-05 {"position":"450,200","size":"100,100"}
 <<set $passage to "FG-05">><<set $nextpassage to "FG-06">>
-<<include "header">>
 <main>
-
-/*The sound of water lapping against concrete — louder than you’d expect. And the sound of silence — no
-cars, no people.*/
-
+<div id="mount"></div>
 Hey! You! Get out of the sun!
 
 What’s that?
 
 Isn’t it a scorchingly hot day where you’re from? Well, it is here, so you’d better get out of direct sunlight. Get onto the edges of the pavement, close enough that you’re hugging the buildings beside you.
+
 Tell me when you’ve done that.
 
-/*The audience get to the side of the pavement.*/
-
 Very good. Let me get a little closer to you — hang on, I’m still getting the hang of these oars...
-
-/*The sound of a gondola approaching, closer and closer.*/
 
 Here we are. Now if I just...hop out... I’m new to the whole gondolier thing...only passed my training last week, you see. Nearly failed when I had to pull off a three point turn, but I managed to distract the guy running my test. You’re here for the tour, aren’t you? Excellent. Right. Hello! My name is Kelly, and I’ll be your tour guide around the City of the London today. Now, if you just want to hop into my gondola...what’s that? What did you say?
 
 
- <<button "I don't see any water?">><<set $prevpass to $passage>><<goto "FG-06">><</button>>
-
- <<button "Gondola?">><<set $prevpass to $passage>><<goto "FG-06">><</button>>
-
-
-
-
+<div class="menu-wrapper">
+   <<button "I don't see any water?">><<set $prevpass to $passage>><<goto "FG-06">><</button>>
+   <<button "Gondola?">><<set $prevpass to $passage>><<goto "FG-06">><</button>>
+</div>
 </main>
 <<include "footer2">>
 
 
 :: FG-06 {"position":"450,325","size":"100,100"}
 <<set $passage to "FG-06">><<set $nextpassage to "FG-08">>
-<<include "header">>
 <main>
-
+<div id="mount"></div>
 Ahh. Sorry. My boss said this might happen. You’re on dragon time, aren’t you? Listen, I’m from the year 2039 and the City...well, for me, it looks a tad different to how you might be seeing it. Don’t worry about it too much. In 2039, this area is actually underwater, so you’re in my gondola, but in 2022, it will seem like it’s not flooded at all, and you’ll be on foot. No biggie. Follow my lead, and you’ll be right as rain. Now, are we all ready for the tour? If you’re ready, let me know.
 
  <<button "Let's go, Kelly.">><<set $prevpass to $passage>><<goto "FG-08">><</button>>
- 
- /*The gondola pushes off. The sound of water.*/
-
-
-
-
 </main>
 <<include "footer2">>
 
 
 :: FG-08 {"position":"450,450","size":"100,100"}
 <<set $passage to "FG-08">><<set $nextpassage to "FG-11">>
-<<include "header">>
 <main>
-
+<div id="mount"></div>
 First off — if you look around, you might be able to spot one of the most famous landmarks in the City — St. Paul’s Cathedral. There it is! Doesn’t it look magnificent in the sunlight? Now — surprise pop quiz! Can anyone tell me who it was designed by?
 
- <<button "A) Christopher Wren">><<set $prevpass to $passage>><<goto "FG-09B">><</button>>
- 
-  <<button "B) John Vanbrugh">><<set $prevpass to $passage>><<goto "FG-09A">><</button>>
-  
-   <<button "C) William Arnold">><<set $prevpass to $passage>><<goto "FG-09A">><</button>>
- 
-
-
-
-
-
+ <div class="menu-wrapper">
+   <<button "A) Christopher Wren">><<set $prevpass to $passage>><<goto "FG-09B">><</button>>
+    <<button "B) John Vanbrugh">><<set $prevpass to $passage>><<goto "FG-09A">><</button>>
+     <<button "C) William Arnold">><<set $prevpass to $passage>><<goto "FG-09A">><</button>>
+ </div>
 </main>
 <<include "footer2">>
 
 
 :: FG-09A {"position":"375,575","size":"100,100"}
 <<set $passage to "FG-09A">><<set $nextpassage to "FG-11">>
-<<include "header">>
 <main>
-
+<div id="mount"></div>
 Ooh good guess! Not quite. Try again.
 
- <<button "A) Christopher Wren">><<set $prevpass to $passage>><<goto "FG-09B">><</button>>
+ <div class="menu-wrapper">
+   <<button "A) Christopher Wren">><<set $prevpass to $passage>><<goto "FG-09B">><</button>>
+   
+    <<button "B) John Vanbrugh">><<set $prevpass to $passage>><<goto "FG-09A">><</button>>
+    
+     <<button "C) William Arnold">><<set $prevpass to $passage>><<goto "FG-09A">><</button>>
+ </div>
  
-  <<button "B) John Vanbrugh">><<set $prevpass to $passage>><<goto "FG-09A">><</button>>
-  
-   <<button "C) William Arnold">><<set $prevpass to $passage>><<goto "FG-09A">><</button>>
- 
-
-
-
-
-
 </main>
 <<include "footer2">>
 
 
 :: FG-09B {"position":"525,575","size":"100,100"}
 <<set $passage to "FG-09B">><<set $nextpassage to "FG-11">>
-<<include "header">>
 <main>
-
+<div id="mount"></div>
 Exactly! Aren’t you clever.
  
  <<button "Next">><<set $prevpass to $passage>><<goto "FG-11">><</button>>
-
-
-
 </main>
 <<include "footer2">>
 
 
 :: FG-11 {"position":"450,700","size":"100,100"}
 <<set $passage to "FG-09A">><<set $nextpassage to "FG-13">>
-<<include "header">>
 <main>
-
+<div id="mount"></div>
 So, St Paul’s was built by Sir Christopher Wren in the 17th Century, in the English Baroque style. It was built as part of a major regeneration project in the City after the Great Fire of London. Obviously, that fire was nothing compared to the size of the wildfires they get over in Australia or California, or even France or Spain or Portugal nowadays — but for the time, it was a pretty big deal! Fires aren’t quite as big a thing in the UK at the moment — what do you think the main problem we have is?
  
 
-<<button "A) I'm not sure">><<set $prevpass to $passage>><<goto "FG-12A">><</button>>
+<div class="menu-wrapper">
+  <<button "A) I'm not sure">><<set $prevpass to $passage>><<goto "FG-12A">><</button>>
+   
+    <<button "B) Flash floods">><<set $prevpass to $passage>><<goto "FG-12B">><</button>>
+    
+     <<button "C) Rain">><<set $prevpass to $passage>><<goto "FG-12C">><</button>>
+</div>
  
-  <<button "B) Flash floods">><<set $prevpass to $passage>><<goto "FG-12B">><</button>>
-  
-   <<button "C) Rain">><<set $prevpass to $passage>><<goto "FG-12C">><</button>>
- 
-
-
-
 </main>
 <<include "footer2">>
 
 
 :: FG-12A {"position":"325,825","size":"100,100"}
 <<set $passage to "FG-12A">><<set $nextpassage to "FG-13">>
-<<include "header">>
 <main>
-
+<div id="mount"></div>
 Well, I’ll tell you! Flash floods.
 
 <<timed 3s>><<set $prevpass to $passage>><<goto "FG-13">><</timed>>
@@ -637,9 +627,9 @@ Well, I’ll tell you! Flash floods.
 
 :: FG-12B {"position":"450,825","size":"100,100"}
 <<set $passage to "FG-12B">><<set $nextpassage to "FG-13">>
-<<include "header">>
-<main>
 
+<main>
+<div id="mount"></div>
 Exactly.
 
 <<timed 3s>><<set $prevpass to $passage>><<goto "FG-13">><</timed>>
@@ -650,9 +640,9 @@ Exactly.
 
 :: FG-12C {"position":"575,825","size":"100,100"}
 <<set $passage to "FG-12C">><<set $nextpassage to "FG-13">>
-<<include "header">>
-<main>
 
+<main>
+<div id="mount"></div>
 Yes! Heavy rain which leads to flooding.
 
 <<timed 3s>><<set $prevpass to $passage>><<goto "FG-13">><</timed>>
@@ -663,18 +653,13 @@ Yes! Heavy rain which leads to flooding.
 
 :: FG-13 {"position":"450,950","size":"100,100"}
 <<set $passage to "FG-12B">><<set $nextpassage to "FG-14">>
-<<include "header">>
 <main>
-
+<div id="mount"></div>
 You see, when we have days and days of scaldingly hot weather, which have become really common in the summer, the ground can become particularly hard. What kind of summers are you guys getting in 2022? You had a 40 degree day? Pfft. Try a month of that. And add to that the way our cities are built here — tightly packed roads made out of concrete and stone — and it means that when rain does eventually fall hard and fast, the ground doesn’t let the water absorb, leading to these big floods which come on very very quickly, not leaving much time for people to prepare! Many, many homes are affected by this in London and elsewhere in the UK — almost five million. What we really need are homes that are built to withstand — oh, sorry. I’m getting off-topic. Dad warned me about this. Apparently I’ve got a tendency to meander. Right, let’s row down towards the Thames. We’ll row down St Peter’s Hill, towards Millennium Bridge, and pause at the river’s edge — where the river was in 2022, anyway.
 
 /*MAP NEEDED */
 
 <<button "We are at the river">><<set $prevpass to $passage>><<goto "FG-14">><</button>>
-
-
-
-
 
 </main>
 <<include "footer2">>
@@ -682,27 +667,21 @@ You see, when we have days and days of scaldingly hot weather, which have become
 
 :: FG-14 {"position":"450,1075","size":"100,100"}
 <<set $passage to "FG-14">><<set $nextpassage to "FG-15">>
-<<include "header">>
 <main>
-
+<div id="mount"></div>
 When you reach the Thames, do me a favour and take a deep, deep breath. Take in that smell — that oily fresh, hot dirty smell. The smell of the City. Stand there and imagine for me a river that’s burst its banks, that’s full and boiling and knocking against concrete and glass. Tell me when you’ve done that.
 
 
 <<button "Okay, done">><<set $prevpass to $passage>><<goto "FG-15">><</button>>
-
-
-
-
-
 </main>
 <<include "footer2">>
 
 
 :: FG-15 {"position":"450,1200","size":"100,100"}
 <<set $passage to "FG-15">><<set $nextpassage to "FG-16">>
-<<include "header">>
-<main>
 
+<main>
+<div id="mount"></div>
 Dad started this business when he came over from Singapore in 2034. There was a particularly bad winter, and the Thames Barrier collapsed that year. Look up at Millennium Bridge. That’s all been submerged in 2039. Crazy, huh? The water now goes all the way up to the steps of St Paul’s. So technically...you’re underwater right now. Okay, turn right and let’s row towards Blackfriars Bridge.
 
 <<timed 3s>><<set $prevpass to $passage>><<goto "FG-16">><</timed>>
@@ -713,11 +692,9 @@ Dad started this business when he came over from Singapore in 2034. There was a 
 
 :: FG-16 {"position":"450,1325","size":"100,100"}
 <<set $passage to "FG-16">><<set $nextpassage to "FG-17">>
-<<include "header">>
 <main>
-
 /*MAP NEEDED*/
-
+<div id="mount"></div>
 The City of London actually started implementing these things called Cool Routes — places in the City where they wanted to increase the biodiversity of the area, where there was more greenery planted and pedestrianised zones were protected and created. Right along where you are now became a Cool Route inthe 2020s. The City also looked to create more green roofs and green walls throughout the Square Mile. Definitely a step in the right direction!
 
 Oh shoot. I told you I’m still a bit of a novice. I’ve forgotten to do the safety spiel. Dad’s going to kill me! I’ll just do it quickly now, if that’s okay with you guys.
@@ -733,25 +710,16 @@ Finally, take precautions while in the sun. It is an unseasonably warm October d
 We’re getting close to Blackfriars Bridge, right?
 
 <<button "Yes">><<set $prevpass to $passage>><<goto "FG-17">><</button>>
-
-
-
-
-
 </main>
 <<include "footer2">>
 
 
 :: FG-17 {"position":"450,1450","size":"100,100"}
 <<set $passage to "FG-17">><<set $nextpassage to "FG-18">>
-<<include "header">>
 <main>
-
-
+<div id="mount"></div>
 Okay. Take a right onto Puddle Dock. Remember, make sure to stay to the side of the pavements, or out of the sun, as much as possible. I don’t want any of you getting burned!
-
 /*MAP NEEDED*/
-
 Now let’s head right up to the top of Puddle Dock — back inland. 
 
 Not as many people work or live here in the City anymore...as you might be able to tell. Pretty quiet, isn’t it? After the Coronavirus pandemic of 2020 — have you guys heard of that one? Apparently it was a pretty big deal — people who would usually come into the office in the City ended up working from home a lot more. Remote working, they called it. Slowly, a lot of these huge skyscrapers you can see got turned into different things — some of them got turned into huge greenhouses to tackle food shortages, which was pretty cool. And some of them got turned into social housing — which is great, but they are near flooding areas, and they’re all packed into their skyscrapers tight, like sardines. When the Thames Barrier went, so did a bunch of people, out of London. To be honest, rich people ended up moving further out of the City — more towards the North of England, actually, where they can be higher above the sea level. They left the cities and the poorest amongst them behind, on those new flood plains. 
@@ -759,27 +727,19 @@ Not as many people work or live here in the City anymore...as you might be able 
 Actually, if you turn around and look at the City, do you reckon you could count how many skyscrapers you can see? Let me know when you’ve done that.
 
 <<button "Okay, done.">><<set $prevpass to $passage>><<goto "FG-18">><</button>>
-
-
-
-
 </main>
 <<include "footer2">>
 
 
 :: FG-18 {"position":"450,1575","size":"100,100"}
 <<set $passage to "FG-18">><<set $nextpassage to "FG-19">>
-<<include "header">>
 <main>
-
+<div id="mount"></div>
 How many skyscrapers can you see?
 
 <<textbox "$skyscrapercount" "">>
 
 <<button "Enter">><<set $prevpass to $passage>><<goto "FG-19">><</button>>
-
-
-
 
 </main>
 <<include "footer2">>
@@ -787,16 +747,11 @@ How many skyscrapers can you see?
 
 :: FG-19 {"position":"450,1700","size":"100,100"}
 <<set $passage to "FG-19">><<set $nextpassage to "FG-20">>
-<<include "header">>
 <main>
-
+<div id="mount"></div>
 What do you reckon unused buildings could be used for? Libraries? Social housing? Greenhouses? Do you have any ideas? Maybe talk about it with the people you’re with.
 
-
 <<button "Shall we continue?">><<set $prevpass to $passage>><<goto "FG-20">><</button>>
-
-
-
 
 </main>
 <<include "footer2">>
@@ -804,9 +759,8 @@ What do you reckon unused buildings could be used for? Libraries? Social housing
 
 :: FG-20 {"position":"450,1825","size":"100,100"}
 <<set $passage to "FG-20">><<set $nextpassage to "FG-21">>
-<<include "header">>
 <main>
-
+<div id="mount"></div>
 Hey, let’s head up St Andrew’s Hill. You’ll be coming out from underwater that way. Keep to the side of the pavement, remember.
 
 /*MAP NEEDED*/
@@ -817,20 +771,14 @@ Ah, I think you should be coming out from the water now. Come on, let’s dock t
 
 
 <<button "Okay">><<set $prevpass to $passage>><<goto "FG-21">><</button>>
-
-
-
-
-
 </main>
 <<include "footer2">>
 
 
 :: FG-21 {"position":"450,1950","size":"100,100"}
 <<set $passage to "FG-21">><<set $nextpassage to "FG-22">>
-<<include "header">>
 <main>
-
+<div id="mount"></div>
 We’ll walk now up Ludgate Square, onto Ludgate Hill.
 
 Oh, hey. Do me a favour. I’ve got a bet going with my Dad — he reckons there are upwards of 10 trees in the City — I don’t think there are nearly as many anymore. The thing with trees in cities is that, apart from looking beautiful and being great for the environment as a whole, they also help reduce the temperature of the streets they’re on! Really useful when you’re working with 40 degree summers. Will you keep a count of any trees we see on the rest of our route? I want to compare the difference between 2022 and 2039!
@@ -840,29 +788,22 @@ Now, when we get to Ludgate Circus, I want you to find St Bride Street.
 /*MAP NEEDED*/
 
 <<button "Found St Bride Street">><<set $prevpass to $passage>><<goto "FG-22">><</button>>
-
-
-
-
 </main>
 <<include "footer2">>
 
 
 :: FG-22 {"position":"450,2075","size":"100,100"}
 <<set $passage to "FG-22">><<set $nextpassage to "FG-23">>
-<<include "header">>
 <main>
-
+<div id="mount"></div>
 I know I can make everything sound a bit doom and gloom in 2039...I don’t mean to, honestly. Dad said I can scare people off a bit, and that’s no good for a tour guide. You should see him do his thing, he’s brilliant at it. There are definitely good things that have happened too, and good things that you can do in 2022 to help yourselves by the time you get to 2039.
 
 Are any of you guys vegan?
 
-<<button "Yes">><<set $prevpass to $passage>><<goto "FG-23">><</button>>
-
-<<button "No">><<set $prevpass to $passage>><<goto "FG-23">><</button>>
-
-
-
+<div class="menu-wrapper">
+  <<button "Yes">><<set $prevpass to $passage>><<goto "FG-23">><</button>>
+  <<button "No">><<set $prevpass to $passage>><<goto "FG-23">><</button>>
+</div>
 
 </main>
 <<include "footer2">>
@@ -870,9 +811,8 @@ Are any of you guys vegan?
 
 :: FG-23 {"position":"450,2200","size":"100,100"}
 <<set $passage to "FG-23">><<set $nextpassage to "FG-24">>
-<<include "header">>
 <main>
-
+<div id="mount"></div>
 You know, most people I know nowadays are vegan? I know it sounds silly, and how much good can that really do, but honestly...quite a lot! If you replace meat with  vegetables — so, for example, replacing beef with peas, then you cut down on 90% of your personal carbon emissions. Isn’t that great? Now, I know peas aren’t necessarily as exciting as beef, but you don’t have to eat peas...fake meat is really good now too, you know. You can get steaks which are like, almost exactly the same texture, minus the blood and killing cows and stuff.
 
 And you know what’s great, is that a bunch of supermarkets in the last twenty years have pledged to embrace plant-based produce over meat. That makes a big, big difference. And, good news to any vegans in our gondola today — I can confirm that by 2039, they’ve finally cracked the secret to making good vegan cheese. So no need to miss out.
@@ -883,34 +823,24 @@ How are the resolutions going? Make sure to discuss it alongside the people you�
 
 <<button "Found Printer Street">><<set $prevpass to $passage>><<goto "FG-24">><</button>>
 
-
-
-
-
-
 </main>
 <<include "footer2">>
 
 
 :: FG-24 {"position":"450,2325","size":"100,100"}
 <<set $passage to "FG-24">>
-<<include "header">>
 <main>
-
+<div id="mount"></div>
 Follow East Harding Street onto Pemberton Row, and we should be making it to Dr Johnson’s House — and the end of our tour!
 
 Now, let me ask you: what was the City famous for when you were in 2022?
 
 
-<<button "A) Banks and financial offices ">><<set $prevpass to $passage>><<goto "FG-25A">><</button>>
-
-<<button "B) Its rich history ">><<set $prevpass to $passage>><<goto "FG-25B">><</button>>
-
-
-
-
-
-
+<div class="menu-wrapper">
+  <<button "A) Banks and financial offices ">><<set $prevpass to $passage>><<goto "FG-25A">><</button>>
+  
+  <<button "B) Its rich history ">><<set $prevpass to $passage>><<goto "FG-25B">><</button>>
+</div>
 
 </main>
 <<include "footer">>
@@ -918,31 +848,23 @@ Now, let me ask you: what was the City famous for when you were in 2022?
 
 :: FG-25A {"position":"375,2450","size":"100,100"}
 <<set $passage to "FG-25A">><<set $nextpassage to "FG-26">>
-<<include "header">>
 <main>
-
+<div id="mount"></div>
 Oh right, sure. That makes sense. I mean, those places, those companies that exist in the City...some of them can be pretty big contributors to carbon emissions, right? I wonder if there’s anything more the City can do to tackle that...
 
 
 <<timed 3s>><<set $prevpass to $passage>><<goto "FG-26">><</timed>>
-
-
-
 </main>
 <<include "footer2">>
 
 
 :: FG-25B {"position":"525,2450","size":"100,100"}
 <<set $passage to "FG-25B">><<set $nextpassage to "FG-26">>
-<<include "header">>
 <main>
-
+<div id="mount"></div>
 Totally. There’s so much here, in every nook and cranny. It’s bursting with history, if you know where to look. I guess I’m wondering...how can we best preserve that history going forward? If it’s all still underwater by the time you get to my time...what will you be losing?
 
-
 <<timed 3s>><<set $prevpass to $passage>><<goto "FG-26">><</timed>>
-
-
 
 </main>
 <<include "footer">>
@@ -950,20 +872,13 @@ Totally. There’s so much here, in every nook and cranny. It’s bursting with 
 
 :: FG-26 {"position":"450,2575","size":"100,100"}
 <<set $passage to "FG-26">><<set $nextpassage to "FG-27">>
-<<include "header">>
 <main>
-
+<div id="mount"></div>
 Okay. I think we’re nearly at our finish.
 
 /*MAP NEEDED */
 
 <<button "We are here">><<set $prevpass to $passage>><<goto "FG-27">><</button>>
-
-
-
-
-
-
 
 </main>
 <<include "footer2">>
@@ -971,9 +886,8 @@ Okay. I think we’re nearly at our finish.
 
 :: FG-27 {"position":"450,2700","size":"100,100"}
 <<set $passage to "FG-26">>
-<<include "header">>
 <main>
-
+<div id="mount"></div>
 Here we are! This is Dr Johnson’s House — a museum and former home of the writer Samuel Johnson.
 
 That concludes our tour for today — thank you so much for joining me, Kelly, on our gondola tour of the City. I do hope seeing the City in 2039 was a reflective and interesting experience. 
@@ -989,29 +903,17 @@ How many trees did you see?
       <<set $prevpass to $passage>><<goto "FG-28B">>
     <</if>>
 <</button>>
-
-
-
-
-
-
-
 </main>
 <<include "footer">>
 
 
 :: FG-28A {"position":"375,2825","size":"100,100"}
 <<set $passage to "FG-28A">><<set $nextpassage to "FG-29">>
-<<include "header">>
 <main>
-
+<div id="mount"></div>
 I told Dad! I’m going to rub that in his face later. Hm, that’s pretty rubbish, though. The City really should plant more trees, don’t you think? Maybe that can be one of your resolutions. Speaking of, what were your resolutions? Maybe when I’m gone, you can tell everyone in your group?
 
 <<timed 3s>><<set $prevpass to $passage>><<goto "FG-29">><</timed>>
-
-
-
-
 
 </main>
 <<include "footer2">>
@@ -1019,27 +921,20 @@ I told Dad! I’m going to rub that in his face later. Hm, that’s pretty rubbi
 
 :: FG-28B {"position":"525,2825","size":"100,100"}
 <<set $passage to "FG-28B">><<set $nextpassage to "FG-29">>
-<<include "header">>
 <main>
-
+<div id="mount"></div>
 Wow, seriously? Looks like Dad was right. I reckon the City can do better than that, though, don’t you? It might be something worth writing to them about. Maybe that can be one of your resolutions. Speaking of, what were your resolutions? Maybe when I’m gone, you can tell everyone in your group?
 
 
 <<timed 3s>><<set $prevpass to $passage>><<goto "FG-29">><</timed>>
-
-
-
-
-
 </main>
 <<include "footer">>
 
 
 :: FG-29 {"position":"450,2950","size":"100,100"}
 <<set $passage to "FG-29">><<set $nextpassage to "end">>
-<<include "header">>
 <main>
-
+<div id="mount"></div>
 I’ve got to get back to the gondola now — don’t want anyone nicking it. Thank you very much for your time. Please rate me on Yelp — yes, Yelp still exists — I’m Kelly from Waterworks Tours. Make sure you comment and say I was the best tour guide ever — 
   Dad will be super happy with me. Goodbye!
 
@@ -1062,9 +957,6 @@ I’ve got to get back to the gondola now — don’t want anyone nicking it. Th
 <main>
 
 End location
-
-
-  
 </main>
 <<include "footer">>
 
