@@ -521,15 +521,17 @@ $(document.head).find('#style-ui-bar').remove();
 
 // MAKE MAP FUNCTION
 
-setup.generateDirectionsMap = function (latorg, longorg, latdest, longdest){
+setup.generateDirectionsMap = function (origin, dest){
 const iFrame = document.createElement("iframe")
 iFrame.classList.add("map")
 iFrame.setAttribute("loading", "lazy")
 iFrame.setAttribute("referrerpolicy", "no-referrer-when-downgrade")
 // iFrame.setAttribute("allowfullscreen")
-iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBDRwRTMpSybNcmgkYVX1yZ0YmBbNhs9qU&center=${latorg},${longorg}&zoom=17&origin=${latorg},${longorg}&destination=${latdest},${longdest}&mode=walking`)
+iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBDRwRTMpSybNcmgkYVX1yZ0YmBbNhs9qU&center=${origin[0]},${origin[1]}&zoom=17&origin=${origin[0]},${origin[1]}&destination=${dest[0]},${dest[1]}&mode=walking`)
 const mount = document.getElementById("mapMount")
+console.log(iFrame)
 return iFrame
+// this.mapMount.appendChild(iFrame)
 }
 
 //Get random 5 letter word
@@ -549,7 +551,43 @@ setup.checkForRepeats = (array,element) => {
  const arrayCopy = [...array];
  const duplicates = arrayCopy.filter((item, index) => index !== arrayCopy.indexOf(item));
  return duplicates.contains(element)
-}</script><tw-passagedata pid="1" name="StoryInit" tags="" position="100,100" size="100,100">&lt;&lt;cacheaudio &quot;badjoke&quot; &quot;https://youhavefoundconey.net/CG/what/assets/audio/badjoke.mp3&quot;&gt;&gt;
+}</script><tw-passagedata pid="1" name="StoryInit" tags="" position="100,100" size="100,100">&lt;&lt;cacheaudio &quot;FG_05.1&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_05.1.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FG_05.2&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_05.2.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FG_06&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_06.mp3&quot;&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;FG_08&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_08.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FG_09A&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_09A.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FG_09B&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_09B.mp3&quot;&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;FG_11&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_11.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FG_12A&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_12A.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FG_12B&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_12B.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FG_12C&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_12C.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FG_13&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_13.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FG_14&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_14.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FG_15&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_15.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FG_16&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_16.mp3&quot;&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;FG_17&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_17.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FG_18&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_19.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FG_19&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_19.mp3&quot;&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;FG_20&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_20.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FG_21&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_21.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FG_22&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_22.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FG_23&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_23.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FG_24&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_24.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FG_25A&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_25A.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FG_25B&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_25B.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FG_26&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_26.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FG_27&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_27.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FG_28A&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_28A.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FG_28B&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_28B.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FG_29&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_29.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FG_30&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/GB_30.mp3&quot;&gt;&gt;
+
+
+
 &lt;&lt;waitforaudio&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="header" tags="" position="100,225" size="100,100">&lt;header&gt;The Future Gondolier&lt;/header&gt;</tw-passagedata><tw-passagedata pid="3" name="footer" tags="" position="100,350" size="100,100">&lt;footer&gt;
 &lt;div class=&quot;nav-item back&quot;&gt;&lt;&lt;button &quot;&lt;&quot;&gt;&gt;&lt;&lt;goto $prevpass&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
 &lt;div class=&quot;nav-item replay&quot;&gt;&lt;&lt;button &quot;Replay&quot;&gt;&gt;&lt;&lt;goto $passage&gt;&gt;&lt;&lt;/button&gt;&gt; &lt;/div&gt;
@@ -557,7 +595,6 @@ setup.checkForRepeats = (array,element) => {
 &lt;div class=&quot;nav-item forward&quot;&gt;&lt;&lt;button &quot;&gt;&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto $nextpassage&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
 &lt;/footer&gt;</tw-passagedata><tw-passagedata pid="4" name="lost" tags="" position="450,50" size="100,100">&lt;&lt;set $passage to &quot;lost&quot;&gt;&gt;
 &lt;main&gt;
-Sorry to hear that you&#39;re lost! 
 You have two options:
 
 &lt;div class=&quot;menu-wrapper&quot;&gt;
@@ -567,15 +604,12 @@ You have two options:
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="landing" tags="" position="450,50" size="100,100">&lt;&lt;set $passage to &quot;landing&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-05&quot;&gt;&gt;
 &lt;main&gt;
-landing page
-
  &lt;&lt;button &quot;start&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-05&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
-&lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="FG-05" tags="" position="450,200" size="100,100">&lt;&lt;set $passage to &quot;FG-05&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-06&quot;&gt;&gt;
+&lt;/main&gt;</tw-passagedata><tw-passagedata pid="6" name="FG-05" tags="" position="450,200" size="100,100">&lt;&lt;set $passage to &quot;FG-05&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-06&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_05.1&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-Hey! You! Get out of the sun!
+&lt;&lt;timed 0.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;Hey! You! Get out of the sun!
 
 What’s that?
 
@@ -583,6 +617,8 @@ Isn’t it a scorchingly hot day where you’re from? Well, it is here, so you�
 
 Tell me when you’ve done that.
 
+&lt;&lt;button &quot;I&#39;m ready&quot;&gt;&gt;
+&lt;&lt;timed 0.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_05.2&quot; play&gt;&gt;
 Very good. Let me get a little closer to you — hang on, I’m still getting the hang of these oars...
 
 Here we are. Now if I just...hop out... I’m new to the whole gondolier thing...only passed my training last week, you see. Nearly failed when I had to pull off a three point turn, but I managed to distract the guy running my test. You’re here for the tour, aren’t you? Excellent. Right. Hello! My name is Kelly, and I’ll be your tour guide around the City of the London today. Now, if you just want to hop into my gondola...what’s that? What did you say?
@@ -592,15 +628,21 @@ Here we are. Now if I just...hop out... I’m new to the whole gondolier thing..
    &lt;&lt;button &quot;I don&#39;t see any water?&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-06&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
    &lt;&lt;button &quot;Gondola?&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-06&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/div&gt;
+&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="FG-06" tags="" position="450,325" size="100,100">&lt;&lt;set $passage to &quot;FG-06&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-08&quot;&gt;&gt;
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="FG-06" tags="" position="450,325" size="100,100">&lt;&lt;set $passage to &quot;FG-06&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-08&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_06&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 Ahh. Sorry. My boss said this might happen. You’re on dragon time, aren’t you? Listen, I’m from the year 2039 and the City...well, for me, it looks a tad different to how you might be seeing it. Don’t worry about it too much. In 2039, this area is actually underwater, so you’re in my gondola, but in 2022, it will seem like it’s not flooded at all, and you’ll be on foot. No biggie. Follow my lead, and you’ll be right as rain. Now, are we all ready for the tour? If you’re ready, let me know.
 
  &lt;&lt;button &quot;Let&#39;s go, Kelly.&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-08&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="FG-08" tags="" position="450,450" size="100,100">&lt;&lt;set $passage to &quot;FG-08&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-11&quot;&gt;&gt;
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="FG-08" tags="" position="450,450" size="100,100">&lt;&lt;set $passage to &quot;FG-08&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-11&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_08&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 First off — if you look around, you might be able to spot one of the most famous landmarks in the City — St. Paul’s Cathedral. There it is! Doesn’t it look magnificent in the sunlight? Now — surprise pop quiz! Can anyone tell me who it was designed by?
@@ -611,7 +653,7 @@ First off — if you look around, you might be able to spot one of the most famo
      &lt;&lt;button &quot;C) William Arnold&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-09A&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
  &lt;/div&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="FG-09A" tags="" position="375,575" size="100,100">&lt;&lt;set $passage to &quot;FG-09A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-11&quot;&gt;&gt;
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="FG-09A" tags="" position="375,575" size="100,100">&lt;&lt;set $passage to &quot;FG-09A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-11&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_09A&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 Ooh good guess! Not quite. Try again.
@@ -625,14 +667,14 @@ Ooh good guess! Not quite. Try again.
  &lt;/div&gt;
  
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="FG-09B" tags="" position="525,575" size="100,100">&lt;&lt;set $passage to &quot;FG-09B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-11&quot;&gt;&gt;
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="FG-09B" tags="" position="525,575" size="100,100">&lt;&lt;set $passage to &quot;FG-09B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-11&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_09B&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 Exactly! Aren’t you clever.
  
  &lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-11&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="FG-11" tags="" position="450,700" size="100,100">&lt;&lt;set $passage to &quot;FG-09A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-13&quot;&gt;&gt;
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="FG-11" tags="" position="450,700" size="100,100">&lt;&lt;set $passage to &quot;FG-09A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-13&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_11&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 So, St Paul’s was built by Sir Christopher Wren in the 17th Century, in the English Baroque style. It was built as part of a major regeneration project in the City after the Great Fire of London. Obviously, that fire was nothing compared to the size of the wildfires they get over in Australia or California, or even France or Spain or Portugal nowadays — but for the time, it was a pretty big deal! Fires aren’t quite as big a thing in the UK at the moment — what do you think the main problem we have is?
@@ -647,7 +689,7 @@ So, St Paul’s was built by Sir Christopher Wren in the 17th Century, in the En
 &lt;/div&gt;
  
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="FG-12A" tags="" position="325,825" size="100,100">&lt;&lt;set $passage to &quot;FG-12A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-13&quot;&gt;&gt;
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="FG-12A" tags="" position="325,825" size="100,100">&lt;&lt;set $passage to &quot;FG-12A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-13&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_12A&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 Well, I’ll tell you! Flash floods.
@@ -655,7 +697,7 @@ Well, I’ll tell you! Flash floods.
 &lt;&lt;timed 3s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-13&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="FG-12B" tags="" position="450,825" size="100,100">&lt;&lt;set $passage to &quot;FG-12B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-13&quot;&gt;&gt;
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="FG-12B" tags="" position="450,825" size="100,100">&lt;&lt;set $passage to &quot;FG-12B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-13&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_12B&quot; play&gt;&gt;
 
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
@@ -664,26 +706,26 @@ Exactly.
 &lt;&lt;timed 3s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-13&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="FG-12C" tags="" position="575,825" size="100,100">&lt;&lt;set $passage to &quot;FG-12C&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-13&quot;&gt;&gt;
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="FG-12C" tags="" position="575,825" size="100,100">&lt;&lt;set $passage to &quot;FG-12C&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-13&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_12C&quot; play&gt;&gt;
 
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 Yes! Heavy rain which leads to flooding.
 
-&lt;&lt;timed 3s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-13&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 5s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-13&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="FG-13" tags="" position="450,950" size="100,100">&lt;&lt;set $passage to &quot;FG-12B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-14&quot;&gt;&gt;
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="FG-13" tags="" position="450,950" size="100,100">&lt;&lt;set $passage to &quot;FG-12B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-14&quot;&gt;&gt;&lt;&lt;set $map1 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_13&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 You see, when we have days and days of scaldingly hot weather, which have become really common in the summer, the ground can become particularly hard. What kind of summers are you guys getting in 2022? You had a 40 degree day? Pfft. Try a month of that. And add to that the way our cities are built here — tightly packed roads made out of concrete and stone — and it means that when rain does eventually fall hard and fast, the ground doesn’t let the water absorb, leading to these big floods which come on very very quickly, not leaving much time for people to prepare! Many, many homes are affected by this in London and elsewhere in the UK — almost five million. What we really need are homes that are built to withstand — oh, sorry. I’m getting off-topic. Dad warned me about this. Apparently I’ve got a tendency to meander. Right, let’s row down towards the Thames. We’ll row down St Peter’s Hill, towards Millennium Bridge, and pause at the river’s edge — where the river was in 2022, anyway.
 
-/*MAP NEEDED */
+$map1
 
 &lt;&lt;button &quot;We are at the river&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-14&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="FG-14" tags="" position="450,1075" size="100,100">&lt;&lt;set $passage to &quot;FG-14&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-15&quot;&gt;&gt;
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="FG-14" tags="" position="450,1075" size="100,100">&lt;&lt;set $passage to &quot;FG-14&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-15&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_14&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 When you reach the Thames, do me a favour and take a deep, deep breath. Take in that smell — that oily fresh, hot dirty smell. The smell of the City. Stand there and imagine for me a river that’s burst its banks, that’s full and boiling and knocking against concrete and glass. Tell me when you’ve done that.
@@ -691,18 +733,18 @@ When you reach the Thames, do me a favour and take a deep, deep breath. Take in 
 
 &lt;&lt;button &quot;Okay, done&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-15&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="FG-15" tags="" position="450,1200" size="100,100">&lt;&lt;set $passage to &quot;FG-15&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-16&quot;&gt;&gt;
-
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="FG-15" tags="" position="450,1200" size="100,100">&lt;&lt;set $passage to &quot;FG-15&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-16&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_15&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 Dad started this business when he came over from Singapore in 2034. There was a particularly bad winter, and the Thames Barrier collapsed that year. Look up at Millennium Bridge. That’s all been submerged in 2039. Crazy, huh? The water now goes all the way up to the steps of St Paul’s. So technically...you’re underwater right now. Okay, turn right and let’s row towards Blackfriars Bridge.
 
-&lt;&lt;timed 3s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-16&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 10s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-16&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="FG-16" tags="" position="450,1325" size="100,100">&lt;&lt;set $passage to &quot;FG-16&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-17&quot;&gt;&gt;
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="FG-16" tags="" position="450,1325" size="100,100">&lt;&lt;set $passage to &quot;FG-16&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-17&quot;&gt;&gt;&lt;&lt;set $map2 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_16&quot; play&gt;&gt;
 &lt;main&gt;
-/*MAP NEEDED*/
+$map2
+
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 The City of London actually started implementing these things called Cool Routes — places in the City where they wanted to increase the biodiversity of the area, where there was more greenery planted and pedestrianised zones were protected and created. Right along where you are now became a Cool Route inthe 2020s. The City also looked to create more green roofs and green walls throughout the Square Mile. Definitely a step in the right direction!
 
@@ -720,11 +762,14 @@ We’re getting close to Blackfriars Bridge, right?
 
 &lt;&lt;button &quot;Yes&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-17&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="FG-17" tags="" position="450,1450" size="100,100">&lt;&lt;set $passage to &quot;FG-17&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-18&quot;&gt;&gt;
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="FG-17" tags="" position="450,1450" size="100,100">&lt;&lt;set $passage to &quot;FG-17&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-18&quot;&gt;&gt;&lt;&lt;set $map3 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_17&quot; play&gt;&gt;
+/* TODO ISSUE WITH AUDIO HERE */
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 Okay. Take a right onto Puddle Dock. Remember, make sure to stay to the side of the pavements, or out of the sun, as much as possible. I don’t want any of you getting burned!
-/*MAP NEEDED*/
+
+$map3
+
 Now let’s head right up to the top of Puddle Dock — back inland. 
 
 Not as many people work or live here in the City anymore...as you might be able to tell. Pretty quiet, isn’t it? After the Coronavirus pandemic of 2020 — have you guys heard of that one? Apparently it was a pretty big deal — people who would usually come into the office in the City ended up working from home a lot more. Remote working, they called it. Slowly, a lot of these huge skyscrapers you can see got turned into different things — some of them got turned into huge greenhouses to tackle food shortages, which was pretty cool. And some of them got turned into social housing — which is great, but they are near flooding areas, and they’re all packed into their skyscrapers tight, like sardines. When the Thames Barrier went, so did a bunch of people, out of London. To be honest, rich people ended up moving further out of the City — more towards the North of England, actually, where they can be higher above the sea level. They left the cities and the poorest amongst them behind, on those new flood plains. 
@@ -733,7 +778,8 @@ Actually, if you turn around and look at the City, do you reckon you could count
 
 &lt;&lt;button &quot;Okay, done.&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-18&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="FG-18" tags="" position="450,1575" size="100,100">&lt;&lt;set $passage to &quot;FG-18&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-19&quot;&gt;&gt;
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="FG-18" tags="" position="450,1575" size="100,100">&lt;&lt;set $passage to &quot;FG-18&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-19&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_18&quot; play&gt;&gt;
+/* TODO ISSUE WITH AUDIO HERE */
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 How many skyscrapers can you see?
@@ -743,7 +789,8 @@ How many skyscrapers can you see?
 &lt;&lt;button &quot;Enter&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-19&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="FG-19" tags="" position="450,1700" size="100,100">&lt;&lt;set $passage to &quot;FG-19&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-20&quot;&gt;&gt;
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="FG-19" tags="" position="450,1700" size="100,100">&lt;&lt;set $passage to &quot;FG-19&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-20&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_19&quot; play&gt;&gt;
+/* TODO ISSUE WITH AUDIO HERE */
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 What do you reckon unused buildings could be used for? Libraries? Social housing? Greenhouses? Do you have any ideas? Maybe talk about it with the people you’re with.
@@ -751,12 +798,12 @@ What do you reckon unused buildings could be used for? Libraries? Social housing
 &lt;&lt;button &quot;Shall we continue?&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-20&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="FG-20" tags="" position="450,1825" size="100,100">&lt;&lt;set $passage to &quot;FG-20&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-21&quot;&gt;&gt;
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="FG-20" tags="" position="450,1825" size="100,100">&lt;&lt;set $passage to &quot;FG-20&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-21&quot;&gt;&gt;&lt;&lt;set $map4 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_20&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 Hey, let’s head up St Andrew’s Hill. You’ll be coming out from underwater that way. Keep to the side of the pavement, remember.
 
-/*MAP NEEDED*/
+$map4
 
 In 2022, there are a lot of cars in the City, right? Not today, but most days. A bunch of European cities actually ended up going car-free in their city centres in the late 2020s, but London never ended up getting to that stage...The thing about going car-free in what are usually the busiest places in the city is that it helps you notice things that you might not normally notice. People slow down a little, take their time, explore areas that usually get blocked off. The city ends up feeling bigger, better, more beautiful. And you really feel like you can breathe more, because air pollution goes down. I wonder if there’s something you guys could do about that. Emailing an MP? Going on climate protests? Cycling instead of using cars? I don’t mean to put the onus totally on you guys. If we really want to change the world for the better and avoid disaster, it has to be a mix of institutional change and individual change. Banning private planes might be a good start. Taxing big businesses properly. Hmm. What else? Can you think of any other ideas? Maybe three things you can do personally, and three things our governments can do? Give it a ponder for the rest of the tour.
 
@@ -765,7 +812,7 @@ Ah, I think you should be coming out from the water now. Come on, let’s dock t
 
 &lt;&lt;button &quot;Okay&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-21&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="FG-21" tags="" position="450,1950" size="100,100">&lt;&lt;set $passage to &quot;FG-21&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-22&quot;&gt;&gt;
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="FG-21" tags="" position="450,1950" size="100,100">&lt;&lt;set $passage to &quot;FG-21&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-22&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_21&quot; play&gt;&gt;&lt;&lt;set $map5 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 We’ll walk now up Ludgate Square, onto Ludgate Hill.
@@ -774,11 +821,11 @@ Oh, hey. Do me a favour. I’ve got a bet going with my Dad — he reckons there
 
 Now, when we get to Ludgate Circus, I want you to find St Bride Street.
 
-/*MAP NEEDED*/
+$map5
 
 &lt;&lt;button &quot;Found St Bride Street&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-22&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="FG-22" tags="" position="450,2075" size="100,100">&lt;&lt;set $passage to &quot;FG-22&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-23&quot;&gt;&gt;
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="FG-22" tags="" position="450,2075" size="100,100">&lt;&lt;set $passage to &quot;FG-22&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-23&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_22&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 I know I can make everything sound a bit doom and gloom in 2039...I don’t mean to, honestly. Dad said I can scare people off a bit, and that’s no good for a tour guide. You should see him do his thing, he’s brilliant at it. There are definitely good things that have happened too, and good things that you can do in 2022 to help yourselves by the time you get to 2039.
@@ -791,7 +838,7 @@ Are any of you guys vegan?
 &lt;/div&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="FG-23" tags="" position="450,2200" size="100,100">&lt;&lt;set $passage to &quot;FG-23&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-24&quot;&gt;&gt;
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="FG-23" tags="" position="450,2200" size="100,100">&lt;&lt;set $passage to &quot;FG-23&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-24&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_23&quot; play&gt;&gt;&lt;&lt;set $map6 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 You know, most people I know nowadays are vegan? I know it sounds silly, and how much good can that really do, but honestly...quite a lot! If you replace meat with  vegetables — so, for example, replacing beef with peas, then you cut down on 90% of your personal carbon emissions. Isn’t that great? Now, I know peas aren’t necessarily as exciting as beef, but you don’t have to eat peas...fake meat is really good now too, you know. You can get steaks which are like, almost exactly the same texture, minus the blood and killing cows and stuff.
@@ -802,11 +849,14 @@ Head up towards Little New Street, will you? Then you should find Printer Street
 
 How are the resolutions going? Make sure to discuss it alongside the people you’re with.
 
+$map6 
+
 &lt;&lt;button &quot;Found Printer Street&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-24&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="FG-24" tags="" position="450,2325" size="100,100">&lt;&lt;set $passage to &quot;FG-24&quot;&gt;&gt;
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="FG-24" tags="" position="450,2325" size="100,100">&lt;&lt;set $passage to &quot;FG-24&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_24&quot; play&gt;&gt;
 &lt;main&gt;
+
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 Follow East Harding Street onto Pemberton Row, and we should be making it to Dr Johnson’s House — and the end of our tour!
 
@@ -820,7 +870,7 @@ Now, let me ask you: what was the City famous for when you were in 2022?
 &lt;/div&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="FG-25A" tags="" position="375,2450" size="100,100">&lt;&lt;set $passage to &quot;FG-25A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-26&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="FG-25A" tags="" position="375,2450" size="100,100">&lt;&lt;set $passage to &quot;FG-25A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-26&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_25A&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 Oh right, sure. That makes sense. I mean, those places, those companies that exist in the City...some of them can be pretty big contributors to carbon emissions, right? I wonder if there’s anything more the City can do to tackle that...
@@ -828,7 +878,7 @@ Oh right, sure. That makes sense. I mean, those places, those companies that exi
 
 &lt;&lt;timed 3s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-26&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="FG-25B" tags="" position="525,2450" size="100,100">&lt;&lt;set $passage to &quot;FG-25B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-26&quot;&gt;&gt;
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="FG-25B" tags="" position="525,2450" size="100,100">&lt;&lt;set $passage to &quot;FG-25B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-26&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_25B&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 Totally. There’s so much here, in every nook and cranny. It’s bursting with history, if you know where to look. I guess I’m wondering...how can we best preserve that history going forward? If it’s all still underwater by the time you get to my time...what will you be losing?
@@ -836,17 +886,17 @@ Totally. There’s so much here, in every nook and cranny. It’s bursting with 
 &lt;&lt;timed 3s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-26&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="FG-26" tags="" position="450,2575" size="100,100">&lt;&lt;set $passage to &quot;FG-26&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-27&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="FG-26" tags="" position="450,2575" size="100,100">&lt;&lt;set $passage to &quot;FG-26&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-27&quot;&gt;&gt;&lt;&lt;set $map7 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_26&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 Okay. I think we’re nearly at our finish.
 
-/*MAP NEEDED */
+$map7
 
 &lt;&lt;button &quot;We are here&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-27&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="FG-27" tags="" position="450,2700" size="100,100">&lt;&lt;set $passage to &quot;FG-26&quot;&gt;&gt;
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="FG-27" tags="" position="450,2700" size="100,100">&lt;&lt;set $passage to &quot;FG-26&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_27&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 Here we are! This is Dr Johnson’s House — a museum and former home of the writer Samuel Johnson.
@@ -865,7 +915,7 @@ How many trees did you see?
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/button&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="FG-28A" tags="" position="375,2825" size="100,100">&lt;&lt;set $passage to &quot;FG-28A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-29&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="FG-28A" tags="" position="375,2825" size="100,100">&lt;&lt;set $passage to &quot;FG-28A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-29&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_28A&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 I told Dad! I’m going to rub that in his face later. Hm, that’s pretty rubbish, though. The City really should plant more trees, don’t you think? Maybe that can be one of your resolutions. Speaking of, what were your resolutions? Maybe when I’m gone, you can tell everyone in your group?
@@ -873,7 +923,7 @@ I told Dad! I’m going to rub that in his face later. Hm, that’s pretty rubbi
 &lt;&lt;timed 3s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-29&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="FG-28B" tags="" position="525,2825" size="100,100">&lt;&lt;set $passage to &quot;FG-28B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-29&quot;&gt;&gt;
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="FG-28B" tags="" position="525,2825" size="100,100">&lt;&lt;set $passage to &quot;FG-28B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-29&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_28B&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 Wow, seriously? Looks like Dad was right. I reckon the City can do better than that, though, don’t you? It might be something worth writing to them about. Maybe that can be one of your resolutions. Speaking of, what were your resolutions? Maybe when I’m gone, you can tell everyone in your group?
@@ -881,7 +931,7 @@ Wow, seriously? Looks like Dad was right. I reckon the City can do better than t
 
 &lt;&lt;timed 3s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-29&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="FG-29" tags="" position="450,2950" size="100,100">&lt;&lt;set $passage to &quot;FG-29&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;end&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="FG-29" tags="" position="450,2950" size="100,100">&lt;&lt;set $passage to &quot;FG-29&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;end&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_29&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 I’ve got to get back to the gondola now — don’t want anyone nicking it. Thank you very much for your time. Please rate me on Yelp — yes, Yelp still exists — I’m Kelly from Waterworks Tours. Make sure you comment and say I was the best tour guide ever — 
@@ -895,9 +945,11 @@ I’ve got to get back to the gondola now — don’t want anyone nicking it. Th
 &lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Replay&quot;&gt;&gt;&lt;&lt;goto $passage&gt;&gt;&lt;&lt;/button&gt;&gt; &lt;/div&gt;
 &lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Take me to the end&quot;&gt;&gt;&lt;&lt;goto &quot;lost&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
 &lt;div class=&quot;nav-item forward&quot;&gt;&lt;&lt;button &quot;&gt;&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto $nextpassage&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="35" name="end" tags="" position="100,600" size="100,100">&lt;main&gt;
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="35" name="end" tags="" position="100,600" size="100,100">&lt;main&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;set $endMap = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])&gt;&gt;
 
 End location
+
+$endMap
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
