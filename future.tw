@@ -446,7 +446,7 @@ iFrame.classList.add("map")
 iFrame.setAttribute("loading", "lazy")
 iFrame.setAttribute("referrerpolicy", "no-referrer-when-downgrade")
 // iFrame.setAttribute("allowfullscreen")
-iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBDRwRTMpSybNcmgkYVX1yZ0YmBbNhs9qU&center=${origin[0]},${origin[1]}&zoom=17&origin=${origin[0]},${origin[1]}&destination=${dest[0]},${dest[1]}&mode=walking`)
+iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBDRwRTMpSybNcmgkYVX1yZ0YmBbNhs9qU&center=${origin[0]},${origin[1]}&zoom=18&origin=${origin[0]},${origin[1]}&destination=${dest[0]},${dest[1]}&mode=walking`)
 const mount = document.getElementById("mapMount")
 console.log(iFrame)
 return iFrame
@@ -695,7 +695,7 @@ Yes! Heavy rain which leads to flooding.
 
 
 :: FG-13 {"position":"450,950","size":"100,100"}
-<<set $passage to "FG-12B">><<set $nextpassage to "FG-14">><<set $map1 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>><<audio ":all" stop>><<audio "FG_13" play>>
+<<set $passage to "FG-12B">><<set $nextpassage to "FG-14">><<set $map1 = setup.generateDirectionsMap([51.51235903720836, -0.09826818656430915],[51.51077966722368, -0.09844273228171523])>><<audio ":all" stop>><<audio "FG_13" play>>
 <main>
 <div id="mount"></div>
 You see, when we have days and days of scaldingly hot weather, which have become really common in the summer, the ground can become particularly hard. What kind of summers are you guys getting in 2022? You had a 40 degree day? Pfft. Try a month of that. And add to that the way our cities are built here — tightly packed roads made out of concrete and stone — and it means that when rain does eventually fall hard and fast, the ground doesn’t let the water absorb, leading to these big floods which come on very very quickly, not leaving much time for people to prepare! Many, many homes are affected by this in London and elsewhere in the UK — almost five million. What we really need are homes that are built to withstand — oh, sorry. I’m getting off-topic. Dad warned me about this. Apparently I’ve got a tendency to meander. Right, let’s row down towards the Thames. We’ll row down St Peter’s Hill, towards Millennium Bridge, and pause at the river’s edge — where the river was in 2022, anyway.
@@ -726,14 +726,14 @@ When you reach the Thames, do me a favour and take a deep, deep breath. Take in 
 <div id="mount"></div>
 Dad started this business when he came over from Singapore in 2034. There was a particularly bad winter, and the Thames Barrier collapsed that year. Look up at Millennium Bridge. That’s all been submerged in 2039. Crazy, huh? The water now goes all the way up to the steps of St Paul’s. So technically...you’re underwater right now. Okay, turn right and let’s row towards Blackfriars Bridge.
 
-<<timed 10s>><<set $prevpass to $passage>><<goto "FG-16">><</timed>>
+<<timed 20s>><<set $prevpass to $passage>><<goto "FG-16">><</timed>>
 
 </main>
 <<include "footer2">>
 
 
 :: FG-16 {"position":"450,1325","size":"100,100"}
-<<set $passage to "FG-16">><<set $nextpassage to "FG-17">><<set $map2 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>><<audio ":all" stop>><<audio "FG_16" play>>
+<<set $passage to "FG-16">><<set $nextpassage to "FG-17">><<set $map2 = setup.generateDirectionsMap([51.51077966722368, -0.09844273228171523],[51.51206356821932, -0.10145819610280857])>><<audio ":all" stop>><<audio "FG_16" play>>
 <main>
 $map2
 
@@ -758,12 +758,7 @@ We’re getting close to Blackfriars Bridge, right?
 
 
 :: FG-17 {"position":"450,1450","size":"100,100"}
-<<set $passage to "FG-17">><<set $nextpassage to "FG-18">><<set $map3 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>><<audio ":all" stop>><<audio "FG_17" play>>
-/* TODO ISSUE WITH AUDIO HERE */
-<main>
-<div id="mount"></div>
-Okay. Take a right onto Puddle Dock. Remember, make sure to stay to the side of the pavements, or out of the sun, as much as possible. I don’t want any of you getting burned!
-
+<<set $passage to "FG-17">><<set $nextpassage to "FG-18">><<set $map3 = setup.generateDirectionsMap([51.51206356821932, -0.10145819610280857],[51.514097059700916, -0.10419512732243998])>><<audio ":all" stop>><<audio "FG_17" play>> <main><div id="mount"></div>
 $map3
 
 Now let’s head right up to the top of Puddle Dock — back inland. 
@@ -772,32 +767,23 @@ Not as many people work or live here in the City anymore...as you might be able 
 
 Actually, if you turn around and look at the City, do you reckon you could count how many skyscrapers you can see? Let me know when you’ve done that.
 
-<<button "Okay, done.">><<set $prevpass to $passage>><<goto "FG-18">><</button>>
-</main>
-<<include "footer2">>
-
-
-:: FG-18 {"position":"450,1575","size":"100,100"}
-<<set $passage to "FG-18">><<set $nextpassage to "FG-19">><<audio ":all" stop>><<audio "FG_18" play>>
-/* TODO ISSUE WITH AUDIO HERE */
-<main>
-<div id="mount"></div>
 How many skyscrapers can you see?
 
 <<textbox "$skyscrapercount" "">>
 
-<<button "Enter">><<set $prevpass to $passage>><<goto "FG-19">><</button>>
-
+<<button "Okay, done.">><<set $prevpass to $passage>><<goto "FG-19">><</button>>
 </main>
 <<include "footer2">>
 
 
 :: FG-19 {"position":"450,1700","size":"100,100"}
 <<set $passage to "FG-19">><<set $nextpassage to "FG-20">><<audio ":all" stop>><<audio "FG_19" play>>
-/* TODO ISSUE WITH AUDIO HERE */
-<main>
-<div id="mount"></div>
-What do you reckon unused buildings could be used for? Libraries? Social housing? Greenhouses? Do you have any ideas? Maybe talk about it with the people you’re with.
+
+<main><div id="mount"></div>
+About half of those ended up getting used for social housing or greenhouses by the end of the 2030s.
+What do you reckon unused buildings could be used for? Give it a think and then put it into your devices for me. Maybe talk about it with the people you’re with.
+
+<<textbox "$uses" "">>
 
 <<button "Shall we continue?">><<set $prevpass to $passage>><<goto "FG-20">><</button>>
 
@@ -806,9 +792,8 @@ What do you reckon unused buildings could be used for? Libraries? Social housing
 
 
 :: FG-20 {"position":"450,1825","size":"100,100"}
-<<set $passage to "FG-20">><<set $nextpassage to "FG-21">><<set $map4 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>><<audio ":all" stop>><<audio "FG_20" play>>
-<main>
-<div id="mount"></div>
+<<set $passage to "FG-20">><<set $nextpassage to "FG-21">><<set $map4 = setup.generateDirectionsMap([51.5120470267446, -0.10196619608949237],[51.51284384005929, -0.10120569283365387])>><<audio ":all" stop>><<audio "FG_20" play>>
+<main><div id="mount"></div>
 Hey, let’s head up St Andrew’s Hill. You’ll be coming out from underwater that way. Keep to the side of the pavement, remember.
 
 $map4
@@ -824,9 +809,8 @@ Ah, I think you should be coming out from the water now. Come on, let’s dock t
 
 
 :: FG-21 {"position":"450,1950","size":"100,100"}
-<<set $passage to "FG-21">><<set $nextpassage to "FG-22">><<audio ":all" stop>><<audio "FG_21" play>><<set $map5 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>>
-<main>
-<div id="mount"></div>
+<<set $passage to "FG-21">><<set $nextpassage to "FG-22">><<audio ":all" stop>><<audio "FG_21" play>><<set $map5 = setup.generateDirectionsMap([51.51326180333997, -0.10120045228830153],[51.514637312301815, -0.10473447512266555])>>
+<main><div id="mount"></div>
 We’ll walk now up Ludgate Square, onto Ludgate Hill.
 
 Oh, hey. Do me a favour. I’ve got a bet going with my Dad — he reckons there are upwards of 10 trees in the City — I don’t think there are nearly as many anymore. The thing with trees in cities is that, apart from looking beautiful and being great for the environment as a whole, they also help reduce the temperature of the streets they’re on! Really useful when you’re working with 40 degree summers. Will you keep a count of any trees we see on the rest of our route? I want to compare the difference between 2022 and 2039!
@@ -858,7 +842,7 @@ Are any of you guys vegan?
 
 
 :: FG-23 {"position":"450,2200","size":"100,100"}
-<<set $passage to "FG-23">><<set $nextpassage to "FG-24">><<audio ":all" stop>><<audio "FG_23" play>><<set $map6 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>>
+<<set $passage to "FG-23">><<set $nextpassage to "FG-24">><<audio ":all" stop>><<audio "FG_23" play>><<set $map6 = setup.generateDirectionsMap([51.514637312301815, -0.10473447512266555],[51.51553167474993, -0.10738425497944915])>>
 <main>
 <div id="mount"></div>
 You know, most people I know nowadays are vegan? I know it sounds silly, and how much good can that really do, but honestly...quite a lot! If you replace meat with  vegetables — so, for example, replacing beef with peas, then you cut down on 90% of your personal carbon emissions. Isn’t that great? Now, I know peas aren’t necessarily as exciting as beef, but you don’t have to eat peas...fake meat is really good now too, you know. You can get steaks which are like, almost exactly the same texture, minus the blood and killing cows and stuff.
@@ -922,7 +906,7 @@ Totally. There’s so much here, in every nook and cranny. It’s bursting with 
 
 
 :: FG-26 {"position":"450,2575","size":"100,100"}
-<<set $passage to "FG-26">><<set $nextpassage to "FG-27">><<set $map7 = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>><<audio ":all" stop>><<audio "FG_26" play>>
+<<set $passage to "FG-26">><<set $nextpassage to "FG-27">><<set $map7 = setup.generateDirectionsMap([51.51553167474993, -0.10738425497944915],[51.51510002285436, -0.1082076329674715])>><<audio ":all" stop>><<audio "FG_26" play>>
 <main>
 <div id="mount"></div>
 Okay. I think we’re nearly at our finish.
@@ -1005,7 +989,7 @@ I’ve got to get back to the gondola now — don’t want anyone nicking it. Th
 
 
 :: end {"position":"100,600","size":"100,100"}
-<main><<audio ":all" stop>><<set $endMap = setup.generateDirectionsMap([51.51273574253808, -0.09190867122182791],[51.51318914905516, -0.09147383074234947])>>
+<main><<audio ":all" stop>><<set $endMap = setup.generateDirectionsMap([51.51510002285436, -0.1082076329674715],[51.51510002285436, -0.1082076329674715])>>
 
 End location
 
