@@ -547,39 +547,96 @@ You have two options:
 
 </main>
 
-
+<<timed 0.5s>><<replace "#mount">> <<type 50ms>> Textpre
+        <<button "I'm ready">>
+            <<replace "#mount">>   Text<</replace>>
+          <</button>><</type>><</replace>><</timed>>
 
 :: FG-05 {"position":"450,200","size":"100,100"}
+<<set $passage to "FG-05">><<set $nextpassage to "FG-06">>
+<<audio ":all" stop>><<audio "FG_05.1" play>>
+<main>
+<div id="mount"></div>
+      <<timed 21.5s>><<replace "#mount">><<type 60ms>>Hey! You! Get out of the sun.<</type>><</replace>><</timed>>
+
+      <<timed 27s>><<replace "#mount">><<type 60ms>>What's that? Isn't it a scorchingly hot day where you're from?<</type>><</replace>><</timed>>
+
+      <<timed 32s>><<replace "#mount">><<type 50ms>>Well, it is here so you better get out the direct sunlight.<</type>><</replace>><</timed>>
+      <<timed 35.5s>><<replace "#mount">><<type 50ms>>Get on to the edges of the pavement close enough that you're hugging the buildings beside you. Tell me when you've done that.
+      
+           <<button "I'm ready">>
+              <<audio ":all" stop>><<audio "FG_05.2" play>>
+    
+             <<timed 0.1s>><<replace "#mount">><<type 50ms>>Very good. Let me get a little closer to you.<</type>><</replace>><</timed>>
+
+          <<timed 4s>><<replace "#mount">><<type 50ms>>Hang on. I'm still getting the hang of these oars....<</type>><</replace>><</timed>>
+
+          <<timed 10s>><<replace "#mount">><<type 60ms>>Here we are. Now if I just... hop out.<</type>><</replace>><</timed>>
+
+          <<timed 14s>><<replace "#mount">><<type 50ms>>I'm new to the whole gondola thing, only passed my training last week, you see.<</type>><</replace>><</timed>>
+
+          <<timed 20s>><<replace "#mount">><<type 40ms>>Nearly failed when I had to pull off a three-point turn, but I managed to distract the guy running the test.<</type>><</replace>><</timed>>
+
+          <<timed 25s>><<replace "#mount">><<type 50ms>>You're here for the tour, aren't you? Excellent. Right.<</type>><</replace>><</timed>>
+
+          <<timed 29s>><<replace "#mount">><<type 40ms>>Hello, my name is Kelly and I'll be your tour guide around the City of London today.<</type>><</replace>><</timed>>
+
+          <<timed 34s>><<replace "#mount">><<type 40ms>>Now, if you just want to hop on to my gondola... what's that? What did you say?
+
+                <div class="menu-wrapper">
+                  <<button "I don't see any water?">><<set $prevpass to $passage>><<goto "FG-06">><</button>>
+                  <<button "Gondola?">><<set $prevpass to $passage>><<goto "FG-06">><</button>>
+                </div>
+        <</type>><</replace>><</timed>>
+        <</button>>
+        <</type>>
+
+      <</replace>><</timed>>
+ 
+</main>
+<<include "footer2">>
+
+
+/* :: FG-05 {"position":"450,200","size":"100,100"}
 <<set $passage to "FG-05">><<set $nextpassage to "FG-06">><<audio ":all" stop>><<audio "FG_05.1" play>>
 <main>
 <div id="mount"></div>
-<<timed 0.5s>><<replace "#mount">>Hey! You! Get out of the sun!
 
-What’s that?
+<<timed 21.5s>><<replace "#mount">><<type 60ms>>Hey! You! Get out of the sun.<</type>><</replace>><</timed>>
 
-Isn’t it a scorchingly hot day where you’re from? Well, it is here, so you’d better get out of direct sunlight. Get onto the edges of the pavement, close enough that you’re hugging the buildings beside you.
+<<timed 27s>><<replace "#mount">><<type 60ms>>What's that? Isn't it a scorchingly hot day where you're from?<</type>><</replace>><</timed>>
 
-Tell me when you’ve done that.
+<<timed 32s>><<replace "#mount">><<type 50ms>>Well, it is here so you better get out the direct sunlight.<</type>><</replace>><</timed>>
+<<timed 35.5s>><<replace "#mount">><<type 50ms>>Get on to the edges of the pavement close enough that you're hugging the buildings beside you. Tell me when you've done that.<</type>><</replace>><</timed>>
+<<timed 39.5s>>
+    <<button "I'm ready">><<audio ":all" stop>><<audio "FG_05.2" play>>
+          <<timed 0.1s>><<replace "#mount">><<type 50ms>>Very good. Let me get a little closer to you.<</type>><</replace>><</timed>>
 
-<<button "I'm ready">>
-<<timed 0.5s>><<replace "#mount">><<audio ":all" stop>><<audio "FG_05.2" play>>
-Very good. Let me get a little closer to you — hang on, I’m still getting the hang of these oars...
+          <<timed 4s>><<replace "#mount">><<type 50ms>>Hang on. I'm still getting the hang of these oars....<</type>><</replace>><</timed>>
 
-Here we are. Now if I just...hop out... I’m new to the whole gondolier thing...only passed my training last week, you see. Nearly failed when I had to pull off a three point turn, but I managed to distract the guy running my test. You’re here for the tour, aren’t you? Excellent. Right. Hello! My name is Kelly, and I’ll be your tour guide around the City of the London today. Now, if you just want to hop into my gondola...what’s that? What did you say?
+          <<timed 10s>><<replace "#mount">><<type 60ms>>Here we are. Now if I just... hop out.<</type>><</replace>><</timed>>
 
+          <<timed 14s>><<replace "#mount">><<type 50ms>>I'm new to the whole gondola thing, only passed my training last week, you see.<</type>><</replace>><</timed>>
 
-<div class="menu-wrapper">
-   <<button "I don't see any water?">><<set $prevpass to $passage>><<goto "FG-06">><</button>>
-   <<button "Gondola?">><<set $prevpass to $passage>><<goto "FG-06">><</button>>
-</div>
-<</replace>><</timed>>
-<</button>>
+          <<timed 20s>><<replace "#mount">><<type 60ms>>Nearly failed when I had to pull off a three-point turn, but I managed to distract the guy running the test.<</type>><</replace>><</timed>>
 
-<</replace>><</timed>>
+          <<timed 25s>><<replace "#mount">><<type 50ms>>You're here for the tour, aren't you? Excellent. Right.<</type>><</replace>><</timed>>
 
+          <<timed 29s>><<replace "#mount">><<type 50ms>>Hello, my name is Kelly and I'll be your tour guide around the City of London today.<</type>><</replace>><</timed>>
+
+          <<timed 33s>><<replace "#mount">><<type 50ms>>Now, if you just want to hop on to my gondola... what's that? What did you say?<</type>><</replace>><</timed>>
+
+    <<timed 35s>>
+      <div class="menu-wrapper">
+        <<button "I don't see any water?">><<set $prevpass to $passage>><<goto "FG-06">><</button>>
+        <<button "Gondola?">><<set $prevpass to $passage>><<goto "FG-06">><</button>>
+      </div>
+    <</timed>>
+  <</button>>
+  <</timed>>
 
 </main>
-<<include "footer2">>
+<<include "footer2">> */
 
 
 :: FG-06 {"position":"450,325","size":"100,100"}
