@@ -278,7 +278,7 @@ body{
   color:#fff;
   /* color:#000; */
   overflow:scroll;
-  background: #1c8f93;
+  background: #188081;
   /* padding: 1.5rem */
   display:flex;
   flex-direction: column
@@ -310,7 +310,7 @@ align-items: end;
   bottom: 0;
   padding: 2rem;
   width: 100%;
-background: #1c8f93;
+background: #188081;
 }
 
 nav{
@@ -440,7 +440,7 @@ textarea{
 /* MAP */
 	.map{
 width: 100%;
-    height: 60vh;
+    height: 45vh;
     border: 0;
     margin: auto;
     }
@@ -606,15 +606,14 @@ You have two options:
 &lt;main&gt;
  &lt;&lt;button &quot;start&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-05&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
-&lt;/main&gt;
-
-&lt;&lt;timed 0.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt; &lt;&lt;type 50ms&gt;&gt; Textpre
-        &lt;&lt;button &quot;I&#39;m ready&quot;&gt;&gt;
-            &lt;&lt;replace &quot;#mount&quot;&gt;&gt;   Text&lt;&lt;/replace&gt;&gt;
-          &lt;&lt;/button&gt;&gt;&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="FG-05" tags="" position="450,200" size="100,100">&lt;&lt;set $passage to &quot;FG-05&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-06&quot;&gt;&gt;
+&lt;/main&gt;</tw-passagedata><tw-passagedata pid="6" name="FG-05" tags="" position="450,200" size="100,100">&lt;&lt;set $passage to &quot;FG-05&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-06&quot;&gt;&gt;
 &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_05.1&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
+
+  &lt;&lt;timed 1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;[Connecting...]&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+    &lt;&lt;timed 5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;[Connecting...]&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+      &lt;&lt;timed 10s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;[Connecting...]&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
       &lt;&lt;timed 21.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Hey! You! Get out of the sun.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
       &lt;&lt;timed 27s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;What&#39;s that? Isn&#39;t it a scorchingly hot day where you&#39;re from?&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
@@ -652,115 +651,118 @@ You have two options:
       &lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
  
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;
-
-
-/* :: FG-05 {&quot;position&quot;:&quot;450,200&quot;,&quot;size&quot;:&quot;100,100&quot;}
-&lt;&lt;set $passage to &quot;FG-05&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-06&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_05.1&quot; play&gt;&gt;
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="FG-06" tags="" position="450,325" size="100,100">&lt;&lt;set $passage to &quot;FG-06&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-08&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_06&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 
-&lt;&lt;timed 21.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Hey! You! Get out of the sun.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;timed 27s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;What&#39;s that? Isn&#39;t it a scorchingly hot day where you&#39;re from?&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;timed 32s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Well, it is here so you better get out the direct sunlight.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 35.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Get on to the edges of the pavement close enough that you&#39;re hugging the buildings beside you. Tell me when you&#39;ve done that.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 39.5s&gt;&gt;
-    &lt;&lt;button &quot;I&#39;m ready&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_05.2&quot; play&gt;&gt;
-          &lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Very good. Let me get a little closer to you.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 70ms&gt;&gt;Ahh sorry. My boss said this might happen. You&#39;re on dragon time, aren&#39;t you?&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-          &lt;&lt;timed 4s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Hang on. I&#39;m still getting the hang of these oars....&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 7s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Listen, I&#39;m from the year 2039 and the City...&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-          &lt;&lt;timed 10s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Here we are. Now if I just... hop out.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 11s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Well, for me, it looks a tad different to how you might be seeing it. Don&#39;t worry about it too much.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-          &lt;&lt;timed 14s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;I&#39;m new to the whole gondola thing, only passed my training last week, you see.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 18s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;In 2039, this area is actually underwater. So, you&#39;re in my gondola, but in 2022, it will seem like it&#39;s not flooded at all yet, and you&#39;ll be on foot. No biggie.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-          &lt;&lt;timed 20s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Nearly failed when I had to pull off a three-point turn, but I managed to distract the guy running the test.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 30s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Follow my lead, and you&#39;ll be right as rain.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-          &lt;&lt;timed 25s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;You&#39;re here for the tour, aren&#39;t you? Excellent. Right.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 33s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Now, are we all ready for the tour? If you&#39;re ready, let me know.
 
-          &lt;&lt;timed 29s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Hello, my name is Kelly and I&#39;ll be your tour guide around the City of London today.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;button &quot;Let&#39;s go, Kelly.&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-08&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;
 
-          &lt;&lt;timed 33s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Now, if you just want to hop on to my gondola... what&#39;s that? What did you say?&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
 
-    &lt;&lt;timed 35s&gt;&gt;
-      &lt;div class=&quot;menu-wrapper&quot;&gt;
-        &lt;&lt;button &quot;I don&#39;t see any water?&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-06&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
-        &lt;&lt;button &quot;Gondola?&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-06&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
-      &lt;/div&gt;
-    &lt;&lt;/timed&gt;&gt;
-  &lt;&lt;/button&gt;&gt;
-  &lt;&lt;/timed&gt;&gt;
-
-&lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt; */</tw-passagedata><tw-passagedata pid="7" name="FG-06" tags="" position="450,325" size="100,100">&lt;&lt;set $passage to &quot;FG-06&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-08&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_06&quot; play&gt;&gt;
-&lt;main&gt;
-&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-Ahh. Sorry. My boss said this might happen. You’re on dragon time, aren’t you? Listen, I’m from the year 2039 and the City...well, for me, it looks a tad different to how you might be seeing it. Don’t worry about it too much. In 2039, this area is actually underwater, so you’re in my gondola, but in 2022, it will seem like it’s not flooded at all, and you’ll be on foot. No biggie. Follow my lead, and you’ll be right as rain. Now, are we all ready for the tour? If you’re ready, let me know.
-
- &lt;&lt;button &quot;Let&#39;s go, Kelly.&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-08&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="FG-08" tags="" position="450,450" size="100,100">&lt;&lt;set $passage to &quot;FG-08&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-11&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_08&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-First off — if you look around, you might be able to spot one of the most famous landmarks in the City — St. Paul’s Cathedral. There it is! Doesn’t it look magnificent in the sunlight? Now — surprise pop quiz! Can anyone tell me who it was designed by?
 
- &lt;div class=&quot;menu-wrapper&quot;&gt;
+&lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;First off, if you look around, you might be able to spot one of the most famous landmarks in the City: St Paul&#39;s Cathedral.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 9s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;There it is! Doesn&#39;t it look magnificent in the sunlight?&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 14s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Now, surprise pop quiz. Can anyone tell me who it was designed by?
+
+&lt;div class=&quot;menu-wrapper&quot;&gt;
+ 
    &lt;&lt;button &quot;A) Christopher Wren&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-09B&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
     &lt;&lt;button &quot;B) John Vanbrugh&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-09A&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
      &lt;&lt;button &quot;C) William Arnold&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-09A&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
  &lt;/div&gt;
+ &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="FG-09A" tags="" position="375,575" size="100,100">&lt;&lt;set $passage to &quot;FG-09A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-11&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_09A&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-Ooh good guess! Not quite. Try again.
+
+&lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 75ms&gt;&gt;Ooh good guess! Not quite, try again.
+
 
  &lt;div class=&quot;menu-wrapper&quot;&gt;
-   &lt;&lt;button &quot;A) Christopher Wren&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-09B&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;button &quot;A) Christopher Wren&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-09B&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
    
     &lt;&lt;button &quot;B) John Vanbrugh&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-09A&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
     
      &lt;&lt;button &quot;C) William Arnold&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-09A&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
- &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
  
 &lt;/main&gt;
 &lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="FG-09B" tags="" position="525,575" size="100,100">&lt;&lt;set $passage to &quot;FG-09B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-11&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_09B&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-Exactly! Aren’t you clever.
+
+&lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 75ms&gt;&gt;Exactly! Aren&#39;t you clever?&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
  
- &lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-11&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;timed 4s&gt;&gt; &lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-11&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="FG-11" tags="" position="450,700" size="100,100">&lt;&lt;set $passage to &quot;FG-09A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-13&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_11&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-So, St Paul’s was built by Sir Christopher Wren in the 17th Century, in the English Baroque style. It was built as part of a major regeneration project in the City after the Great Fire of London. Obviously, that fire was nothing compared to the size of the wildfires they get over in Australia or California, or even France or Spain or Portugal nowadays — but for the time, it was a pretty big deal! Fires aren’t quite as big a thing in the UK at the moment — what do you think the main problem we have is?
- 
+
+&lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;So, St Paul&#39;s was built by Sir Christopher Wren in the 17th Century in the English Baroque style.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 6s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;It was built as part of a major regeneration project in the City after the Great Fire of London.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 12s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Obviously, that fire was nothing compared to the size of the wildfires they get over in Australia or California, or even France or Spain or Portugal nowadays.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 23s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;But for the time, it was a pretty big deal.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 27s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Fires aren&#39;t quite as big as a thing in the UK at the moment.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 31s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;What do you think the main problem we have is?
 
 &lt;div class=&quot;menu-wrapper&quot;&gt;
-  &lt;&lt;button &quot;A) I&#39;m not sure&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-12A&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;button &quot;A) I&#39;m not sure&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-12A&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
    
     &lt;&lt;button &quot;B) Flash floods&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-12B&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
     
      &lt;&lt;button &quot;C) Rain&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-12C&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+    
 &lt;/div&gt;
- 
+ &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt; &lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="FG-12A" tags="" position="325,825" size="100,100">&lt;&lt;set $passage to &quot;FG-12A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-13&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_12A&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-Well, I’ll tell you! Flash floods.
 
-&lt;&lt;timed 3s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-13&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Well, I&#39;ll tell you.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Flash floods.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 4s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-13&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
 &lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="FG-12B" tags="" position="450,825" size="100,100">&lt;&lt;set $passage to &quot;FG-12B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-13&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_12B&quot; play&gt;&gt;
 
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-Exactly.
+
+&lt;&lt;timed 0s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Exactly.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 3s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-13&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
@@ -769,168 +771,339 @@ Exactly.
 
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-Yes! Heavy rain which leads to flooding.
 
-&lt;&lt;timed 5s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-13&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Yes! Heavy rain which leads to flooding.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 4s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-13&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
 &lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="FG-13" tags="" position="450,950" size="100,100">&lt;&lt;set $passage to &quot;FG-12B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-14&quot;&gt;&gt;&lt;&lt;set $map1 = setup.generateDirectionsMap([51.51235903720836, -0.09826818656430915],[51.51077966722368, -0.09844273228171523])&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_13&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-You see, when we have days and days of scaldingly hot weather, which have become really common in the summer, the ground can become particularly hard. What kind of summers are you guys getting in 2022? You had a 40 degree day? Pfft. Try a month of that. And add to that the way our cities are built here — tightly packed roads made out of concrete and stone — and it means that when rain does eventually fall hard and fast, the ground doesn’t let the water absorb, leading to these big floods which come on very very quickly, not leaving much time for people to prepare! Many, many homes are affected by this in London and elsewhere in the UK — almost five million. What we really need are homes that are built to withstand — oh, sorry. I’m getting off-topic. Dad warned me about this. Apparently I’ve got a tendency to meander. Right, let’s row down towards the Thames. We’ll row down St Peter’s Hill, towards Millennium Bridge, and pause at the river’s edge — where the river was in 2022, anyway.
+&lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;You see, when we have days and days of scaldingly hot weather, which have become really common in the summer, the ground can become particularly hard.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-$map1
+&lt;&lt;timed 9s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;What kind of summers are you guys getting in 2022?&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;button &quot;We are at the river&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-14&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;timed 13s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;You had a 40 degrees day? Pfft. Try a month of that.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 17s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;And add that to the way our cities are built here, tightly packed roads made out of concrete and stone,&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 25s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 40ms&gt;&gt;And it means that when rain does eventually fall hard and fast, the ground doesn&#39;t let the water absorb,&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 30s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Leading to these big floods, which come on very, very quickly. Not leaving much time for people to prepare.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 37s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Many, many homes are affected by this in London and elsewhere in the UK. Almost 5 million!&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 44s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;What we really need are homes that are built to withstand...&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 48s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Oh, sorry, I&#39;m getting off topic. Dad warned me about this. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 54s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Apparently, I&#39;ve got a tendency to meander.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 58s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Right, let&#39;s row down towards the Thames. We&#39;ll row down St Peter&#39;s Hill towards Millennium Bridge and pause at the river&#39;s edge.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+  
+&lt;&lt;timed 66s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Where the river was in 2022, anyway.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 75s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;$map1
+
+&lt;&lt;button &quot;We are at the river&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-14&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
 &lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="FG-14" tags="" position="450,1075" size="100,100">&lt;&lt;set $passage to &quot;FG-14&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-15&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_14&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-When you reach the Thames, do me a favour and take a deep, deep breath. Take in that smell — that oily fresh, hot dirty smell. The smell of the City. Stand there and imagine for me a river that’s burst its banks, that’s full and boiling and knocking against concrete and glass. Tell me when you’ve done that.
 
 
-&lt;&lt;button &quot;Okay, done&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-15&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;When you reach the Thames, do me a favour and take a deep, deep breath.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 6s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Take in that smell, that oily, fresh, hot, dirty smell. The smell of the City.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 13s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Stand there and imagine for me a river that burst its banks, that&#39;s full and boiling and knocking against concrete and glass.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 21s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 40ms&gt;&gt;Tell me when you&#39;ve done that.
+
+&lt;&lt;button &quot;Okay, done&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-15&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="FG-15" tags="" position="450,1200" size="100,100">&lt;&lt;set $passage to &quot;FG-15&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-16&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_15&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-Dad started this business when he came over from Singapore in 2034. There was a particularly bad winter, and the Thames Barrier collapsed that year. Look up at Millennium Bridge. That’s all been submerged in 2039. Crazy, huh? The water now goes all the way up to the steps of St Paul’s. So technically...you’re underwater right now. Okay, turn right and let’s row towards Blackfriars Bridge.
 
-&lt;&lt;timed 20s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-16&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Dad started this business when he came over from Singapore in 2034.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 4s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;That was a particularly bad winter and the Thames Barrier collapsed that year.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 9s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Look up at Millennium Bridge. That&#39;s all been submerged in 2039. Crazy, huh?&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 16s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;The water now goes all the way up to the steps of St Paul&#39;s. So, technically, you&#39;re underwater right now.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 24s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Okay, turn right. And let&#39;s row towards Blackfriars Bridge.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 30s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-16&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="FG-16" tags="" position="450,1325" size="100,100">&lt;&lt;set $passage to &quot;FG-16&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-17&quot;&gt;&gt;&lt;&lt;set $map2 = setup.generateDirectionsMap([51.51077966722368, -0.09844273228171523],[51.51206356821932, -0.10145819610280857])&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_16&quot; play&gt;&gt;
-&lt;main&gt;
-$map2
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="FG-16" tags="" position="450,1325" size="100,100">&lt;&lt;set $passage to &quot;FG-16&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-17&quot;&gt;&gt;&lt;&lt;set $map2 = setup.generateDirectionsMap([51.51077966722368, -0.09844273228171523],[51.51206356821932, -0.10145819610280857])&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_16&quot; play&gt;&gt;&lt;main&gt;$map2
 
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-The City of London actually started implementing these things called Cool Routes — places in the City where they wanted to increase the biodiversity of the area, where there was more greenery planted and pedestrianised zones were protected and created. Right along where you are now became a Cool Route inthe 2020s. The City also looked to create more green roofs and green walls throughout the Square Mile. Definitely a step in the right direction!
 
-Oh shoot. I told you I’m still a bit of a novice. I’ve forgotten to do the safety spiel. Dad’s going to kill me! I’ll just do it quickly now, if that’s okay with you guys.
 
-Errr... Hello, everybody. My name is Kelly. On behalf of Waterworks Tours, I’d like to welcome you to the City of London. We do hope you will enjoy your stay. First off, drinking alcoholic beverages is NOT ALLOWED while on the gondola. We once had a terrible situation involving a bottle of sambuca and a stag do, and my dad — er, I mean, my boss — would like me to emphasise that Waterworks Tours’s insurance policy does NOT cover alcohol-based accidents. Got it?
+&lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 40ms&gt;&gt;The City of London actually started implementing these things called Cool Routes: places in the city where they wanted to increase the biodiversity of the area.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-Good.
+&lt;&lt;timed 8.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Where there was more greenery planted and pedestrian zones which were protected and created.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-Secondly, while in the gondola, please do keep your arms and legs inside the boat at all times. You do not want to be paddling around in the Thames, let me tell you. You can get an awful infection that way. And you may not mind, but I personally do not want to be getting my hair wet today, and I’ll be the one jumping in to save you if you do go overboard. So for the sake of my good hair day, please do keep all limbs inside the gondola. 
+&lt;&lt;timed 14s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Right along where you are now became a Cool Route in the 2020s. The city also looked to create more green roofs and green walls throughout the Square Mile.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-Finally, take precautions while in the sun. It is an unseasonably warm October day today in 2039, and we are going through a bit of heatwave, with the temperature going up to 27 degrees celsius. Nothing really to worry about — heatwaves in the autumn are pretty normal nowadays — but the UV rays from the sun can be very dangerous, so we do ask that you wear appropriate sunscreen and hats if needed. Last year on Christmas day, it was 13 degrees! Guess that’s just the world we live in, hey?
+&lt;&lt;timed 23.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 40ms&gt;&gt;Definitely a step in the right direction!&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-We’re getting close to Blackfriars Bridge, right?
+&lt;&lt;timed 26s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Oh, shoot. I told you I&#39;m still a bit of a novice. I&#39;ve forgotten to do the safety spiel. Argh, Dad&#39;s going to kill me!&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;button &quot;Yes&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-17&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;timed 35s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;I&#39;ll just do it quickly now, if that&#39;s okay with you guys.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 41s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 40ms&gt;&gt;Hello, everybody. My name is Kelly, and on behalf of Waterworks Tours, I&#39;d like to welcome you to the City of London. We do hope you will enjoy your stay.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 48s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 40ms&gt;&gt;First off, drinking alcoholic beverages is not allowed while on the gondola.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 52s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 40ms&gt;&gt;We once had a terrible situation involving a bottle of sambuca and a stag do, and my Dad - &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 57.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 40ms&gt;&gt;Er, I mean, my boss - would like me to emphasise that Waterworks Tours insurance policy does not cover alcohol-based accidents.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 64s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Got it? Good.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 67s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Secondly, while in the gondola, please do keep your arms and legs inside of the boat at all times.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 73s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;You do not want to be paddling around in the Thames, let me tell you. You can get an awful infection that way.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 79s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 40ms&gt;&gt;And you may not mind, but I personally do not want to be getting my hair wet today - and I&#39;ll be the one jumping in to save you if you go overboard.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 86.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;So, for the sake of my good hair day, please do keep all limbs inside the gondola.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 93s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Finally, take precautions while in the sun. It is an unseasonably warm October day today in 2039, and we are going through a bit of a heatwave with the temperature going up to 27 degrees Celsius.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 104s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Nothing really to worry about. Heat waves in the autumn are pretty normal nowadays.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 109s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;But the UV rays from the sun can be very dangerous. So, we do ask that you wear appropriate sunscreen and hats if needed.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 116s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Last year on Christmas Day, it was 13 degrees. Guess that&#39;s just the world we live in, hey?&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 123s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 40ms&gt;&gt;We&#39;re getting close to Blackfriars Bridge, right?
+
+&lt;&lt;button &quot;Yes&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-17&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+
+
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="FG-17" tags="" position="450,1450" size="100,100">&lt;&lt;set $passage to &quot;FG-17&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-18&quot;&gt;&gt;&lt;&lt;set $map3 = setup.generateDirectionsMap([51.51206356821932, -0.10145819610280857],[51.514097059700916, -0.10419512732243998])&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_17&quot; play&gt;&gt; &lt;main&gt;&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-$map3
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="FG-17" tags="" position="450,1450" size="100,100">&lt;&lt;set $passage to &quot;FG-17&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-19&quot;&gt;&gt;&lt;&lt;set $map3 = setup.generateDirectionsMap([51.51206356821932, -0.10145819610280857],[51.514097059700916, -0.10419512732243998])&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_17&quot; play&gt;&gt; &lt;main&gt;$map3
 
-Now let’s head right up to the top of Puddle Dock — back inland. 
+&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 
-Not as many people work or live here in the City anymore...as you might be able to tell. Pretty quiet, isn’t it? After the Coronavirus pandemic of 2020 — have you guys heard of that one? Apparently it was a pretty big deal — people who would usually come into the office in the City ended up working from home a lot more. Remote working, they called it. Slowly, a lot of these huge skyscrapers you can see got turned into different things — some of them got turned into huge greenhouses to tackle food shortages, which was pretty cool. And some of them got turned into social housing — which is great, but they are near flooding areas, and they’re all packed into their skyscrapers tight, like sardines. When the Thames Barrier went, so did a bunch of people, out of London. To be honest, rich people ended up moving further out of the City — more towards the North of England, actually, where they can be higher above the sea level. They left the cities and the poorest amongst them behind, on those new flood plains. 
 
-Actually, if you turn around and look at the City, do you reckon you could count how many skyscrapers you can see? Let me know when you’ve done that.
+&lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Now, let&#39;s head right up to the top of Puddle Dock, back inland.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-How many skyscrapers can you see?
+&lt;&lt;timed 6s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Not as many people work or live here in the City anymore, as you might be able to tell. Pretty quiet, isn&#39;t it?&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 13.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;After the Coronavirus Pandemic of 2020 - have you guys heard of that one? Apparently, it was a pretty big deal. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 21s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 40ms&gt;&gt;People who would usually come into the office in the City ended up working from home a lot more. Remote working, they called it.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 27s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Slowly, a lot of these huge skyscrapers you can see got turned into different things.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 33s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 40ms&gt;&gt;Some of them got turned into huge greenhouses to tackle food shortages, which was pretty cool.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 38s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;And some of them got turned into social housing, which is great. But they are near flooding areas, and they&#39;re all packed into their skyscrapers tight, like sardines.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 48s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;When the Thames Barrier went, so did a bunch of people out of London.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 52s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;To be honest, rich people ended up moving further out of the City, more towards the North of England actually, where they can be higher up above the sea level.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 61s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 40ms&gt;&gt;They left the cities and the poorest amongst them behind on those new floodplains.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 65s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Actually, if you turn around and look at the City, do you reckon you could count how many skyscrapers you can see? &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 72s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Let me know when you&#39;ve done that.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 76s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;How many skyscrapers can you see?
 
 &lt;&lt;textbox &quot;$skyscrapercount&quot; &quot;&quot;&gt;&gt;
 
-&lt;&lt;button &quot;Okay, done.&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-19&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;button &quot;Okay, done.&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-19&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="FG-19" tags="" position="450,1700" size="100,100">&lt;&lt;set $passage to &quot;FG-19&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-20&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_19&quot; play&gt;&gt;
 
 &lt;main&gt;&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-About half of those ended up getting used for social housing or greenhouses by the end of the 2030s.
-What do you reckon unused buildings could be used for? Give it a think and then put it into your devices for me. Maybe talk about it with the people you’re with.
+
+&lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;About half of those ended up getting used for social housing or greenhouses by the end of the 2030s.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 8s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;What else do you reckon unused buildings could be used for?
+
+Give it a think, and then put it into your devices for me.
 
 &lt;&lt;textbox &quot;$uses&quot; &quot;&quot;&gt;&gt;
 
-&lt;&lt;button &quot;Shall we continue?&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-20&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;button &quot;Shall we continue?&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-20&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="FG-20" tags="" position="450,1825" size="100,100">&lt;&lt;set $passage to &quot;FG-20&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-21&quot;&gt;&gt;&lt;&lt;set $map4 = setup.generateDirectionsMap([51.5120470267446, -0.10196619608949237],[51.51284384005929, -0.10120569283365387])&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_20&quot; play&gt;&gt;
-&lt;main&gt;&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-Hey, let’s head up St Andrew’s Hill. You’ll be coming out from underwater that way. Keep to the side of the pavement, remember.
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="FG-20" tags="" position="450,1825" size="100,100">&lt;&lt;set $passage to &quot;FG-20&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-21&quot;&gt;&gt;&lt;&lt;set $map4 = setup.generateDirectionsMap([51.5120470267446, -0.10196619608949237],[51.51284384005929, -0.10120569283365387])&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_20&quot; play&gt;&gt;&lt;main&gt;$map4
 
-$map4
+&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 
-In 2022, there are a lot of cars in the City, right? Not today, but most days. A bunch of European cities actually ended up going car-free in their city centres in the late 2020s, but London never ended up getting to that stage...The thing about going car-free in what are usually the busiest places in the city is that it helps you notice things that you might not normally notice. People slow down a little, take their time, explore areas that usually get blocked off. The city ends up feeling bigger, better, more beautiful. And you really feel like you can breathe more, because air pollution goes down. I wonder if there’s something you guys could do about that. Emailing an MP? Going on climate protests? Cycling instead of using cars? I don’t mean to put the onus totally on you guys. If we really want to change the world for the better and avoid disaster, it has to be a mix of institutional change and individual change. Banning private planes might be a good start. Taxing big businesses properly. Hmm. What else? Can you think of any other ideas? Maybe three things you can do personally, and three things our governments can do? Give it a ponder for the rest of the tour.
+&lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Hey, let&#39;s head up St Andrews Hill. You&#39;ll be coming out from underwater that way.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-Ah, I think you should be coming out from the water now. Come on, let’s dock the gondola.
+&lt;&lt;timed 5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Keep to the side of the pavement, remember?&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
+&lt;&lt;timed 11s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;In 2022, there are a lot of cars in the City, right? Not today, but most days.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 17s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;A bunch of European cities actually ended up going car-free in their city centres in the late 2020s. But London never ended up getting to that stage.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 27s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;The thing about going car-free in what are usually the busiest places in the city is that it helps you notice things that you might not normally notice.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 36s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;People slow down a little, take their time, explore areas that are usually getting blocked off.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 43s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;The city ends up feeling bigger, better, more beautiful. And you really feel like you can breathe more, because air pollution goes down.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 53s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;I wonder if there&#39;s something you guys could do about that. Emailing an MP? Going on climate protests? Cycling instead of using cars?&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 63s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;I don&#39;t mean to put the onus totally on you guys. If we really want to change the world for the better and avoid disaster, it has to be a mix of institutional change and individual change.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 74s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Banning private planes might be a good start. Taxing big businesses properly.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 81s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Hmm, what else?&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 83s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 70ms&gt;&gt;Can you think of any other ideas? Maybe three things you can do personally and three things our governments can do.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 92s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Give it a ponder for the rest of the tour.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 97s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Ah, I think you should be coming out from the water now. Come on, let&#39;s dock the gondola.
 
 &lt;&lt;button &quot;Okay&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-21&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;
+
+&lt;&lt;/timed&gt;&gt;
+
 &lt;/main&gt;
 &lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="FG-21" tags="" position="450,1950" size="100,100">&lt;&lt;set $passage to &quot;FG-21&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-22&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_21&quot; play&gt;&gt;&lt;&lt;set $map5 = setup.generateDirectionsMap([51.51326180333997, -0.10120045228830153],[51.514637312301815, -0.10473447512266555])&gt;&gt;
 &lt;main&gt;&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-We’ll walk now up Ludgate Square, onto Ludgate Hill.
 
-Oh, hey. Do me a favour. I’ve got a bet going with my Dad — he reckons there are upwards of 10 trees in the City — I don’t think there are nearly as many anymore. The thing with trees in cities is that, apart from looking beautiful and being great for the environment as a whole, they also help reduce the temperature of the streets they’re on! Really useful when you’re working with 40 degree summers. Will you keep a count of any trees we see on the rest of our route? I want to compare the difference between 2022 and 2039!
+&lt;&lt;timed 5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;We&#39;ll walk now up Ludgate Square onto Ludgate Hill.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-Now, when we get to Ludgate Circus, I want you to find St Bride Street.
+&lt;&lt;timed 9s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Oh, hey, do me a favour. I&#39;ve got a bet going with my Dad. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-$map5
+&lt;&lt;timed 14s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;He reckons there are upwards of 10 trees in the City. I don&#39;t think there are nearly as many anymore.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;button &quot;Found St Bride Street&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-22&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;timed 21s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;The thing with trees in the city is that, apart from looking beautiful and being great for the environment as a whole, they also help reduce the temperature of the streets they&#39;re on.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 31s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 40ms&gt;&gt;Really useful when you&#39;re working 40-degree summers.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 34s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 40ms&gt;&gt;Will you keep a count of any trees we see on the rest of our route?&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 38s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;I want to compare the difference between 2022 and 2039. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 43s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Now, when we get to Ludgate Circus, I want you to find St Bride Street.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 53s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;$map5
+
+&lt;&lt;button &quot;Found St Bride Street&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-22&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;
+
+&lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="FG-22" tags="" position="450,2075" size="100,100">&lt;&lt;set $passage to &quot;FG-22&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-23&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_22&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-I know I can make everything sound a bit doom and gloom in 2039...I don’t mean to, honestly. Dad said I can scare people off a bit, and that’s no good for a tour guide. You should see him do his thing, he’s brilliant at it. There are definitely good things that have happened too, and good things that you can do in 2022 to help yourselves by the time you get to 2039.
 
-Are any of you guys vegan?
+&lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;I know I can make everything sound a bit doom and gloom in 2039. I don&#39;t mean to, honestly.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 8s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Dad said I can scare people off a bit, and that&#39;s no good for a tour guide.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 13s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;You should see him do his thing. He&#39;s brilliant at it.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 17s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;There are definitely good things that have happened too and good things that you can do in 2022 to help yourselves by the time you get to 2039.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 26s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Are any of you guys vegan?
 
 &lt;div class=&quot;menu-wrapper&quot;&gt;
   &lt;&lt;button &quot;Yes&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-23&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
   &lt;&lt;button &quot;No&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-23&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;/div&gt;
+&lt;/div&gt;&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;
+
+&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
 &lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="FG-23" tags="" position="450,2200" size="100,100">&lt;&lt;set $passage to &quot;FG-23&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-24&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_23&quot; play&gt;&gt;&lt;&lt;set $map6 = setup.generateDirectionsMap([51.514637312301815, -0.10473447512266555],[51.51553167474993, -0.10738425497944915])&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-You know, most people I know nowadays are vegan? I know it sounds silly, and how much good can that really do, but honestly...quite a lot! If you replace meat with  vegetables — so, for example, replacing beef with peas, then you cut down on 90% of your personal carbon emissions. Isn’t that great? Now, I know peas aren’t necessarily as exciting as beef, but you don’t have to eat peas...fake meat is really good now too, you know. You can get steaks which are like, almost exactly the same texture, minus the blood and killing cows and stuff.
 
-And you know what’s great, is that a bunch of supermarkets in the last twenty years have pledged to embrace plant-based produce over meat. That makes a big, big difference. And, good news to any vegans in our gondola today — I can confirm that by 2039, they’ve finally cracked the secret to making good vegan cheese. So no need to miss out.
 
-Head up towards Little New Street, will you? Then you should find Printer Street on your left. 
+&lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;You know, most people I know nowadays are vegan. I know it sounds silly, and how much good can that really do? But honestly, quite a lot!&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-How are the resolutions going? Make sure to discuss it alongside the people you’re with.
+&lt;&lt;timed 11s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 70ms&gt;&gt;If you replace meat with vegetables, so for example, replacing beef with peas, then you cut down on 90% of your personal carbon emissions. Isn&#39;t that great?&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-$map6 
+&lt;&lt;timed 24s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Now I know peas aren&#39;t necessarily as exciting as beef, but you don&#39;t have to eat peas.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;button &quot;Found Printer Street&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-24&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;timed 30s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Fake meat is really good now too, you know. You can get steaks which are like, almost exactly the same texture. Minus the blood and killing cows and stuff.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 42s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;And you know what&#39;s great, is that a bunch of supermarkets in the last 20 years have pledged to embrace plant-based produce over meat. That makes a big, big difference.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 53s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;And, good news to any vegans on our gondola today, I can confirm that by 2039 they finally cracked the secret to making good vegan cheese.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 65s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;So no need to miss out!&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 68s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Head up towards Little New Street will you? Then you should find Printer Street on your left.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 74s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;How are resolutions going? Make sure to discuss it alongside the people you&#39;re with.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 84s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;$map6 
+
+&lt;&lt;button &quot;Found Printer Street&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-24&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;
+
 
 &lt;/main&gt;
 &lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="FG-24" tags="" position="450,2325" size="100,100">&lt;&lt;set $passage to &quot;FG-24&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_24&quot; play&gt;&gt;
 &lt;main&gt;
 
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-Follow East Harding Street onto Pemberton Row, and we should be making it to Dr Johnson’s House — and the end of our tour!
 
-Now, let me ask you: what was the City famous for when you were in 2022?
+&lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Follow East Harding Street onto Pemberton Row and we should be making it to Dr Johnson&#39;s house - and the end of our tour!&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
+&lt;&lt;timed 7s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 70ms&gt;&gt;Now, let me ask you. What was the City famous for when you were in 2022?
 
 &lt;div class=&quot;menu-wrapper&quot;&gt;
   &lt;&lt;button &quot;A) Banks and financial offices &quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-25A&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
   
   &lt;&lt;button &quot;B) Its rich history &quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-25B&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;/div&gt;
+&lt;/div&gt;&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;
+
+
+&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="FG-25A" tags="" position="375,2450" size="100,100">&lt;&lt;set $passage to &quot;FG-25A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-26&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_25A&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-Oh right, sure. That makes sense. I mean, those places, those companies that exist in the City...some of them can be pretty big contributors to carbon emissions, right? I wonder if there’s anything more the City can do to tackle that...
+
+&lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Oh right, sure. That makes sense.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 3s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;I mean, those places, those companies that exist in the City, some of them can be pretty big contributors to carbon emissions, right?&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 11s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;I wonder if there&#39;s anything more the City can do to tackle that...&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 
-&lt;&lt;timed 3s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-26&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 15s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-26&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="FG-25B" tags="" position="525,2450" size="100,100">&lt;&lt;set $passage to &quot;FG-25B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-26&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_25B&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-Totally. There’s so much here, in every nook and cranny. It’s bursting with history, if you know where to look. I guess I’m wondering...how can we best preserve that history going forward? If it’s all still underwater by the time you get to my time...what will you be losing?
 
-&lt;&lt;timed 3s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-26&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Totally. There&#39;s so much here in every nook and cranny.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;It&#39;s bursting with history, if you know where to look.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 9s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;I guess I&#39;m wondering... how can we best preserve that history going forward?&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 15s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;If it&#39;s all still underwater by the time you get to my time, what will you be losing?&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 22s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-26&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="FG-26" tags="" position="450,2575" size="100,100">&lt;&lt;set $passage to &quot;FG-26&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-27&quot;&gt;&gt;&lt;&lt;set $map7 = setup.generateDirectionsMap([51.51553167474993, -0.10738425497944915],[51.51510002285436, -0.1082076329674715])&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_26&quot; play&gt;&gt;
@@ -946,11 +1119,18 @@ $map7
 &lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="FG-27" tags="" position="450,2700" size="100,100">&lt;&lt;set $passage to &quot;FG-26&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_27&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-Here we are! This is Dr Johnson’s House — a museum and former home of the writer Samuel Johnson.
 
-That concludes our tour for today — thank you so much for joining me, Kelly, on our gondola tour of the City. I do hope seeing the City in 2039 was a reflective and interesting experience. 
 
-How many trees did you see?
+&lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Here we are! This is Dr Johnson&#39;s House, a museum and former home of the writer Samuel Johnson.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 8s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;That concludes our tour for today. Thank you so much for joining me, Kelly, on our gondola tour of the City.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 16s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;I do hope seeing the City in 2039 was a reflective and interesting experience.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+/*22*/
+
+&lt;&lt;timed 24s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;How many trees did you see?&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;
+
 
 &lt;&lt;textbox &quot;$treenumber&quot; &quot;&quot;&gt;&gt;
 
@@ -960,31 +1140,52 @@ How many trees did you see?
       &lt;&lt;else&gt;&gt;
       &lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-28B&quot;&gt;&gt;
     &lt;&lt;/if&gt;&gt;
-&lt;&lt;/button&gt;&gt;
+&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="FG-28A" tags="" position="375,2825" size="100,100">&lt;&lt;set $passage to &quot;FG-28A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-29&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_28A&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-I told Dad! I’m going to rub that in his face later. Hm, that’s pretty rubbish, though. The City really should plant more trees, don’t you think? Maybe that can be one of your resolutions. Speaking of, what were your resolutions? Maybe when I’m gone, you can tell everyone in your group?
 
-&lt;&lt;timed 3s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-29&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;I told Dad! I&#39;m going to rub it in his face later.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;That&#39;s pretty rubbish though. The City really should plant more trees, don&#39;t you think?&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 12s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Maybe that could be one of your resolutions. Speaking of, what were your resolutions?&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 18s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Maybe when I&#39;m gone, you can tell everyone in your group.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 25s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-29&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
 &lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="FG-28B" tags="" position="525,2825" size="100,100">&lt;&lt;set $passage to &quot;FG-28B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-29&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_28B&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-Wow, seriously? Looks like Dad was right. I reckon the City can do better than that, though, don’t you? It might be something worth writing to them about. Maybe that can be one of your resolutions. Speaking of, what were your resolutions? Maybe when I’m gone, you can tell everyone in your group?
+
+&lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Wow, seriously? Looks like Dad was right.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 4s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;I reckon the City can do better than that though, don&#39;t you? It might be something worth writing to them about.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 13s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Maybe that could be one of your resolutions. Speaking of, what were your resolutions?&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 19s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Maybe when I&#39;m gone, you can tell everyone in your group.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 
-&lt;&lt;timed 3s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-29&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 27s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-29&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="FG-29" tags="" position="450,2950" size="100,100">&lt;&lt;set $passage to &quot;FG-29&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;end&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_29&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-I’ve got to get back to the gondola now — don’t want anyone nicking it. Thank you very much for your time. Please rate me on Yelp — yes, Yelp still exists — I’m Kelly from Waterworks Tours. Make sure you comment and say I was the best tour guide ever — 
-  Dad will be super happy with me. Goodbye!
 
-&lt;&lt;timed 3s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;end&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 40ms&gt;&gt;I&#39;ve got to get back to the gondola now. Don&#39;t want anyone nicking it.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 4s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Thank you very much for your time. Please rate me on Yelp - yes, Yelp still exists.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 11s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;I&#39;m Kelly from Waterworks Tours. Make sure you comment and say I was the best tour guide ever. Dad will be super happy with me.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 19.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Goodbye!&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 24s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;end&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="footer2" tags="" position="100,475" size="100,100">&lt;footer&gt;
