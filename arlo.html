@@ -98,7 +98,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://313236DF-3F92-41FD-83D5-D6E2D6FFB6BD// --><tw-storydata name="Future Gondolier" startnode="5" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="313236DF-3F92-41FD-83D5-D6E2D6FFB6BD" zoom="0.6" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
+	<tw-storydata name="Future Gondolier" startnode="5" creator="Twine" creator-version="2.5.1" format="SugarCube" format-version="2.36.1" ifid="313236DF-3F92-41FD-83D5-D6E2D6FFB6BD" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
 
 /* GENERICS */
 html {
@@ -334,8 +334,6 @@ align-items: flex-end
   display:flex
 }
 
-
-
 .nav-item.replay, .nav-item.end{
 justify-content: center
 }
@@ -345,9 +343,6 @@ justify-content: end
 
 .nav-item.replay, .nav-item.back{
 justify-content: start
-}
-.nav-wrapper.end > .nav-item{
-justify-content: flex-end;
 }
 
 .nav-item.forward > button, 
@@ -461,71 +456,6 @@ width: 100%;
 	height:50vh;
 	border:0
 }
-}
-
-/* KEY  */
-.key-wrapper{
-  width:fit-content;
-  display:flex;
-  justify-content:center;
-  padding: 2rem;
-  margin:auto
-}
-
-
-.key-wrapper > img{
-    width:100px
-}
-
-.adventure-wrapper{
-border: solid 1px white;
-    padding: 10px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.adv-item{
-display: flex;
-   justify-content: space-between;
-    align-items: end;
-}
-
-.adventure-title{
-  margin-block-end:0;
-  text-align:center
-}
-
-.glowing {
-  /* width: 100px;
-  height: 100px; */
-  border-radius:50%;
-  background-color: transparent;
-  -webkit-animation: glowing 3s ease-in-out infinite alternate;
-  -moz-animation: glowing 3s ease-in-out infinite alternate;
-  animation: glowing 3s ease-in-out infinite alternate;
-}
-@-webkit-keyframes glowing {
-  from {
-    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f0f, 0 0 40px #0ff, 0 0 50px #DAA520, 0 0 60px #DAA520, 0 0 70px #DAA520;
-  }
-  to {
-    box-shadow: 0 0 20px #fff, 0 0 30px #FAFAD2, 0 0 40px #FAFAD2, 0 0 50px #FAFAD2, 0 0 60px #FAFAD2, 0 0 70px #FAFAD26, 0 0 80px #FAFAD2;
-  }
-}
-
-@media screen and (min-width: 450px) {
-.choices{
-  display:flex;
-  justify-content: space-between;
-  
-}
-
-.adventure-wrapper{
-  padding: 2rem
-}
-
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">$('#ui-bar').remove();
 $(document.head).find('#style-ui-bar').remove();
 // TYPEWRITER FN
@@ -599,7 +529,7 @@ iFrame.setAttribute("referrerpolicy", "no-referrer-when-downgrade")
 // iFrame.setAttribute("allowfullscreen")
 iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBDRwRTMpSybNcmgkYVX1yZ0YmBbNhs9qU&center=${origin[0]},${origin[1]}&zoom=18&origin=${origin[0]},${origin[1]}&destination=${dest[0]},${dest[1]}&mode=walking`)
 const mount = document.getElementById("mapMount")
-// console.log(iFrame)
+console.log(iFrame)
 return iFrame
 // this.mapMount.appendChild(iFrame)
 }
@@ -654,7 +584,7 @@ setup.checkForRepeats = (array,element) => {
 &lt;&lt;cacheaudio &quot;FG_28A&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_28A.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;FG_28B&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_28B.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;FG_29&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_29.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;FG_30&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/FG_30.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FG_30&quot; &quot;https://www.youhavefoundconey.net/tgksnd/FG/GB_30.mp3&quot;&gt;&gt;
 
 
 
@@ -681,9 +611,9 @@ You have two options:
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 
-  &lt;&lt;timed 1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;[connecting...]&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
-    &lt;&lt;timed 5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;[connecting...]&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
-      &lt;&lt;timed 10s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;[connecting...]&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+  &lt;&lt;timed 1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;[Connecting...]&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+    &lt;&lt;timed 5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;[Connecting...]&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+      &lt;&lt;timed 10s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;[Connecting...]&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
       &lt;&lt;timed 21.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Hey! You! Get out of the sun.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
       &lt;&lt;timed 27s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;What&#39;s that? Isn&#39;t it a scorchingly hot day where you&#39;re from?&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
@@ -1123,13 +1053,17 @@ $map5
 
 &lt;&lt;timed 68s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Head up towards Little New Street will you? Then you should find Printer Street on your left.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;timed 74s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;How are resolutions going? Make sure to discuss it alongside the people you&#39;re with.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 84s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;$map6 
+&lt;&lt;timed 74s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;How are resolutions going? Make sure to discuss it alongside the people you&#39;re with.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 84s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;
+$map6 
 
 New Street is between the glass
 building and the one with the large white pillars.
 When you get to Printer St Turn Left.
 
-&lt;&lt;button &quot;Found Printer Street&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-24&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;button &quot;Found Printer Street&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-24&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;
 
 
 &lt;/main&gt;
@@ -1265,12 +1199,10 @@ Through the archway labeled 1 Gough Square
 End location
 
 $endMap
-
-&lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-30&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footerend&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="footerend" tags="" position="99,485" size="100,100">&lt;footer&gt;
 &lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Start again&quot;&gt;&gt;&lt;&lt;goto &quot;landing&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="36" name="footerlost" tags="" position="100,625" size="100,100">&lt;footer&gt;&lt;div class=&quot;nav-wrapper &quot;&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Back&quot;&gt;&gt;&lt;&lt;goto $prevpass&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="37" name="footerkey" tags="" position="850,475" size="100,100">&lt;footer&gt;&lt;div class=&quot;nav-wrapper&quot;&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;&lt;&quot;&gt;&gt;&lt;&lt;goto $prevpass&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Start again&quot;&gt;&gt;&lt;&lt;goto &quot;landing&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;nav-wrapper end&quot;&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Key&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-31&quot;&gt;&gt;&lt;&lt;/button&gt;&gt; &lt;/div&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Try another adventure&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-32&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="38" name="FG-16.2" tags="" position="450,1450" size="100,100">&lt;&lt;set $passage to &quot;FG-16.2&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-17&quot;&gt;&gt;&lt;&lt;set $map3 = setup.generateDirectionsMap([51.510868, -0.102809],[51.512060, -0.104000])&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;main&gt;
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="36" name="FG-16.2" tags="" position="450,1450" size="100,100">&lt;&lt;set $passage to &quot;FG-16.2&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-17&quot;&gt;&gt;&lt;&lt;set $map3 = setup.generateDirectionsMap([51.510868, -0.102809],[51.512060, -0.104000])&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;main&gt;
 Pass under the bridge and take the staircase on your right back up to street level.
 Turn Right to walk back inland.
 Carefully cross Queen Victoria St
@@ -1282,7 +1214,7 @@ $map3
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="FG-01" tags="" position="600,200" size="100,100">&lt;&lt;set $passage to &quot;FG-01&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-02B&quot;&gt;&gt;
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="FG-01" tags="" position="600,200" size="100,100">&lt;&lt;set $passage to &quot;FG-01&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-02B&quot;&gt;&gt;
 /* &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;UMC01&quot; play&gt;&gt; */
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt; 
@@ -1310,7 +1242,7 @@ Now are you playing this adventure solo or with a group?
   
   &lt;&lt;button &quot;Group&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-02B&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="FG-02A" tags="" position="725,125" size="100,100">&lt;&lt;set $passage to &quot;FG-02A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-03&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="FG-02A" tags="" position="725,125" size="100,100">&lt;&lt;set $passage to &quot;FG-02A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-03&quot;&gt;&gt;
 /* &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG-02A&quot; play&gt;&gt; */
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt; 
@@ -1318,7 +1250,7 @@ Now are you playing this adventure solo or with a group?
 &lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;set $prevpass to &quot;FG-01&quot;&gt;&gt;&lt;&lt;goto &quot;FG-03&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
  
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="FG-02B" tags="" position="725,250" size="100,100">&lt;&lt;set $passage to &quot;FG-02B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-03&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="FG-02B" tags="" position="725,250" size="100,100">&lt;&lt;set $passage to &quot;FG-02B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-03&quot;&gt;&gt;
 /* &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG-02B&quot; play&gt;&gt; */
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt; 
@@ -1326,7 +1258,7 @@ This is perfect for a group! If you’re playing on separate devices try to pres
 &lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;set $prevpass to &quot;FG-01&quot;&gt;&gt;&lt;&lt;goto &quot;FG-03&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
  
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="FG-04" tags="" position="975,200" size="100,100">&lt;&lt;set $passage to &quot;FG-04&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-05&quot;&gt;&gt; /* &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG-04 “ play&gt;&gt; */&lt;main&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="FG-04" tags="" position="975,200" size="100,100">&lt;&lt;set $passage to &quot;FG-04&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-05&quot;&gt;&gt; /* &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG-04 “ play&gt;&gt; */&lt;main&gt;
 My friend Kelly will be here soon to guide you, connecting from the year 2039. 
 
 Here comes Kelly now. 
@@ -1336,7 +1268,7 @@ Enjoy the tour, and try not to let your feet get too wet.
 &lt;&lt;timed 8s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-05&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="FG-03" tags="" position="850,200" size="100,100">&lt;&lt;set $passage to &quot;FG-03&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-04&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="FG-03" tags="" position="850,200" size="100,100">&lt;&lt;set $passage to &quot;FG-03&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-04&quot;&gt;&gt;
 /* &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG-03” play&gt;&gt; */
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt; 
@@ -1352,7 +1284,7 @@ Are you ready?
  
  
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="FG-30" tags="" position="600,400" size="100,100">&lt;&lt;set $passage to &quot;FG-30&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-31&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="FG-30" tags="" position="600,400" size="100,100">&lt;&lt;set $passage to &quot;FG-30&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-31&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
 /* &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG-30&quot; play&gt;&gt; */
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
@@ -1370,13 +1302,14 @@ The big black door with the door knocker, with a white frame and a little fence.
 To get through the door you will need this &lt;&lt;button &quot;key&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-31&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="FG-31" tags="" position="725,400" size="100,100">&lt;&lt;set $passage to &quot;FG-31&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-32&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;main&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="FG-31" tags="" position="725,400" size="100,100">&lt;&lt;set $passage to &quot;UFG-31&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-32&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;main&gt;
 
 
 &lt;div class=&quot;key-wrapper glowing&quot;&gt;&lt;img src=&quot;./assets/keys-34.png&quot;&gt;&lt;/div&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footerkey&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="FG-32" tags="" position="850,400" size="100,100">&lt;&lt;set $passage to &quot;FG-32&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;set $map8 = setup.generateDirectionsMap([51.51510002285436, -0.10820763296747155], [51.514259, -0.103426])&gt;&gt;&lt;main&gt;
+&lt;&lt;include &quot;footerkey&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="FG-32" tags="" position="850,400" size="100,100">
+&lt;&lt;set $passage to &quot;FG-32&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;set $map8 = setup.generateDirectionsMap([51.51510002285436, -0.10820763296747155], [51.514259, -0.103426])&gt;&gt;&lt;main&gt;
 &lt;h2&gt;Undercover with Moll Cutpurse&lt;/h2&gt;
 $map8
 

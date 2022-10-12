@@ -249,6 +249,8 @@ align-items: flex-end
   display:flex
 }
 
+
+
 .nav-item.replay, .nav-item.end{
 justify-content: center
 }
@@ -258,6 +260,9 @@ justify-content: end
 
 .nav-item.replay, .nav-item.back{
 justify-content: start
+}
+.nav-wrapper.end > .nav-item{
+justify-content: flex-end;
 }
 
 .nav-item.forward > button, 
@@ -373,6 +378,71 @@ width: 100%;
 }
 }
 
+/* KEY  */
+.key-wrapper{
+  width:fit-content;
+  display:flex;
+  justify-content:center;
+  padding: 2rem;
+  margin:auto
+}
+
+
+.key-wrapper > img{
+    width:100px
+}
+
+.adventure-wrapper{
+border: solid 1px white;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.adv-item{
+display: flex;
+   justify-content: space-between;
+    align-items: end;
+}
+
+.adventure-title{
+  margin-block-end:0;
+  text-align:center
+}
+
+.glowing {
+  /* width: 100px;
+  height: 100px; */
+  border-radius:50%;
+  background-color: transparent;
+  -webkit-animation: glowing 3s ease-in-out infinite alternate;
+  -moz-animation: glowing 3s ease-in-out infinite alternate;
+  animation: glowing 3s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glowing {
+  from {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f0f, 0 0 40px #0ff, 0 0 50px #DAA520, 0 0 60px #DAA520, 0 0 70px #DAA520;
+  }
+  to {
+    box-shadow: 0 0 20px #fff, 0 0 30px #FAFAD2, 0 0 40px #FAFAD2, 0 0 50px #FAFAD2, 0 0 60px #FAFAD2, 0 0 70px #FAFAD26, 0 0 80px #FAFAD2;
+  }
+}
+
+@media screen and (min-width: 450px) {
+.choices{
+  display:flex;
+  justify-content: space-between;
+  
+}
+
+.adventure-wrapper{
+  padding: 2rem
+}
+
+}
+
 
 :: Story JavaScript [script]
 $('#ui-bar').remove();
@@ -448,7 +518,7 @@ iFrame.setAttribute("referrerpolicy", "no-referrer-when-downgrade")
 // iFrame.setAttribute("allowfullscreen")
 iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBDRwRTMpSybNcmgkYVX1yZ0YmBbNhs9qU&center=${origin[0]},${origin[1]}&zoom=18&origin=${origin[0]},${origin[1]}&destination=${dest[0]},${dest[1]}&mode=walking`)
 const mount = document.getElementById("mapMount")
-console.log(iFrame)
+// console.log(iFrame)
 return iFrame
 // this.mapMount.appendChild(iFrame)
 }
@@ -507,7 +577,7 @@ setup.checkForRepeats = (array,element) => {
 <<cacheaudio "FG_28A" "https://www.youhavefoundconey.net/tgksnd/FG/FG_28A.mp3">>
 <<cacheaudio "FG_28B" "https://www.youhavefoundconey.net/tgksnd/FG/FG_28B.mp3">>
 <<cacheaudio "FG_29" "https://www.youhavefoundconey.net/tgksnd/FG/FG_29.mp3">>
-<<cacheaudio "FG_30" "https://www.youhavefoundconey.net/tgksnd/FG/GB_30.mp3">>
+<<cacheaudio "FG_30" "https://www.youhavefoundconey.net/tgksnd/FG/FG_30.mp3">>
 
 
 
@@ -541,9 +611,9 @@ You have two options:
 
 
 :: landing {"position":"450,50","size":"100,100"}
-<<set $passage to "landing">><<set $nextpassage to "FG-05">>
+<<set $passage to "landing">><<set $nextpassage to "FG-01">>
 <main>
- <<button "start">><<set $prevpass to $passage>><<goto "FG-05">><</button>>
+ <<button "start">><<set $prevpass to $passage>><<goto "FG-01">><</button>>
 
 </main>
 
@@ -554,9 +624,9 @@ You have two options:
 <main>
 <div id="mount"></div>
 
-  <<timed 1s>><<replace "#mount">><<type 60ms>>[Connecting...]<</type>><</replace>><</timed>>
-    <<timed 5s>><<replace "#mount">><<type 60ms>>[Connecting...]<</type>><</replace>><</timed>>
-      <<timed 10s>><<replace "#mount">><<type 60ms>>[Connecting...]<</type>><</replace>><</timed>>
+  <<timed 1s>><<replace "#mount">><<type 60ms>>[connecting...]<</type>><</replace>><</timed>>
+    <<timed 5s>><<replace "#mount">><<type 60ms>>[connecting...]<</type>><</replace>><</timed>>
+      <<timed 10s>><<replace "#mount">><<type 60ms>>[connecting...]<</type>><</replace>><</timed>>
       <<timed 21.5s>><<replace "#mount">><<type 60ms>>Hey! You! Get out of the sun.<</type>><</replace>><</timed>>
 
       <<timed 27s>><<replace "#mount">><<type 60ms>>What's that? Isn't it a scorchingly hot day where you're from?<</type>><</replace>><</timed>>
@@ -646,7 +716,7 @@ You have two options:
 <<include "footer2">>
 
 
-:: FG-09A {"position":"375,575","size":"100,100"}
+:: FG-09A {"position":"400,575","size":"100,100"}
 <<set $passage to "FG-09A">><<set $nextpassage to "FG-11">><<audio ":all" stop>><<audio "FG_09A" play>>
 <main>
 <div id="mount"></div>
@@ -677,13 +747,13 @@ You have two options:
 
 <<timed 0.1s>><<replace "#mount">><<type 75ms>>Exactly! Aren't you clever?<</type>><</replace>><</timed>>
  
-<<timed 4s>> <<button "Next">><<set $prevpass to $passage>><<goto "FG-11">><</button>><</timed>>
+<<timed 4s>> <<button "Thanks!">><<set $prevpass to $passage>><<goto "FG-11">><</button>><</timed>>
 </main>
 <<include "footer2">>
 
 
 :: FG-11 {"position":"450,700","size":"100,100"}
-<<set $passage to "FG-09A">><<set $nextpassage to "FG-13">><<audio ":all" stop>><<audio "FG_11" play>>
+<<set $passage to "FG-11">><<set $nextpassage to "FG-13">><<audio ":all" stop>><<audio "FG_11" play>>
 <main>
 <div id="mount"></div>
 
@@ -721,7 +791,7 @@ You have two options:
 
 <<timed 2s>><<replace "#mount">><<type 50ms>>Flash floods.<</type>><</replace>><</timed>>
 
-<<timed 4s>><<set $prevpass to $passage>><<goto "FG-13">><</timed>>
+<<timed 4s>><<set $prevpass to "FG-11">><<goto "FG-13">><</timed>>
 
 </main>
 <<include "footer2">>
@@ -735,7 +805,7 @@ You have two options:
 
 <<timed 0s>><<replace "#mount">><<type 60ms>>Exactly.<</type>><</replace>><</timed>>
 
-<<timed 3s>><<set $prevpass to $passage>><<goto "FG-13">><</timed>>
+<<timed 3s>><<set $prevpass to "FG-11">><<goto "FG-13">><</timed>>
 
 </main>
 <<include "footer2">>
@@ -749,14 +819,14 @@ You have two options:
 
 <<timed 0.1s>><<replace "#mount">><<type 60ms>>Yes! Heavy rain which leads to flooding.<</type>><</replace>><</timed>>
 
-<<timed 4s>><<set $prevpass to $passage>><<goto "FG-13">><</timed>>
+<<timed 4s>><<set $prevpass to "FG-11">><<goto "FG-13">><</timed>>
 
 </main>
 <<include "footer2">>
 
 
 :: FG-13 {"position":"450,950","size":"100,100"}
-<<set $passage to "FG-12B">><<set $nextpassage to "FG-14">><<set $map1 = setup.generateDirectionsMap([51.51235903720836, -0.09826818656430915],[51.51077966722368, -0.09844273228171523])>><<audio ":all" stop>><<audio "FG_13" play>>
+<<set $passage to "FG-13">><<set $nextpassage to "FG-14">><<set $map1 = setup.generateDirectionsMap([51.51235903720836, -0.09826818656430915],[51.51077966722368, -0.09844273228171523])>><<audio ":all" stop>><<audio "FG_13" play>>
 <main>
 <div id="mount"></div>
 <<timed 0.1s>><<replace "#mount">><<type 50ms>>You see, when we have days and days of scaldingly hot weather, which have become really common in the summer, the ground can become particularly hard.<</type>><</replace>><</timed>>
@@ -785,7 +855,7 @@ You have two options:
 
 <<timed 75s>><<replace "#mount">><<type 50ms>>$map1
 
-<<button "We are at the river">><<set $prevpass to $passage>><<goto "FG-14">><</button>><</type>><</replace>><</timed>>
+<<button "We are at the river">><<set $prevpass to "FG-11">><<goto "FG-14">><</button>><</type>><</replace>><</timed>>
 
 </main>
 <<include "footer2">>
@@ -834,7 +904,9 @@ You have two options:
 
 
 :: FG-16 {"position":"450,1325","size":"100,100"}
-<<set $passage to "FG-16">><<set $nextpassage to "FG-17">><<set $map2 = setup.generateDirectionsMap([51.51077966722368, -0.09844273228171523],[51.51206356821932, -0.10145819610280857])>><<audio ":all" stop>><<audio "FG_16" play>><main>$map2
+<<set $passage to "FG-16">><<set $nextpassage to "FG-16.2">><<set $map2 = setup.generateDirectionsMap([51.51077966722368, -0.09844273228171523],[51.510868, -0.102809])>><<audio ":all" stop>><<audio "FG_16" play>><main>Take a right and head along Paul’s Walk.
+The first bridge ahead of you is Blackfriars Bridge
+$map2
 
 <div id="mount"></div>
 
@@ -879,7 +951,7 @@ You have two options:
 
 <<timed 123s>><<replace "#mount">><<type 40ms>>We're getting close to Blackfriars Bridge, right?
 
-<<button "Yes">><<set $prevpass to $passage>><<goto "FG-17">><</button>><</type>><</replace>><</timed>>
+<<button "Yes">><<set $prevpass to "FG-15">><<goto "FG-16.2">><</button>><</type>><</replace>><</timed>>
 
 
 
@@ -887,37 +959,34 @@ You have two options:
 <<include "footer2">>
 
 
-:: FG-17 {"position":"450,1450","size":"100,100"}
-<<set $passage to "FG-17">><<set $nextpassage to "FG-19">><<set $map3 = setup.generateDirectionsMap([51.51206356821932, -0.10145819610280857],[51.514097059700916, -0.10419512732243998])>><<audio ":all" stop>><<audio "FG_17" play>> <main>$map3
+:: FG-17 {"position":"450,1575","size":"100,100"}
+<<set $passage to "FG-17">><<set $nextpassage to "FG-19">><<audio ":all" stop>><<audio "FG_17" play>> <main> 
 
 <div id="mount"></div>
 
+<<timed 0.1s>><<replace "#mount">><<type 50ms>>Not as many people work or live here in the City anymore, as you might be able to tell. Pretty quiet, isn't it?<</type>><</replace>><</timed>>
 
-<<timed 0.1s>><<replace "#mount">><<type 50ms>>Now, let's head right up to the top of Puddle Dock, back inland.<</type>><</replace>><</timed>>
+<<timed 7.5s>><<replace "#mount">><<type 50ms>>After the Coronavirus Pandemic of 2020 - have you guys heard of that one? Apparently, it was a pretty big deal. <</type>><</replace>><</timed>>
 
-<<timed 6s>><<replace "#mount">><<type 50ms>>Not as many people work or live here in the City anymore, as you might be able to tell. Pretty quiet, isn't it?<</type>><</replace>><</timed>>
+<<timed 25s>><<replace "#mount">><<type 40ms>>People who would usually come into the office in the City ended up working from home a lot more. Remote working, they called it.<</type>><</replace>><</timed>>
 
-<<timed 13.5s>><<replace "#mount">><<type 50ms>>After the Coronavirus Pandemic of 2020 - have you guys heard of that one? Apparently, it was a pretty big deal. <</type>><</replace>><</timed>>
+<<timed 22s>><<replace "#mount">><<type 50ms>>Slowly, a lot of these huge skyscrapers you can see got turned into different things.<</type>><</replace>><</timed>>
 
-<<timed 21s>><<replace "#mount">><<type 40ms>>People who would usually come into the office in the City ended up working from home a lot more. Remote working, they called it.<</type>><</replace>><</timed>>
+<<timed 27s>><<replace "#mount">><<type 40ms>>Some of them got turned into huge greenhouses to tackle food shortages, which was pretty cool.<</type>><</replace>><</timed>>
 
-<<timed 27s>><<replace "#mount">><<type 50ms>>Slowly, a lot of these huge skyscrapers you can see got turned into different things.<</type>><</replace>><</timed>>
+<<timed 32s>><<replace "#mount">><<type 50ms>>And some of them got turned into social housing, which is great. But they are near flooding areas, and they're all packed into their skyscrapers tight, like sardines.<</type>><</replace>><</timed>>
 
-<<timed 33s>><<replace "#mount">><<type 40ms>>Some of them got turned into huge greenhouses to tackle food shortages, which was pretty cool.<</type>><</replace>><</timed>>
+<<timed 42s>><<replace "#mount">><<type 50ms>>When the Thames Barrier went, so did a bunch of people out of London.<</type>><</replace>><</timed>>
 
-<<timed 38s>><<replace "#mount">><<type 50ms>>And some of them got turned into social housing, which is great. But they are near flooding areas, and they're all packed into their skyscrapers tight, like sardines.<</type>><</replace>><</timed>>
+<<timed 46s>><<replace "#mount">><<type 50ms>>To be honest, rich people ended up moving further out of the City, more towards the North of England actually, where they can be higher up above the sea level.<</type>><</replace>><</timed>>
 
-<<timed 48s>><<replace "#mount">><<type 50ms>>When the Thames Barrier went, so did a bunch of people out of London.<</type>><</replace>><</timed>>
+<<timed 55s>><<replace "#mount">><<type 40ms>>They left the cities and the poorest amongst them behind on those new floodplains.<</type>><</replace>><</timed>>
 
-<<timed 52s>><<replace "#mount">><<type 50ms>>To be honest, rich people ended up moving further out of the City, more towards the North of England actually, where they can be higher up above the sea level.<</type>><</replace>><</timed>>
+<<timed 59s>><<replace "#mount">><<type 50ms>>Actually, if you turn around and look at the City, do you reckon you could count how many skyscrapers you can see? <</type>><</replace>><</timed>>
 
-<<timed 61s>><<replace "#mount">><<type 40ms>>They left the cities and the poorest amongst them behind on those new floodplains.<</type>><</replace>><</timed>>
+<<timed 67s>><<replace "#mount">><<type 50ms>>Let me know when you've done that.<</type>><</replace>><</timed>>
 
-<<timed 65s>><<replace "#mount">><<type 50ms>>Actually, if you turn around and look at the City, do you reckon you could count how many skyscrapers you can see? <</type>><</replace>><</timed>>
-
-<<timed 72s>><<replace "#mount">><<type 50ms>>Let me know when you've done that.<</type>><</replace>><</timed>>
-
-<<timed 76s>><<replace "#mount">>How many skyscrapers can you see?
+<<timed 70s>><<replace "#mount">>How many skyscrapers can you see?
 
 <<textbox "$skyscrapercount" "">>
 
@@ -946,7 +1015,10 @@ Give it a think, and then put it into your devices for me.
 
 
 :: FG-20 {"position":"450,1825","size":"100,100"}
-<<set $passage to "FG-20">><<set $nextpassage to "FG-21">><<set $map4 = setup.generateDirectionsMap([51.5120470267446, -0.10196619608949237],[51.51284384005929, -0.10120569283365387])>><<audio ":all" stop>><<audio "FG_20" play>><main>$map4
+<<set $passage to "FG-20">><<set $nextpassage to "FG-21">><<set $map4 = setup.generateDirectionsMap([51.512060, -0.104000],[51.514095, -0.104214])>><<audio ":all" stop>><<audio "FG_20" play>><main>
+Continue up the main road (A201) in the same direction.
+Stop when you come to Ludgate Circus
+$map4
 
 <div id="mount"></div>
 
@@ -988,28 +1060,30 @@ Give it a think, and then put it into your devices for me.
 
 
 :: FG-21 {"position":"450,1950","size":"100,100"}
-<<set $passage to "FG-21">><<set $nextpassage to "FG-22">><<audio ":all" stop>><<audio "FG_21" play>><<set $map5 = setup.generateDirectionsMap([51.51326180333997, -0.10120045228830153],[51.514637312301815, -0.10473447512266555])>>
-<main><div id="mount"></div>
+<<set $passage to "FG-21">><<set $nextpassage to "FG-22">><<audio ":all" stop>><<audio "FG_21" play>><<set $map5 = setup.generateDirectionsMap([51.514095, -0.104214],[51.514742, -0.104952])>>
+<main>
+Across the circus on your left
+you can see a smaller street lined with trees.
+Head up that road to the next intersection.
 
-<<timed 5s>><<replace "#mount">><<type 50ms>>We'll walk now up Ludgate Square onto Ludgate Hill.<</type>><</replace>><</timed>>
+$map5
 
-<<timed 9s>><<replace "#mount">><<type 60ms>>Oh, hey, do me a favour. I've got a bet going with my Dad. <</type>><</replace>><</timed>>
+<div id="mount"></div>
 
-<<timed 14s>><<replace "#mount">><<type 60ms>>He reckons there are upwards of 10 trees in the City. I don't think there are nearly as many anymore.<</type>><</replace>><</timed>>
+<<timed 0.1s>><<replace "#mount">><<type 60ms>>Oh, hey, do me a favour. I've got a bet going with my Dad. <</type>><</replace>><</timed>>
 
-<<timed 21s>><<replace "#mount">><<type 50ms>>The thing with trees in the city is that, apart from looking beautiful and being great for the environment as a whole, they also help reduce the temperature of the streets they're on.<</type>><</replace>><</timed>>
+<<timed 5s>><<replace "#mount">><<type 60ms>>He reckons there are upwards of 10 trees in the City. I don't think there are nearly as many anymore.<</type>><</replace>><</timed>>
 
-<<timed 31s>><<replace "#mount">><<type 40ms>>Really useful when you're working 40-degree summers.<</type>><</replace>><</timed>>
+<<timed 12s>><<replace "#mount">><<type 50ms>>The thing with trees in the city is that, apart from looking beautiful and being great for the environment as a whole, they also help reduce the temperature of the streets they're on.<</type>><</replace>><</timed>>
 
-<<timed 34s>><<replace "#mount">><<type 40ms>>Will you keep a count of any trees we see on the rest of our route?<</type>><</replace>><</timed>>
+<<timed 22s>><<replace "#mount">><<type 40ms>>Really useful when you're working 40-degree summers.<</type>><</replace>><</timed>>
 
-<<timed 38s>><<replace "#mount">><<type 50ms>>I want to compare the difference between 2022 and 2039. <</type>><</replace>><</timed>>
+<<timed 25s>><<replace "#mount">><<type 40ms>>Will you keep a count of any trees we see on the rest of our route?<</type>><</replace>><</timed>>
 
-<<timed 43s>><<replace "#mount">><<type 60ms>>Now, when we get to Ludgate Circus, I want you to find St Bride Street.<</type>><</replace>><</timed>>
+<<timed 29s>><<replace "#mount">><<type 50ms>>I want to compare the difference between 2022 and 2039. <</type>><</replace>><</timed>>
 
-<<timed 53s>><<replace "#mount">><<type 60ms>>$map5
-
-<<button "Found St Bride Street">><<set $prevpass to $passage>><<goto "FG-22">><</button>><</type>><</replace>>
+<<timed 44s>><<replace "#mount">>
+<<button "Next">><<set $prevpass to $passage>><<goto "FG-22">><</button>><</replace>>
 
 <</timed>>
 </main>
@@ -1043,7 +1117,7 @@ Give it a think, and then put it into your devices for me.
 
 
 :: FG-23 {"position":"450,2200","size":"100,100"}
-<<set $passage to "FG-23">><<set $nextpassage to "FG-24">><<audio ":all" stop>><<audio "FG_23" play>><<set $map6 = setup.generateDirectionsMap([51.514637312301815, -0.10473447512266555],[51.51553167474993, -0.10738425497944915])>>
+<<set $passage to "FG-23">><<set $nextpassage to "FG-24">><<audio ":all" stop>><<audio "FG_23" play>><<set $map6 = setup.generateDirectionsMap([51.514742, -0.104952],[51.51553167474993, -0.10738425497944915])>>
 <main>
 <div id="mount"></div>
 
@@ -1064,12 +1138,13 @@ Give it a think, and then put it into your devices for me.
 
 <<timed 68s>><<replace "#mount">><<type 50ms>>Head up towards Little New Street will you? Then you should find Printer Street on your left.<</type>><</replace>><</timed>>
 
-<<timed 74s>><<replace "#mount">><<type 50ms>>How are resolutions going? Make sure to discuss it alongside the people you're with.<</type>><</replace>><</timed>>
+<<timed 74s>><<replace "#mount">><<type 50ms>>How are resolutions going? Make sure to discuss it alongside the people you're with.<</type>><</replace>><</timed>><<timed 84s>><<replace "#mount">><<type 50ms>>$map6 
 
-<<timed 84s>><<replace "#mount">><<type 50ms>>$map6 
+New Street is between the glass
+building and the one with the large white pillars.
+When you get to Printer St Turn Left.
 
-<<button "Found Printer Street">><<set $prevpass to $passage>><<goto "FG-24">><</button>><</timed>>
-<</type>><</replace>>
+<<button "Found Printer Street">><<set $prevpass to $passage>><<goto "FG-24">><</button>><</type>><</replace>><</timed>>
 
 
 </main>
@@ -1143,6 +1218,9 @@ Give it a think, and then put it into your devices for me.
 Okay. I think we’re nearly at our finish.
 
 $map7
+Follow the road as it turns right and then left
+learning to Pemberton Row
+Through the archway labeled 1 Gough Square
 
 <<button "We are here">><<set $prevpass to $passage>><<goto "FG-27">><</button>>
 
@@ -1154,24 +1232,13 @@ $map7
 <<set $passage to "FG-26">><<audio ":all" stop>><<audio "FG_27" play>>
 <main>
 <div id="mount"></div>
-
-
 <<timed 0.1s>><<replace "#mount">><<type 60ms>>Here we are! This is Dr Johnson's House, a museum and former home of the writer Samuel Johnson.<</type>><</replace>><</timed>>
-
 <<timed 8s>><<replace "#mount">><<type 60ms>>That concludes our tour for today. Thank you so much for joining me, Kelly, on our gondola tour of the City.<</type>><</replace>><</timed>>
-
-<<timed 16s>><<replace "#mount">><<type 50ms>>I do hope seeing the City in 2039 was a reflective and interesting experience.<</type>><</replace>><</timed>>
-
-/*22*/
-
+<<timed 16s>><<replace "#mount">><<type 50ms>>I do hope seeing the City in 2039 was a reflective and interesting experience.<</type>><</replace>><</timed>>/*22*/
 <<timed 24s>><<replace "#mount">><<type 50ms>>How many trees did you see?<</type>><</replace>>
-
-
 <<textbox "$treenumber" "">>
 
-<<button "Enter">>
-	<<if $treenumber lt 10>>
-      <<set $prevpass to $passage>><<goto "FG-28A">>
+<<button "Enter">><<if $treenumber lt 10>> <<set $prevpass to $passage>><<goto "FG-28A">>
       <<else>>
       <<set $prevpass to $passage>><<goto "FG-28B">>
     <</if>>
@@ -1219,7 +1286,7 @@ $map7
 
 
 :: FG-29 {"position":"450,2950","size":"100,100"}
-<<set $passage to "FG-29">><<set $nextpassage to "end">><<audio ":all" stop>><<audio "FG_29" play>>
+<<set $passage to "FG-29">><<set $nextpassage to "FG-30">><<audio ":all" stop>><<audio "FG_29" play>>
 <main>
 <div id="mount"></div>
 
@@ -1232,7 +1299,7 @@ $map7
 
 <<timed 19.5s>><<replace "#mount">><<type 50ms>>Goodbye!<</type>><</replace>><</timed>>
 
-<<timed 24s>><<set $prevpass to $passage>><<goto "end">><</timed>>
+<<timed 24s>><<set $prevpass to $passage>><<goto "FG-30">><</timed>>
 
 </main>
 <<include "footer">>
@@ -1253,6 +1320,8 @@ $map7
 End location
 
 $endMap
+
+<<button "Next">><<set $prevpass to $passage>><<goto "FG-30">><</button>>
 </main>
 <<include "footerend">>
 
@@ -1261,5 +1330,158 @@ $endMap
 <footer>
 <div class="nav-item"><<button "Start again">><<goto "landing">><</button>></div>
 </footer>
+
+:: footerlost {"position":"100,625","size":"100,100"}
+<footer><div class="nav-wrapper "><div class="nav-item"><<button "Back">><<goto $prevpass>><</button>></div></div></footer>
+
+:: footerkey
+<footer><div class="nav-wrapper"><div class="nav-item"><<button "<">><<goto $prevpass>><</button>></div><div class="nav-item"><<button "Start again">><<goto "landing">><</button>></div></div><div class="nav-wrapper end"><div class="nav-item"><<button "Key">><<set $prevpass to $passage>><<goto "FG-31">><</button>> </div><div class="nav-item"><<button "Try another adventure">><<set $prevpass to $passage>><<goto "FG-32">><</button>></div></div></footer>
+
+
+:: FG-16.2 {"position":"450,1450","size":"100,100"}
+<<set $passage to "FG-16.2">><<set $nextpassage to "FG-17">><<set $map3 = setup.generateDirectionsMap([51.510868, -0.102809],[51.512060, -0.104000])>><<audio ":all" stop>><main>
+Pass under the bridge and take the staircase on your right back up to street level.
+Turn Right to walk back inland.
+Carefully cross Queen Victoria St
+
+$map3
+
+<<button "We're there.">><<set $prevpass to "FG-16">><<goto "FG-17">><</button>>
+
+
+
+</main>
+<<include "footer2">>
+
+
+:: FG-01 {"position":"600,200","size":"100,100"}
+<<set $passage to "FG-01">><<set $nextpassage to "FG-02B">>
+/* <<audio ":all" stop>><<audio "UMC01" play>> */
+<main>
+<div id="mount"></div> 
+Felix, keeper of the Maze, and small dragon, here at your service.
+
+
+I’m opening up the City to you, a City you’ve never experienced before, and its secrets too. For the City is full of treasure. Not the kind of treasure that glitters in candlelight, but something more precious: stories, and the people who carry them. 
+
+You’re now in Dragontime. Past present and future happening all at once. Two thousand years of messy, pulsing, fiery history since the Romans first called their new home Londinium. Almost as long as I’ve been alive. 
+
+You’ve opened up door #3 into the maze of adventures. 
+
+
+You’ll be led presently through the streets of the City by a guide from one of its many pasts or possible futures.
+
+If you follow them all the way along their adventure, I’ll be there to meet you near another door, opening into an amazing experience for you, hidden in one of the secret gems of the City.
+
+What kind of amazing experience? Well, it’s a surprise. Otherwise this wouldn’t be an adventure.
+
+Now are you playing this adventure solo or with a group?
+
+ 
+<div class="menu-wrapper">
+  <<button "Solo">><<set $prevpass to $passage>><<goto "FG-02A">><</button>>
+  
+  <<button "Group">><<set $prevpass to $passage>><<goto "FG-02B">><</button>></div>
+</main>
+<<include "footer">>
+
+
+:: FG-02A {"position":"725,125","size":"100,100"}
+<<set $passage to "FG-02A">><<set $nextpassage to "FG-03">>
+/* <<audio ":all" stop>><<audio "FG-02A" play>> */
+<main>
+<div id="mount"></div> 
+ The adventure may sometimes refer to a group of people but don’t worry, you by yourself are plenty for a group.
+<<button "Next">><<set $prevpass to "FG-01">><<goto "FG-03">><</button>>
+ 
+</main>
+<<include "footer">>
+
+
+:: FG-02B {"position":"725,250","size":"100,100"}
+<<set $passage to "FG-02B">><<set $nextpassage to "FG-03">>
+/* <<audio ":all" stop>><<audio "FG-02B" play>> */
+<main>
+<div id="mount"></div> 
+This is perfect for a group! If you’re playing on separate devices try to press your buttons at the same time to stay in sync.
+<<button "Next">><<set $prevpass to "FG-01">><<goto "FG-03">><</button>>
+ 
+</main>
+<<include "footer">>
+
+
+:: FG-04 {"position":"975,200","size":"100,100"}
+<<set $passage to "FG-04">><<set $nextpassage to "FG-05">> /* <<audio ":all" stop>><<audio "FG-04 “ play>> */<main>
+My friend Kelly will be here soon to guide you, connecting from the year 2039. 
+
+Here comes Kelly now. 
+
+Enjoy the tour, and try not to let your feet get too wet. 
+
+<<timed 8s>><<set $prevpass to $passage>><<goto "FG-05">><</timed>>
+
+</main>
+<<include "footer">>
+
+
+:: FG-03 {"position":"850,200","size":"100,100"}
+<<set $passage to "FG-03">><<set $nextpassage to "FG-04">>
+/* <<audio ":all" stop>><<audio "FG-03” play>> */
+<main>
+<div id="mount"></div> 
+You can always use the arrows or the replay button if you need to hear or read anything again. 
+
+I’ll provide maps when needed.
+
+And the "Take me to the end" button will skip the adventure and show you how to get to the surprise at the end.
+
+Are you ready?
+
+<<button "Yes!">><<set $prevpass to $passage>><<goto "FG-04">><</button>>
+ 
+ 
+</main>
+<<include "footer">>
+
+
+:: FG-30 {"position":"600,400","size":"100,100"}
+<<set $passage to "FG-30">><<set $nextpassage to "FG-31">><<audio ":all" stop>>
+/* <<audio ":all" stop>><<audio "FG-30" play>> */
+<main>
+<div id="mount"></div>
+You might not find Waterworks Tours on Yelp just yet, you’ll have to wait another 17 years. 
+
+But I do hope you enjoyed Kelly’s tour. 
+
+
+Let’s get you to your destination. 
+
+Head to the front door of Dr Johnson's House. 
+
+The big black door with the door knocker, with a white frame and a little fence. 
+
+To get through the door you will need this <<button "key">><<set $prevpass to $passage>><<goto "FG-31">><</button>>
+
+</main>
+<<include "footer">>
+
+
+:: FG-31 {"position":"725,400","size":"100,100"}
+<<set $passage to "FG-31">><<set $nextpassage to "FG-32">><<audio ":all" stop>><main>
+
+
+<div class="key-wrapper glowing"><img src="./assets/keys-34.png"></div>
+
+</main>
+<<include "footerkey">>
+
+
+:: FG-32 {"position":"850,400","size":"100,100"}
+<<set $passage to "FG-32">><<audio ":all" stop>><<set $map8 = setup.generateDirectionsMap([51.51510002285436, -0.10820763296747155], [51.514259, -0.103426])>><main>
+<h2>Undercover with Moll Cutpurse</h2>
+$map8
+
+</main>
+<<include "footerkey">>
 
 
