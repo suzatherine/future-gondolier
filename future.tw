@@ -555,40 +555,40 @@ setup.checkForRepeats = (array,element) => {
 
 
 :: StoryInit {"position":"100,100","size":"100,100"}
-<<cacheaudio "FG_05.1" "https://www.youhavefoundconey.net/tgksnd/FG/FG_05.1.mp3">>
-<<cacheaudio "FG_05.2" "https://www.youhavefoundconey.net/tgksnd/FG/FG_05.2.mp3">>
-<<cacheaudio "FG_06" "https://www.youhavefoundconey.net/tgksnd/FG/FG_06.mp3">>
+<<cacheaudio "FG_05.1" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_05.1.mp3">>
+<<cacheaudio "FG_05.2" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_05.2.mp3">>
+<<cacheaudio "FG_06" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_06.mp3">>
 
-<<cacheaudio "FG_08" "https://www.youhavefoundconey.net/tgksnd/FG/FG_08.mp3">>
-<<cacheaudio "FG_09A" "https://www.youhavefoundconey.net/tgksnd/FG/FG_09A.mp3">>
-<<cacheaudio "FG_09B" "https://www.youhavefoundconey.net/tgksnd/FG/FG_09B.mp3">>
+<<cacheaudio "FG_08" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_08.mp3">>
+<<cacheaudio "FG_09A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_09A.mp3">>
+<<cacheaudio "FG_09B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_09B.mp3">>
 
-<<cacheaudio "FG_11" "https://www.youhavefoundconey.net/tgksnd/FG/FG_11.mp3">>
-<<cacheaudio "FG_12A" "https://www.youhavefoundconey.net/tgksnd/FG/FG_12A.mp3">>
-<<cacheaudio "FG_12B" "https://www.youhavefoundconey.net/tgksnd/FG/FG_12B.mp3">>
-<<cacheaudio "FG_12C" "https://www.youhavefoundconey.net/tgksnd/FG/FG_12C.mp3">>
-<<cacheaudio "FG_13" "https://www.youhavefoundconey.net/tgksnd/FG/FG_13.mp3">>
-<<cacheaudio "FG_14" "https://www.youhavefoundconey.net/tgksnd/FG/FG_14.mp3">>
-<<cacheaudio "FG_15" "https://www.youhavefoundconey.net/tgksnd/FG/FG_15.mp3">>
-<<cacheaudio "FG_16" "https://www.youhavefoundconey.net/tgksnd/FG/FG_16.mp3">>
+<<cacheaudio "FG_11" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_11.mp3">>
+<<cacheaudio "FG_12A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_12A.mp3">>
+<<cacheaudio "FG_12B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_12B.mp3">>
+<<cacheaudio "FG_12C" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_12C.mp3">>
+<<cacheaudio "FG_13" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_13.mp3">>
+<<cacheaudio "FG_14" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_14.mp3">>
+<<cacheaudio "FG_15" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_15.mp3">>
+<<cacheaudio "FG_16" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_16.mp3">>
 
-<<cacheaudio "FG_17" "https://www.youhavefoundconey.net/tgksnd/FG/FG_17.mp3">>
-<<cacheaudio "FG_18" "https://www.youhavefoundconey.net/tgksnd/FG/FG_19.mp3">>
-<<cacheaudio "FG_19" "https://www.youhavefoundconey.net/tgksnd/FG/FG_19.mp3">>
+<<cacheaudio "FG_17" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_17.mp3">>
+<<cacheaudio "FG_18" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_19.mp3">>
+<<cacheaudio "FG_19" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_19.mp3">>
 
-<<cacheaudio "FG_20" "https://www.youhavefoundconey.net/tgksnd/FG/FG_20.mp3">>
-<<cacheaudio "FG_21" "https://www.youhavefoundconey.net/tgksnd/FG/FG_21.mp3">>
-<<cacheaudio "FG_22" "https://www.youhavefoundconey.net/tgksnd/FG/FG_22.mp3">>
-<<cacheaudio "FG_23" "https://www.youhavefoundconey.net/tgksnd/FG/FG_23.mp3">>
-<<cacheaudio "FG_24" "https://www.youhavefoundconey.net/tgksnd/FG/FG_24.mp3">>
-<<cacheaudio "FG_25A" "https://www.youhavefoundconey.net/tgksnd/FG/FG_25A.mp3">>
-<<cacheaudio "FG_25B" "https://www.youhavefoundconey.net/tgksnd/FG/FG_25B.mp3">>
-<<cacheaudio "FG_26" "https://www.youhavefoundconey.net/tgksnd/FG/FG_26.mp3">>
-<<cacheaudio "FG_27" "https://www.youhavefoundconey.net/tgksnd/FG/FG_27.mp3">>
-<<cacheaudio "FG_28A" "https://www.youhavefoundconey.net/tgksnd/FG/FG_28A.mp3">>
-<<cacheaudio "FG_28B" "https://www.youhavefoundconey.net/tgksnd/FG/FG_28B.mp3">>
-<<cacheaudio "FG_29" "https://www.youhavefoundconey.net/tgksnd/FG/FG_29.mp3">>
-<<cacheaudio "FG_30" "https://www.youhavefoundconey.net/tgksnd/FG/FG_30.mp3">>
+<<cacheaudio "FG_20" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_20.mp3">>
+<<cacheaudio "FG_21" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_21.mp3">>
+<<cacheaudio "FG_22" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_22.mp3">>
+<<cacheaudio "FG_23" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_23.mp3">>
+<<cacheaudio "FG_24" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_24.mp3">>
+<<cacheaudio "FG_25A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_25A.mp3">>
+<<cacheaudio "FG_25B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_25B.mp3">>
+<<cacheaudio "FG_26" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_26.mp3">>
+<<cacheaudio "FG_27" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_27.mp3">>
+<<cacheaudio "FG_28A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_28A.mp3">>
+<<cacheaudio "FG_28B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_28B.mp3">>
+<<cacheaudio "FG_29" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_29.mp3">>
+<<cacheaudio "FG_30" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_30.mp3">>
 
 
 
@@ -624,6 +624,8 @@ You have two options:
 :: landing {"position":"450,50","size":"100,100"}
 <<set $passage to "landing">><<set $nextpassage to "FG-01">>
 <main>
+<h2>The Future Gondolier</h2>
+
  <<button "start">><<set $prevpass to $passage>><<goto "FG-01">><</button>>
 
 </main>
