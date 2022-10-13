@@ -100,6 +100,11 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 	</div>
 	<!-- UUID://313236DF-3F92-41FD-83D5-D6E2D6FFB6BD// --><tw-storydata name="Future Gondolier" startnode="5" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="313236DF-3F92-41FD-83D5-D6E2D6FFB6BD" zoom="0.6" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
 
+@font-face {
+  font-family: "Big John";
+  src: url("/assets/fonts/bigjohn.otf") format("opentype");
+}
+
 /* GENERICS */
 html {
   box-sizing: border-box;
@@ -494,6 +499,12 @@ display: flex;
 
 .adventure-title{
   margin-block-end:0;
+  text-align:center
+}
+
+.endpoint {
+  font-family: "Big John";
+  font-size:3rem;
   text-align:center
 }
 
@@ -1374,6 +1385,7 @@ To get through the door you will need this &lt;&lt;button &quot;key&quot;&gt;&gt
 
 
 &lt;div class=&quot;key-wrapper glowing&quot;&gt;&lt;img src=&quot;./assets/keys-34.png&quot;&gt;&lt;/div&gt;
+&lt;h2 class=&quot;endpoint&quot;&gt;DR JOHNSON&#39;S HOUSE&lt;/h2&gt;
 
 &lt;/main&gt;
 &lt;&lt;include &quot;footerkey&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="FG-32" tags="" position="850,400" size="100,100">&lt;&lt;set $passage to &quot;FG-32&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;set $map8 = setup.generateDirectionsMap([51.51510002285436, -0.10820763296747155], [51.514259, -0.103426])&gt;&gt;&lt;main&gt;

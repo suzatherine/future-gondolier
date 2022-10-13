@@ -15,6 +15,11 @@ Future Gondolier
 :: Story Stylesheet [stylesheet]
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
 
+@font-face {
+  font-family: "Big John";
+  src: url("/assets/fonts/bigjohn.otf") format("opentype");
+}
+
 /* GENERICS */
 html {
   box-sizing: border-box;
@@ -409,6 +414,12 @@ display: flex;
 
 .adventure-title{
   margin-block-end:0;
+  text-align:center
+}
+
+.endpoint {
+  font-family: "Big John";
+  font-size:3rem;
   text-align:center
 }
 
@@ -1471,6 +1482,7 @@ To get through the door you will need this <<button "key">><<set $prevpass to $p
 
 
 <div class="key-wrapper glowing"><img src="./assets/keys-34.png"></div>
+<h2 class="endpoint">DR JOHNSON'S HOUSE</h2>
 
 </main>
 <<include "footerkey">>
