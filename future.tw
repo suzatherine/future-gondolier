@@ -1481,7 +1481,7 @@ To get through the door you will need this <<button "key">><<set $prevpass to $p
 <<set $passage to "FG-31">><<set $nextpassage to "FG-32">><<audio ":all" stop>><main>
 
 
-<div class="key-wrapper glowing"><img src="./assets/keys-34.png"></div>
+<div class="key-wrapper glowing"><img src="./assets/DrJohnson_sHouse.png"></div>
 <h2 class="endpoint">DR JOHNSON'S HOUSE</h2>
 
 </main>
