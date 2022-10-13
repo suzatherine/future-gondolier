@@ -555,6 +555,8 @@ setup.checkForRepeats = (array,element) => {
 
 
 :: StoryInit {"position":"100,100","size":"100,100"}
+<<cacheaudio "FG_01" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_01.mp3">>
+<<cacheaudio "FG_04" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG-04.mp3">>
 <<cacheaudio "FG_05.1" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_05.1.mp3">>
 <<cacheaudio "FG_05.2" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_05.2.mp3">>
 <<cacheaudio "FG_06" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_06.mp3">>
@@ -588,7 +590,10 @@ setup.checkForRepeats = (array,element) => {
 <<cacheaudio "FG_28A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_28A.mp3">>
 <<cacheaudio "FG_28B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_28B.mp3">>
 <<cacheaudio "FG_29" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_29.mp3">>
-<<cacheaudio "FG_30" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_30.mp3">>
+<<cacheaudio "FG_30" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG-30.mp3">>
+<<cacheaudio "refergroup" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/MC/XX_02_refergroup.mp3">>
+<<cacheaudio "perfectgroup" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/MC/XX_02_perfectgroup.mp3">>
+<<cacheaudio "03" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/MC/XX_03.mp3">>
 
 
 
@@ -609,7 +614,7 @@ setup.checkForRepeats = (array,element) => {
 
 
 :: lost {"position":"450,50","size":"100,100"}
-<<set $passage to "lost">>
+<<set $passage to "lost">><<audio ":all" stop>>
 <main>
 You have two options:
 
@@ -622,7 +627,7 @@ You have two options:
 
 
 :: landing {"position":"450,50","size":"100,100"}
-<<set $passage to "landing">><<set $nextpassage to "FG-01">>
+<<set $passage to "landing">><<set $nextpassage to "FG-01">><<audio ":all" stop>>
 <main>
 <h2>The Future Gondolier</h2>
 
@@ -1369,42 +1374,57 @@ $map3
 
 :: FG-01 {"position":"600,200","size":"100,100"}
 <<set $passage to "FG-01">><<set $nextpassage to "FG-02B">>
-/* <<audio ":all" stop>><<audio "UMC01" play>> */
+<<audio ":all" stop>><<audio "FG_01" play>>
 <main>
 <div id="mount"></div> 
-Felix, keeper of the Maze, and small dragon, here at your service.
 
+<<timed 2s>><<replace "#mount">>
+  Felix, keeper of the Maze, and small dragon, here at your service.
+  <</replace>>
+<</timed>>
+  <<timed 8s>><<replace "#mount">>
+  I’m opening up the City to you, a City you’ve never experienced before, and its secrets too. 
+  
+  For the City is full of treasure. 
+  <</replace>>
+<</timed>>
+  <<timed 16s>><<replace "#mount">> Not the kind of treasure that glitters in candlelight, but something more precious: stories, and the people who carry them. 
+  <</replace>>
+<</timed>>
 
-I’m opening up the City to you, a City you’ve never experienced before, and its secrets too. For the City is full of treasure. Not the kind of treasure that glitters in candlelight, but something more precious: stories, and the people who carry them. 
+<<timed 24s>><<replace "#mount">>You’re now in Dragontime. Past present and future happening all at once. Two thousand years of messy, pulsing, fiery history since the Romans first called their new home Londinium. Almost as long as I’ve been alive. 
+ <</replace>>
+<</timed>>
 
-You’re now in Dragontime. Past present and future happening all at once. Two thousand years of messy, pulsing, fiery history since the Romans first called their new home Londinium. Almost as long as I’ve been alive. 
-
-You’ve opened up door #3 into the maze of adventures. 
-
+<<timed 38s>><<replace "#mount">>You’ve opened up door #3 into the maze of adventures. 
 
 You’ll be led presently through the streets of the City by a guide from one of its many pasts or possible futures.
+ <</replace>><</timed>>
 
-If you follow them all the way along their adventure, I’ll be there to meet you near another door, opening into an amazing experience for you, hidden in one of the secret gems of the City.
+<<timed 47s>><<replace "#mount">>If you follow them all the way along their adventure, I’ll be there to meet you near another door, opening into an amazing experience for you, hidden in one of the secret gems of the City.
+ <</replace>><</timed>>
 
-What kind of amazing experience? Well, it’s a surprise. Otherwise this wouldn’t be an adventure.
+<<timed 57s>><<replace "#mount">>What kind of amazing experience? Well, it’s a surprise. Otherwise this wouldn’t be an adventure.
 
-Now are you playing this adventure solo or with a group?
-
+Now - are you playing this adventure solo, or in a group?
  
 <div class="menu-wrapper">
   <<button "Solo">><<set $prevpass to $passage>><<goto "FG-02A">><</button>>
   
   <<button "Group">><<set $prevpass to $passage>><<goto "FG-02B">><</button>></div>
+ <</replace>>
+<</timed>>
 </main>
 <<include "footer">>
 
 
 :: FG-02A {"position":"725,125","size":"100,100"}
 <<set $passage to "FG-02A">><<set $nextpassage to "FG-03">>
-/* <<audio ":all" stop>><<audio "FG-02A" play>> */
+<<audio ":all" stop>><<audio "refergroup" play>>
 <main>
 <div id="mount"></div> 
  The adventure may sometimes refer to a group of people but don’t worry, you by yourself are plenty for a group.
+
 <<button "Next">><<set $prevpass to "FG-01">><<goto "FG-03">><</button>>
  
 </main>
@@ -1413,10 +1433,11 @@ Now are you playing this adventure solo or with a group?
 
 :: FG-02B {"position":"725,250","size":"100,100"}
 <<set $passage to "FG-02B">><<set $nextpassage to "FG-03">>
-/* <<audio ":all" stop>><<audio "FG-02B" play>> */
+<<audio ":all" stop>><<audio "perfectgroup" play>>
 <main>
 <div id="mount"></div> 
 This is perfect for a group! If you’re playing on separate devices try to press your buttons at the same time to stay in sync.
+
 <<button "Next">><<set $prevpass to "FG-01">><<goto "FG-03">><</button>>
  
 </main>
@@ -1424,7 +1445,8 @@ This is perfect for a group! If you’re playing on separate devices try to pres
 
 
 :: FG-04 {"position":"975,200","size":"100,100"}
-<<set $passage to "FG-04">><<set $nextpassage to "FG-05">> /* <<audio ":all" stop>><<audio "FG-04 “ play>> */<main>
+<<set $passage to "FG-04">><<set $nextpassage to "FG-05">><<audio ":all" stop>><<audio "FG_04" play>>
+<main>
 My friend Kelly will be here soon to guide you, connecting from the year 2039. 
 
 Here comes Kelly now. 
@@ -1439,33 +1461,30 @@ Enjoy the tour, and try not to let your feet get too wet.
 
 :: FG-03 {"position":"850,200","size":"100,100"}
 <<set $passage to "FG-03">><<set $nextpassage to "FG-04">>
-/* <<audio ":all" stop>><<audio "FG-03” play>> */
+<<audio ":all" stop>><<audio "03" play>>
 <main>
 <div id="mount"></div> 
-You can always use the arrows or the replay button if you need to hear or read anything again. 
+<<timed 0s>><<replace "#mount">>You can always use the arrows or the replay button if you need to hear or read anything again. 
+ <</replace>><</timed>>
 
-I’ll provide maps when needed.
+<<timed 6s>><<replace "#mount">>I’ll provide maps when needed.
 
 And the "Take me to the end" button will skip the adventure and show you how to get to the surprise at the end.
 
-Are you ready?
-
-<<button "Yes!">><<set $prevpass to $passage>><<goto "FG-04">><</button>>
- 
+Are you ready? 
+<<button "Yes!">><<set $prevpass to $passage>><<goto "FG-04">><</button>><</replace>><</timed>>
  
 </main>
 <<include "footer">>
 
 
 :: FG-30 {"position":"600,400","size":"100,100"}
-<<set $passage to "FG-30">><<set $nextpassage to "FG-31">><<audio ":all" stop>>
-/* <<audio ":all" stop>><<audio "FG-30" play>> */
+<<set $passage to "FG-30">><<set $nextpassage to "FG-31">><<audio ":all" stop>><<audio "FG-30" play>>
 <main>
 <div id="mount"></div>
 You might not find Waterworks Tours on Yelp just yet, you’ll have to wait another 17 years. 
 
 But I do hope you enjoyed Kelly’s tour. 
-
 
 Let’s get you to your destination. 
 

@@ -632,7 +632,9 @@ setup.checkForRepeats = (array,element) => {
  const arrayCopy = [...array];
  const duplicates = arrayCopy.filter((item, index) => index !== arrayCopy.indexOf(item));
  return duplicates.contains(element)
-}</script><tw-passagedata pid="1" name="StoryInit" tags="" position="100,100" size="100,100">&lt;&lt;cacheaudio &quot;FG_05.1&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_05.1.mp3&quot;&gt;&gt;
+}</script><tw-passagedata pid="1" name="StoryInit" tags="" position="100,100" size="100,100">&lt;&lt;cacheaudio &quot;FG_01&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_01.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FG_04&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG-04.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FG_05.1&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_05.1.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;FG_05.2&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_05.2.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;FG_06&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_06.mp3&quot;&gt;&gt;
 
@@ -665,7 +667,10 @@ setup.checkForRepeats = (array,element) => {
 &lt;&lt;cacheaudio &quot;FG_28A&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_28A.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;FG_28B&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_28B.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;FG_29&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_29.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;FG_30&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_30.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FG_30&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG-30.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;refergroup&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/MC/XX_02_refergroup.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;perfectgroup&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/MC/XX_02_perfectgroup.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;03&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/MC/XX_03.mp3&quot;&gt;&gt;
 
 
 
@@ -674,7 +679,7 @@ setup.checkForRepeats = (array,element) => {
 &lt;div class=&quot;nav-item replay&quot;&gt;&lt;&lt;button &quot;Replay&quot;&gt;&gt;&lt;&lt;goto $passage&gt;&gt;&lt;&lt;/button&gt;&gt; &lt;/div&gt;
 &lt;div class=&quot;nav-item end&quot;&gt;&lt;&lt;button &quot;Take me to the end&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;lost&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
 &lt;div class=&quot;nav-item forward&quot;&gt;&lt;&lt;button &quot;&gt;&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto $nextpassage&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="4" name="lost" tags="" position="450,50" size="100,100">&lt;&lt;set $passage to &quot;lost&quot;&gt;&gt;
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="4" name="lost" tags="" position="450,50" size="100,100">&lt;&lt;set $passage to &quot;lost&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
 &lt;main&gt;
 You have two options:
 
@@ -683,7 +688,7 @@ You have two options:
   &lt;&lt;button &quot;Take me straight to the end location!&quot;&gt;&gt;&lt;&lt;goto &quot;end&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/div&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="landing" tags="" position="450,50" size="100,100">&lt;&lt;set $passage to &quot;landing&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-01&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="landing" tags="" position="450,50" size="100,100">&lt;&lt;set $passage to &quot;landing&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-01&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
 &lt;main&gt;
 &lt;h2&gt;The Future Gondolier&lt;/h2&gt;
 
@@ -1296,50 +1301,67 @@ $map3
 
 &lt;/main&gt;
 &lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="FG-01" tags="" position="600,200" size="100,100">&lt;&lt;set $passage to &quot;FG-01&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-02B&quot;&gt;&gt;
-/* &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;UMC01&quot; play&gt;&gt; */
+&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_01&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt; 
-Felix, keeper of the Maze, and small dragon, here at your service.
 
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;
+  Felix, keeper of the Maze, and small dragon, here at your service.
+  &lt;&lt;/replace&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+  &lt;&lt;timed 8s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;
+  I’m opening up the City to you, a City you’ve never experienced before, and its secrets too. 
+  
+  For the City is full of treasure. 
+  &lt;&lt;/replace&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+  &lt;&lt;timed 16s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt; Not the kind of treasure that glitters in candlelight, but something more precious: stories, and the people who carry them. 
+  &lt;&lt;/replace&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
 
-I’m opening up the City to you, a City you’ve never experienced before, and its secrets too. For the City is full of treasure. Not the kind of treasure that glitters in candlelight, but something more precious: stories, and the people who carry them. 
+&lt;&lt;timed 24s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;You’re now in Dragontime. Past present and future happening all at once. Two thousand years of messy, pulsing, fiery history since the Romans first called their new home Londinium. Almost as long as I’ve been alive. 
+ &lt;&lt;/replace&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
 
-You’re now in Dragontime. Past present and future happening all at once. Two thousand years of messy, pulsing, fiery history since the Romans first called their new home Londinium. Almost as long as I’ve been alive. 
-
-You’ve opened up door #3 into the maze of adventures. 
-
+&lt;&lt;timed 38s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;You’ve opened up door #3 into the maze of adventures. 
 
 You’ll be led presently through the streets of the City by a guide from one of its many pasts or possible futures.
+ &lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-If you follow them all the way along their adventure, I’ll be there to meet you near another door, opening into an amazing experience for you, hidden in one of the secret gems of the City.
+&lt;&lt;timed 47s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;If you follow them all the way along their adventure, I’ll be there to meet you near another door, opening into an amazing experience for you, hidden in one of the secret gems of the City.
+ &lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-What kind of amazing experience? Well, it’s a surprise. Otherwise this wouldn’t be an adventure.
+&lt;&lt;timed 57s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;What kind of amazing experience? Well, it’s a surprise. Otherwise this wouldn’t be an adventure.
 
-Now are you playing this adventure solo or with a group?
-
+Now - are you playing this adventure solo, or in a group?
  
 &lt;div class=&quot;menu-wrapper&quot;&gt;
   &lt;&lt;button &quot;Solo&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-02A&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
   
   &lt;&lt;button &quot;Group&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-02B&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
+ &lt;&lt;/replace&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="FG-02A" tags="" position="725,125" size="100,100">&lt;&lt;set $passage to &quot;FG-02A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-03&quot;&gt;&gt;
-/* &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG-02A&quot; play&gt;&gt; */
+&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;refergroup&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt; 
  The adventure may sometimes refer to a group of people but don’t worry, you by yourself are plenty for a group.
+
 &lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;set $prevpass to &quot;FG-01&quot;&gt;&gt;&lt;&lt;goto &quot;FG-03&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
  
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="FG-02B" tags="" position="725,250" size="100,100">&lt;&lt;set $passage to &quot;FG-02B&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-03&quot;&gt;&gt;
-/* &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG-02B&quot; play&gt;&gt; */
+&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;perfectgroup&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt; 
 This is perfect for a group! If you’re playing on separate devices try to press your buttons at the same time to stay in sync.
+
 &lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;set $prevpass to &quot;FG-01&quot;&gt;&gt;&lt;&lt;goto &quot;FG-03&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
  
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="FG-04" tags="" position="975,200" size="100,100">&lt;&lt;set $passage to &quot;FG-04&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-05&quot;&gt;&gt; /* &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG-04 “ play&gt;&gt; */&lt;main&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="FG-04" tags="" position="975,200" size="100,100">&lt;&lt;set $passage to &quot;FG-04&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-05&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_04&quot; play&gt;&gt;
+&lt;main&gt;
 My friend Kelly will be here soon to guide you, connecting from the year 2039. 
 
 Here comes Kelly now. 
@@ -1350,29 +1372,26 @@ Enjoy the tour, and try not to let your feet get too wet.
 
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="FG-03" tags="" position="850,200" size="100,100">&lt;&lt;set $passage to &quot;FG-03&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-04&quot;&gt;&gt;
-/* &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG-03” play&gt;&gt; */
+&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;03&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt; 
-You can always use the arrows or the replay button if you need to hear or read anything again. 
+&lt;&lt;timed 0s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;You can always use the arrows or the replay button if you need to hear or read anything again. 
+ &lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-I’ll provide maps when needed.
+&lt;&lt;timed 6s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;I’ll provide maps when needed.
 
 And the &quot;Take me to the end&quot; button will skip the adventure and show you how to get to the surprise at the end.
 
-Are you ready?
-
-&lt;&lt;button &quot;Yes!&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-04&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
- 
+Are you ready? 
+&lt;&lt;button &quot;Yes!&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-04&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
  
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="FG-30" tags="" position="600,400" size="100,100">&lt;&lt;set $passage to &quot;FG-30&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-31&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
-/* &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG-30&quot; play&gt;&gt; */
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="FG-30" tags="" position="600,400" size="100,100">&lt;&lt;set $passage to &quot;FG-30&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-31&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG-30&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 You might not find Waterworks Tours on Yelp just yet, you’ll have to wait another 17 years. 
 
 But I do hope you enjoyed Kelly’s tour. 
-
 
 Let’s get you to your destination. 
 
