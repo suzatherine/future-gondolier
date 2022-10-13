@@ -365,7 +365,7 @@ textarea{
 /* MAP */
 	.map{
 width: 100%;
-    height: 45vh;
+    height: 60vh;
     border: 0;
     margin: auto;
     }
@@ -1326,7 +1326,7 @@ Through the archway labeled 1 Gough Square
 
 
 :: end {"position":"100,600","size":"100,100"}
-<main><<audio ":all" stop>><<set $endMap = setup.generateDirectionsMap([51.51510002285436, -0.1082076329674715],[51.51510002285436, -0.1082076329674715])>>
+<main><<audio ":all" stop>><<set $endMap = setup.generateDirectionsMap([51.512207154622004, -0.09831378220898206],[51.51510002285436, -0.1082076329674715])>>
 
 End location
 
