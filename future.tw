@@ -665,7 +665,7 @@ You have two options:
 :: landing {"position":"450,50","size":"100,100"}
 <<set $passage to "landing">><<set $nextpassage to "FG-01">><<audio ":all" stop>>
 <main class="landing">
-<h2>Phillis Wheatley Visits London! Read all about it!</h2> 
+<h2>The Future Gondolier</h2> 
  <<link "<img src='./assets/dragon2.gif'>">><<set $prevpass to $passage>><<goto "FG-01">><</link>>
  <<button "start">><<set $prevpass to $passage>><<goto "FG-01">><</button>>
 
