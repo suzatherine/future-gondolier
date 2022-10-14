@@ -446,6 +446,42 @@ textarea{
     }
 }
 
+/* LANDING  */
+main.landing{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 95vh
+}
+
+.landing > h2 {
+  font-family: "Big John";
+  text-align:center;
+  margin-block-end: 0;
+}
+
+.landing > a {
+  display:flex;    
+  justify-content: center;
+  
+}
+
+.landing > a:active{
+  background-color: transparent;
+
+}
+
+.landing > a > img {
+  width: 80%;
+  max-width: 300px;
+}
+
+/* END */
+main.end > h2{
+  margin-block-end: 0;
+}
+
 
 /* MAP */
 	.map{
@@ -667,7 +703,7 @@ setup.checkForRepeats = (array,element) => {
 &lt;&lt;cacheaudio &quot;FG_28A&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_28A.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;FG_28B&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_28B.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;FG_29&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_29.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;FG_30&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG-30.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;FG-30&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG-30.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;refergroup&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/MC/XX_02_refergroup.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;perfectgroup&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/MC/XX_02_perfectgroup.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;03&quot; &quot;https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/MC/XX_03.mp3&quot;&gt;&gt;
@@ -689,9 +725,9 @@ You have two options:
 &lt;/div&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="landing" tags="" position="450,50" size="100,100">&lt;&lt;set $passage to &quot;landing&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-01&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
-&lt;main&gt;
-&lt;h2&gt;The Future Gondolier&lt;/h2&gt;
-
+&lt;main class=&quot;landing&quot;&gt;
+&lt;h2&gt;Phillis Wheatley Visits London! Read all about it!&lt;/h2&gt; 
+ &lt;&lt;link &quot;&lt;img src=&#39;./assets/dragon2.gif&#39;&gt;&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-01&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
  &lt;&lt;button &quot;start&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-01&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 &lt;/main&gt;</tw-passagedata><tw-passagedata pid="6" name="FG-05" tags="" position="450,200" size="100,100">&lt;&lt;set $passage to &quot;FG-05&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-06&quot;&gt;&gt;
@@ -1151,7 +1187,7 @@ When you get to Printer St Turn Left.
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="FG-24" tags="" position="450,2325" size="100,100">&lt;&lt;set $passage to &quot;FG-24&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_24&quot; play&gt;&gt;
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="FG-24" tags="" position="450,2325" size="100,100">&lt;&lt;set $passage to &quot;FG-24&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-25A&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_24&quot; play&gt;&gt;
 &lt;main&gt;
 
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
@@ -1212,7 +1248,7 @@ Through the archway labeled 1 Gough Square
 &lt;&lt;button &quot;We are here&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-27&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="FG-27" tags="" position="450,2700" size="100,100">&lt;&lt;set $passage to &quot;FG-26&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_27&quot; play&gt;&gt;
+&lt;&lt;include &quot;footer2&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="FG-27" tags="" position="450,2700" size="100,100">&lt;&lt;set $passage to &quot;FG-26&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-28B&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;FG_27&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 &lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Here we are! This is Dr Johnson&#39;s House, a museum and former home of the writer Samuel Johnson.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
@@ -1278,17 +1314,19 @@ Through the archway labeled 1 Gough Square
 &lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Replay&quot;&gt;&gt;&lt;&lt;goto $passage&gt;&gt;&lt;&lt;/button&gt;&gt; &lt;/div&gt;
 &lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Take me to the end&quot;&gt;&gt;&lt;&lt;goto &quot;lost&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
 &lt;div class=&quot;nav-item forward&quot;&gt;&lt;&lt;button &quot;&gt;&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto $nextpassage&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="34" name="end" tags="" position="100,600" size="100,100">&lt;main&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;set $endMap = setup.generateDirectionsMap([51.512207154622004, -0.09831378220898206],[51.51510002285436, -0.1082076329674715])&gt;&gt;
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="34" name="end" tags="" position="100,600" size="100,100">&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;set $passage to &quot;end&quot;&gt;&gt;&lt;&lt;set $endMap = setup.generateDirectionsMap([51.512207154622004, -0.09831378220898206],[51.51510002285436, -0.1082076329674715])&gt;&gt;
+&lt;main class=&quot;end&quot;&gt;&lt;h2&gt;End location&lt;/h2&gt;Dr Johnson&#39;s House
+17 Gough Square
+EC4A 3DE
 
-End location
+&lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-30&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 $endMap
 
-&lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-30&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footerend&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="footerend" tags="" position="99,485" size="100,100">&lt;footer&gt;
+&lt;&lt;include &quot;footerkey&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="footerend" tags="" position="99,485" size="100,100">&lt;footer&gt;
 &lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Start again&quot;&gt;&gt;&lt;&lt;goto &quot;landing&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="36" name="footerlost" tags="" position="100,625" size="100,100">&lt;footer&gt;&lt;div class=&quot;nav-wrapper &quot;&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Back&quot;&gt;&gt;&lt;&lt;goto $prevpass&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="37" name="footerkey" tags="" position="850,475" size="100,100">&lt;footer&gt;&lt;div class=&quot;nav-wrapper&quot;&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;&lt;&quot;&gt;&gt;&lt;&lt;goto $prevpass&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Start again&quot;&gt;&gt;&lt;&lt;goto &quot;landing&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;nav-wrapper end&quot;&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Key&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-31&quot;&gt;&gt;&lt;&lt;/button&gt;&gt; &lt;/div&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Try another adventure&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-32&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="38" name="FG-16.2" tags="" position="450,1450" size="100,100">&lt;&lt;set $passage to &quot;FG-16.2&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-17&quot;&gt;&gt;&lt;&lt;set $map3 = setup.generateDirectionsMap([51.510868, -0.102809],[51.512060, -0.104000])&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;main&gt;
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="36" name="footerlost" tags="" position="100,625" size="100,100">&lt;footer&gt;&lt;div class=&quot;nav-wrapper &quot;&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Back&quot;&gt;&gt;&lt;&lt;goto $prevpass&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="37" name="footerkey" tags="" position="1050,500" size="100,100">&lt;footer&gt;&lt;div class=&quot;nav-wrapper&quot;&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;&lt;&quot;&gt;&gt;&lt;&lt;goto $prevpass&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Start again&quot;&gt;&gt;&lt;&lt;goto &quot;landing&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;nav-wrapper&quot;&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Show map&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;end&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;nav-wrapper end&quot;&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Key&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-31&quot;&gt;&gt;&lt;&lt;/button&gt;&gt; &lt;/div&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Try another adventure&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-32&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="38" name="FG-16.2" tags="" position="450,1450" size="100,100">&lt;&lt;set $passage to &quot;FG-16.2&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-17&quot;&gt;&gt;&lt;&lt;set $map3 = setup.generateDirectionsMap([51.510868, -0.102809],[51.512060, -0.104000])&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;main&gt;
 Pass under the bridge and take the staircase on your right back up to street level.
 Turn Right to walk back inland.
 Carefully cross Queen Victoria St
@@ -1368,7 +1406,7 @@ Here comes Kelly now.
 
 Enjoy the tour, and try not to let your feet get too wet. 
 
-&lt;&lt;timed 8s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-05&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 15s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;FG-05&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="FG-03" tags="" position="850,200" size="100,100">&lt;&lt;set $passage to &quot;FG-03&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;FG-04&quot;&gt;&gt;

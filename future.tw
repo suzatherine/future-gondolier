@@ -361,6 +361,42 @@ textarea{
     }
 }
 
+/* LANDING  */
+main.landing{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 95vh
+}
+
+.landing > h2 {
+  font-family: "Big John";
+  text-align:center;
+  margin-block-end: 0;
+}
+
+.landing > a {
+  display:flex;    
+  justify-content: center;
+  
+}
+
+.landing > a:active{
+  background-color: transparent;
+
+}
+
+.landing > a > img {
+  width: 80%;
+  max-width: 300px;
+}
+
+/* END */
+main.end > h2{
+  margin-block-end: 0;
+}
+
 
 /* MAP */
 	.map{
@@ -590,7 +626,7 @@ setup.checkForRepeats = (array,element) => {
 <<cacheaudio "FG_28A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_28A.mp3">>
 <<cacheaudio "FG_28B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_28B.mp3">>
 <<cacheaudio "FG_29" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_29.mp3">>
-<<cacheaudio "FG_30" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG-30.mp3">>
+<<cacheaudio "FG-30" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG-30.mp3">>
 <<cacheaudio "refergroup" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/MC/XX_02_refergroup.mp3">>
 <<cacheaudio "perfectgroup" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/MC/XX_02_perfectgroup.mp3">>
 <<cacheaudio "03" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/MC/XX_03.mp3">>
@@ -628,9 +664,9 @@ You have two options:
 
 :: landing {"position":"450,50","size":"100,100"}
 <<set $passage to "landing">><<set $nextpassage to "FG-01">><<audio ":all" stop>>
-<main>
-<h2>The Future Gondolier</h2>
-
+<main class="landing">
+<h2>Phillis Wheatley Visits London! Read all about it!</h2> 
+ <<link "<img src='./assets/dragon2.gif'>">><<set $prevpass to $passage>><<goto "FG-01">><</link>>
  <<button "start">><<set $prevpass to $passage>><<goto "FG-01">><</button>>
 
 </main>
@@ -1170,7 +1206,7 @@ When you get to Printer St Turn Left.
 
 
 :: FG-24 {"position":"450,2325","size":"100,100"}
-<<set $passage to "FG-24">><<audio ":all" stop>><<audio "FG_24" play>>
+<<set $passage to "FG-24">><<set $nextpassage to "FG-25A">><<audio ":all" stop>><<audio "FG_24" play>>
 <main>
 
 <div id="mount"></div>
@@ -1247,7 +1283,7 @@ Through the archway labeled 1 Gough Square
 
 
 :: FG-27 {"position":"450,2700","size":"100,100"}
-<<set $passage to "FG-26">><<audio ":all" stop>><<audio "FG_27" play>>
+<<set $passage to "FG-26">><<set $nextpassage to "FG-28B">><<audio ":all" stop>><<audio "FG_27" play>>
 <main>
 <div id="mount"></div>
 <<timed 0.1s>><<replace "#mount">><<type 60ms>>Here we are! This is Dr Johnson's House, a museum and former home of the writer Samuel Johnson.<</type>><</replace>><</timed>>
@@ -1333,15 +1369,17 @@ Through the archway labeled 1 Gough Square
 
 
 :: end {"position":"100,600","size":"100,100"}
-<main><<audio ":all" stop>><<set $endMap = setup.generateDirectionsMap([51.512207154622004, -0.09831378220898206],[51.51510002285436, -0.1082076329674715])>>
+<<audio ":all" stop>><<set $passage to "end">><<set $endMap = setup.generateDirectionsMap([51.512207154622004, -0.09831378220898206],[51.51510002285436, -0.1082076329674715])>>
+<main class="end"><h2>End location</h2>Dr Johnson's House
+17 Gough Square
+EC4A 3DE
 
-End location
+<<button "Next">><<set $prevpass to $passage>><<goto "FG-30">><</button>>
 
 $endMap
 
-<<button "Next">><<set $prevpass to $passage>><<goto "FG-30">><</button>>
 </main>
-<<include "footerend">>
+<<include "footerkey">>
 
 
 :: footerend {"position":"99,485","size":"100,100"}
@@ -1349,11 +1387,13 @@ $endMap
 <div class="nav-item"><<button "Start again">><<goto "landing">><</button>></div>
 </footer>
 
+
 :: footerlost {"position":"100,625","size":"100,100"}
 <footer><div class="nav-wrapper "><div class="nav-item"><<button "Back">><<goto $prevpass>><</button>></div></div></footer>
 
-:: footerkey
-<footer><div class="nav-wrapper"><div class="nav-item"><<button "<">><<goto $prevpass>><</button>></div><div class="nav-item"><<button "Start again">><<goto "landing">><</button>></div></div><div class="nav-wrapper end"><div class="nav-item"><<button "Key">><<set $prevpass to $passage>><<goto "FG-31">><</button>> </div><div class="nav-item"><<button "Try another adventure">><<set $prevpass to $passage>><<goto "FG-32">><</button>></div></div></footer>
+
+:: footerkey {"position":"1050,500","size":"100,100"}
+<footer><div class="nav-wrapper"><div class="nav-item"><<button "<">><<goto $prevpass>><</button>></div><div class="nav-item"><<button "Start again">><<goto "landing">><</button>></div></div><div class="nav-wrapper"><div class="nav-item"><<button "Show map">><<set $prevpass to $passage>><<goto "end">><</button>></div></div><div class="nav-wrapper end"><div class="nav-item"><<button "Key">><<set $prevpass to $passage>><<goto "FG-31">><</button>> </div><div class="nav-item"><<button "Try another adventure">><<set $prevpass to $passage>><<goto "FG-32">><</button>></div></div></footer>
 
 
 :: FG-16.2 {"position":"450,1450","size":"100,100"}
@@ -1453,7 +1493,7 @@ Here comes Kelly now.
 
 Enjoy the tour, and try not to let your feet get too wet. 
 
-<<timed 8s>><<set $prevpass to $passage>><<goto "FG-05">><</timed>>
+<<timed 15s>><<set $prevpass to $passage>><<goto "FG-05">><</timed>>
 
 </main>
 <<include "footer">>
