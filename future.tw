@@ -563,7 +563,7 @@ iFrame.classList.add("map")
 iFrame.setAttribute("loading", "lazy")
 iFrame.setAttribute("referrerpolicy", "no-referrer-when-downgrade")
 // iFrame.setAttribute("allowfullscreen")
-iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBDRwRTMpSybNcmgkYVX1yZ0YmBbNhs9qU&center=${origin[0]},${origin[1]}&zoom=18&origin=${origin[0]},${origin[1]}&destination=${dest[0]},${dest[1]}&mode=walking`)
+iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyCSbMwR1cUMfnIAh0Pxi0F1N16kvDGZXGU&center=${origin[0]},${origin[1]}&zoom=18&origin=${origin[0]},${origin[1]}&destination=${dest[0]},${dest[1]}&mode=walking`)
 const mount = document.getElementById("mapMount")
 // console.log(iFrame)
 return iFrame
@@ -591,45 +591,45 @@ setup.checkForRepeats = (array,element) => {
 
 
 :: StoryInit {"position":"100,100","size":"100,100"}
-<<cacheaudio "FG_01" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_01.mp3">>
-<<cacheaudio "FG_04" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG-04.mp3">>
-<<cacheaudio "FG_05.1" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_05.1.mp3">>
-<<cacheaudio "FG_05.2" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_05.2.mp3">>
-<<cacheaudio "FG_06" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_06.mp3">>
+<<cacheaudio "FG_01" "https://www.youhavefoundconey.net/tgksnd/FG/FG_01.mp3">>
+<<cacheaudio "FG_04" "https://www.youhavefoundconey.net/tgksnd/FG/FG-04.mp3">>
+<<cacheaudio "FG_05.1" "https://www.youhavefoundconey.net/tgksnd/FG/FG_05.1.mp3">>
+<<cacheaudio "FG_05.2" "https://www.youhavefoundconey.net/tgksnd/FG/FG_05.2.mp3">>
+<<cacheaudio "FG_06" "https://www.youhavefoundconey.net/tgksnd/FG/FG_06.mp3">>
 
-<<cacheaudio "FG_08" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_08.mp3">>
-<<cacheaudio "FG_09A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_09A.mp3">>
-<<cacheaudio "FG_09B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_09B.mp3">>
+<<cacheaudio "FG_08" "https://www.youhavefoundconey.net/tgksnd/FG/FG_08.mp3">>
+<<cacheaudio "FG_09A" "https://www.youhavefoundconey.net/tgksnd/FG/FG_09A.mp3">>
+<<cacheaudio "FG_09B" "https://www.youhavefoundconey.net/tgksnd/FG/FG_09B.mp3">>
 
-<<cacheaudio "FG_11" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_11.mp3">>
-<<cacheaudio "FG_12A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_12A.mp3">>
-<<cacheaudio "FG_12B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_12B.mp3">>
-<<cacheaudio "FG_12C" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_12C.mp3">>
-<<cacheaudio "FG_13" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_13.mp3">>
-<<cacheaudio "FG_14" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_14.mp3">>
-<<cacheaudio "FG_15" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_15.mp3">>
-<<cacheaudio "FG_16" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_16.mp3">>
+<<cacheaudio "FG_11" "https://www.youhavefoundconey.net/tgksnd/FG/FG_11.mp3">>
+<<cacheaudio "FG_12A" "https://www.youhavefoundconey.net/tgksnd/FG/FG_12A.mp3">>
+<<cacheaudio "FG_12B" "https://www.youhavefoundconey.net/tgksnd/FG/FG_12B.mp3">>
+<<cacheaudio "FG_12C" "https://www.youhavefoundconey.net/tgksnd/FG/FG_12C.mp3">>
+<<cacheaudio "FG_13" "https://www.youhavefoundconey.net/tgksnd/FG/FG_13.mp3">>
+<<cacheaudio "FG_14" "https://www.youhavefoundconey.net/tgksnd/FG/FG_14.mp3">>
+<<cacheaudio "FG_15" "https://www.youhavefoundconey.net/tgksnd/FG/FG_15.mp3">>
+<<cacheaudio "FG_16" "https://www.youhavefoundconey.net/tgksnd/FG/FG_16.mp3">>
 
-<<cacheaudio "FG_17" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_17.mp3">>
-<<cacheaudio "FG_18" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_19.mp3">>
-<<cacheaudio "FG_19" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_19.mp3">>
+<<cacheaudio "FG_17" "https://www.youhavefoundconey.net/tgksnd/FG/FG_17.mp3">>
+<<cacheaudio "FG_18" "https://www.youhavefoundconey.net/tgksnd/FG/FG_19.mp3">>
+<<cacheaudio "FG_19" "https://www.youhavefoundconey.net/tgksnd/FG/FG_19.mp3">>
 
-<<cacheaudio "FG_20" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_20.mp3">>
-<<cacheaudio "FG_21" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_21.mp3">>
-<<cacheaudio "FG_22" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_22.mp3">>
-<<cacheaudio "FG_23" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_23.mp3">>
-<<cacheaudio "FG_24" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_24.mp3">>
-<<cacheaudio "FG_25A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_25A.mp3">>
-<<cacheaudio "FG_25B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_25B.mp3">>
-<<cacheaudio "FG_26" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_26.mp3">>
-<<cacheaudio "FG_27" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_27.mp3">>
-<<cacheaudio "FG_28A" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_28A.mp3">>
-<<cacheaudio "FG_28B" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_28B.mp3">>
-<<cacheaudio "FG_29" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG_29.mp3">>
-<<cacheaudio "FG-30" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/FG/FG-30.mp3">>
-<<cacheaudio "refergroup" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/MC/XX_02_refergroup.mp3">>
-<<cacheaudio "perfectgroup" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/MC/XX_02_perfectgroup.mp3">>
-<<cacheaudio "03" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/MC/XX_03.mp3">>
+<<cacheaudio "FG_20" "https://www.youhavefoundconey.net/tgksnd/FG/FG_20.mp3">>
+<<cacheaudio "FG_21" "https://www.youhavefoundconey.net/tgksnd/FG/FG_21.mp3">>
+<<cacheaudio "FG_22" "https://www.youhavefoundconey.net/tgksnd/FG/FG_22.mp3">>
+<<cacheaudio "FG_23" "https://www.youhavefoundconey.net/tgksnd/FG/FG_23.mp3">>
+<<cacheaudio "FG_24" "https://www.youhavefoundconey.net/tgksnd/FG/FG_24.mp3">>
+<<cacheaudio "FG_25A" "https://www.youhavefoundconey.net/tgksnd/FG/FG_25A.mp3">>
+<<cacheaudio "FG_25B" "https://www.youhavefoundconey.net/tgksnd/FG/FG_25B.mp3">>
+<<cacheaudio "FG_26" "https://www.youhavefoundconey.net/tgksnd/FG/FG_26.mp3">>
+<<cacheaudio "FG_27" "https://www.youhavefoundconey.net/tgksnd/FG/FG_27.mp3">>
+<<cacheaudio "FG_28A" "https://www.youhavefoundconey.net/tgksnd/FG/FG_28A.mp3">>
+<<cacheaudio "FG_28B" "https://www.youhavefoundconey.net/tgksnd/FG/FG_28B.mp3">>
+<<cacheaudio "FG_29" "https://www.youhavefoundconey.net/tgksnd/FG/FG_29.mp3">>
+<<cacheaudio "FG-30" "https://www.youhavefoundconey.net/tgksnd/FG/FG-30.mp3">>
+<<cacheaudio "refergroup" "https://www.youhavefoundconey.net/tgksnd/MC/XX_02_refergroup.mp3">>
+<<cacheaudio "perfectgroup" "https://www.youhavefoundconey.net/tgksnd/MC/XX_02_perfectgroup.mp3">>
+<<cacheaudio "03" "https://www.youhavefoundconey.net/tgksnd/MC/XX_03.mp3">>
 
 
 
